@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	  xmlns:local="http://schemas.android.com/apk/res-auto">
+  <item
+       android:id="@+id/menu_share"
+       android:icon="@drawable/ic_action_social_share"
+       android:showAsAction="ifRoom"
+       android:title="Back home" />
+  <item
+       android:id="@+id/menu_settings"
+       android:showAsAction="never"
+       android:title="Leave home" />
+  <item
+       android:id="@+id/menu_settings"
+       android:showAsAction="never"
+       android:title="Get up" />
+  <item
+       android:id="@+id/menu_settings"
+       android:showAsAction="never"
+       android:title="Sleep" />
+</menu>

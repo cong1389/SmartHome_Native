@@ -1,0 +1,10 @@
+D:\Working\SmartHome_Native\SmartHome1\SmartHome.Abstract\bin\Release\SmartHome.Abstract.dll
+D:\Working\SmartHome_Native\SmartHome1\SmartHome.Abstract\bin\Release\SmartHome.Abstract.pdb
+D:\Working\SmartHome_Native\SmartHome1\SmartHome.Abstract\obj\Release\SmartHome.Abstract.dll
+D:\Working\SmartHome_Native\SmartHome1\SmartHome.Abstract\obj\Release\SmartHome.Abstract.pdb
+D:\Working\SmartHome_Native\SmartHome\SmartHome.Abstract\bin\Release\SmartHome.Abstract.dll
+D:\Working\SmartHome_Native\SmartHome\SmartHome.Abstract\bin\Release\SmartHome.Abstract.pdb
+D:\Working\SmartHome_Native\SmartHome\SmartHome.Abstract\obj\Release\SmartHome.Abstract.dll
+D:\Working\SmartHome_Native\SmartHome\SmartHome.Abstract\obj\Release\SmartHome.Abstract.pdb
+D:\Working\SmartHome_Native\SmartHome\SmartHome.Abstract\obj\Release\SmartHome.Abstract.dll.mdb
+D:\Working\SmartHome_Native\SmartHome\SmartHome.Abstract\bin\Release\SmartHome.Abstract.dll.mdb

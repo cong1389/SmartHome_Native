@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:myapp="http://schemas.android.com/apk/res-auto">
+  
+  <item android:id="@+id/menu_share"  android:icon="@drawable/ic_action_content_create" android:showAsAction="always" android:title="My devices" />
+  <item android:id="@+id/menu_share" android:icon="@drawable/ic_action_content_undo" android:showAsAction="always" android:title="My store" />
+  <item android:id="@+id/menu_share" android:icon="@drawable/ic_action_content_redo" android:showAsAction="always" android:title="News" /> 
+  <item android:id="@+id/menu_share" android:icon="@drawable/ic_action_content_save" android:showAsAction="always" android:title="Profile" />
+</menu>

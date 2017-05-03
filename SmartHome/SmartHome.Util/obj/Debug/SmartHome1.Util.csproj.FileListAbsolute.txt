@@ -1,0 +1,5 @@
+D:\Working\SmartHome_Native\SmartHome1\SmartHome1.Util\bin\Debug\SmartHome1.Util.dll
+D:\Working\SmartHome_Native\SmartHome1\SmartHome1.Util\bin\Debug\SmartHome1.Util.pdb
+D:\Working\SmartHome_Native\SmartHome1\SmartHome1.Util\obj\Debug\SmartHome1.Util.csprojResolveAssemblyReference.cache
+D:\Working\SmartHome_Native\SmartHome1\SmartHome1.Util\obj\Debug\SmartHome1.Util.dll
+D:\Working\SmartHome_Native\SmartHome1\SmartHome1.Util\obj\Debug\SmartHome1.Util.pdb
