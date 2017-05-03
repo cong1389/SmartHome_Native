@@ -38,6 +38,14 @@ SmartHome.Droid.Activities.LoginActivity, SmartHome.Android;md50bc25531ae266a1f7
 SmartHome.Droid.Activities.LoginActivity, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50bc25531ae266a1f73d9f8430c1d471f.LoginActivity
 SmartHome.Droid.Activities.LoginActivity;md50bc25531ae266a1f73d9f8430c1d471f.LoginActivity
 smarthome.droid.activities.LoginActivity;md50bc25531ae266a1f73d9f8430c1d471f.LoginActivity
+SmartHome.Droid.Activities.DeviceFragment, SmartHome.Android;md50bc25531ae266a1f73d9f8430c1d471f.DeviceFragment
+SmartHome.Droid.Activities.DeviceFragment, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50bc25531ae266a1f73d9f8430c1d471f.DeviceFragment
+SmartHome.Droid.Activities.DeviceFragment;md50bc25531ae266a1f73d9f8430c1d471f.DeviceFragment
+smarthome.droid.activities.DeviceFragment;md50bc25531ae266a1f73d9f8430c1d471f.DeviceFragment
+SmartHome.Droid.Activities.RoomFragment, SmartHome.Android;md50bc25531ae266a1f73d9f8430c1d471f.RoomFragment
+SmartHome.Droid.Activities.RoomFragment, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50bc25531ae266a1f73d9f8430c1d471f.RoomFragment
+SmartHome.Droid.Activities.RoomFragment;md50bc25531ae266a1f73d9f8430c1d471f.RoomFragment
+smarthome.droid.activities.RoomFragment;md50bc25531ae266a1f73d9f8430c1d471f.RoomFragment
 Android.Support.V4.App.SharedElementCallback/IOnSharedElementsReadyListenerImplementor, Xamarin.Android.Support.Compat;mono.android.support.v4.app.SharedElementCallback_OnSharedElementsReadyListenerImplementor
 Android.Support.V4.App.SharedElementCallback+IOnSharedElementsReadyListenerImplementor, Xamarin.Android.Support.Compat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.app.SharedElementCallback_OnSharedElementsReadyListenerImplementor
 Android.Support.V4.App.SharedElementCallback.IOnSharedElementsReadyListenerImplementor;mono.android.support.v4.app.SharedElementCallback_OnSharedElementsReadyListenerImplementor

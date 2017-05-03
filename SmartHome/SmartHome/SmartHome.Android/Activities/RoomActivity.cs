@@ -1,4 +1,4 @@
-
+﻿
 using Android.App;
 using Android.OS;
 using Android.Widget;
@@ -31,39 +31,60 @@ namespace SmartHome.Droid.Activities
 
         #region Common
 
-        private async Task GetRoomData(string houseId)
-        {
-            House objHouse = await APIManager.GetHouseByHouseId(houseId);
-            if (objHouse != null)
-            {
-                lstRoom = objHouse.rooms;
-                var grdHouse = FindViewById<GridView>(Resource.Id.grdHouse);
-                grdHouse.Adapter = new RoomAdapter(this, lstRoom);
-                grdHouse.ItemClick += GrdHouse_ItemClick;
-            }
-        }
+        //private async Task GetRoomData(string houseId)
+        //{
+        //    House objHouse = await APIManager.GetHouseByHouseId(houseId);
+          
+        //    if (objHouse != null)
+        //    {
+        //        lstRoom = objHouse.rooms;
+        //        var grdHouse = FindViewById<GridView>(Resource.Id.grdHouse);
+        //        grdHouse.Adapter = new RoomAdapter(this, lstRoom);
+        //        grdHouse.ItemClick += GrdHouse_ItemClick;
+        //    }
+        //}
 
         #endregion
 
         #region Event
 
-        protected override void OnResume()
+        protected override async void OnResume()
         {
             base.OnResume();
 
             // Create your application here
             SetContentView(Resource.Layout.Room);
-
-            houseId = Intent.GetStringExtra("houseId") ?? "houseId not available";
-            string houseName = Title = Intent.GetStringExtra("houseName") ?? "houseName not available";
-
+            
             //// Init toolbar
             var toolbar = FindViewById<Toolbar>(Resource.Id.app_bar);
             SetSupportActionBar(toolbar);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetDisplayShowHomeEnabled(true);
+            SupportActionBar.SetDisplayShowHomeEnabled(true);            
 
-            GetRoomData(houseId);
+            //Lấy obj house đã lưu trước đó
+            House objHouse_Result = AppInstance.houseData;
+
+            //Nếu house trước đó ==NULL, thì gọi lại API GetHouse
+            if (objHouse_Result == null)
+            {
+                houseId = Intent.GetStringExtra("houseId") ?? "houseId not available";                
+
+                objHouse_Result = await APIManager.GetHouseByHouseId(houseId);
+            }
+            else
+            {
+                lstRoom = objHouse_Result.rooms;               
+            }
+
+            if (objHouse_Result !=null)
+            {
+                houseId = objHouse_Result.houseId;
+                Title = objHouse_Result.name ?? "houseName not available";
+
+                var grdHouse = FindViewById<GridView>(Resource.Id.grdHouse);
+                grdHouse.Adapter = new RoomAdapter(this, lstRoom);
+                grdHouse.ItemClick += GrdHouse_ItemClick;
+            }
         }
 
         protected override async void OnCreate(Bundle savedInstanceState)

@@ -81,7 +81,6 @@ D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\layout\main.xml
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\layout\headerdrawerlayout.xml
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\layout\app_bar.xml
-D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\layout\homelayout.xml
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\layout\house.xml
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\values\strings.xml
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\values\styles.xml
@@ -122,7 +121,6 @@ D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\drawable\ic_home_black_24dp.png
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\drawable\ic_question_answer_black_24dp.png
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\drawable\ic_supervisor_account_black_24dp.png
-D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\drawable\imgbg.png
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\menu\action_menu.xml
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\R.cs.flag
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\uploadflags.txt
@@ -173,5 +171,6 @@ D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\andr
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\layout\devicegridviewitem.xml
+D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\drawable\navleft_top.jpg
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\SmartHome.Android.dll.mdb
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Debug\SmartHome.Android.dll.mdb

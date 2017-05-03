@@ -152,6 +152,8 @@
     <Compile Include="Activities\RoomActivity.cs" />
     <Compile Include="Activities\HomeActivity.cs" />
     <Compile Include="Activities\LoginActivity.cs" />
+    <Compile Include="Activities\DeviceFragment.cs" />
+    <Compile Include="Activities\RoomFragment.cs" />
     <Compile Include="Common\DeviceAdapter.cs" />
     <Compile Include="Common\RoomAdapter.cs" />
     <Compile Include="Common\HouseAdapter.cs" />
@@ -197,9 +199,6 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\app_bar.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\layout\homeLayout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\DeviceGridViewItem.axml">
@@ -339,10 +338,10 @@
     <AndroidResource Include="Resources\drawable\ic_supervisor_account_black_24dp.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\imgBg.png" />
+    <AndroidResource Include="Resources\menu\action_menu.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\menu\action_menu.xml" />
+    <AndroidResource Include="Resources\drawable\navleft_top.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

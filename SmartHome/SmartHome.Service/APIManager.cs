@@ -118,14 +118,14 @@ namespace SmartHome.Service
                 var response = await client.GetAsync(string.Format("{0}/{1}", AppInstance.api_HouseGet, houseId));
                 string result = response.Content.ReadAsStringAsync().Result;
 
-                AppInstance.house = !string.IsNullOrWhiteSpace(result) ? JsonConvert.DeserializeObject<House>(result) : null;
+                AppInstance.houseData = !string.IsNullOrWhiteSpace(result) ? JsonConvert.DeserializeObject<House>(result) : null;
             }
             catch (Exception ex)
             {
                 string msg = ex.Message;
             }
 
-            return AppInstance.house;
+            return AppInstance.houseData;
         }
 
         public static async Task<HouseResponseCollection> GetHouseAll()
@@ -167,14 +167,14 @@ namespace SmartHome.Service
                 var response = await client.GetAsync(string.Format("{0}/{1}", AppInstance.api_RoomByRoomId, roomId));
                 string result = response.Content.ReadAsStringAsync().Result;
 
-                room = !string.IsNullOrWhiteSpace(result) ? JsonConvert.DeserializeObject<Room>(result) : null;
+                AppInstance.roomData = !string.IsNullOrWhiteSpace(result) ? JsonConvert.DeserializeObject<Room>(result) : null;
             }
             catch (Exception ex)
             {
                 string msg = ex.Message;
             }
 
-            return room;
+            return AppInstance.roomData;
         }
 
         #endregion

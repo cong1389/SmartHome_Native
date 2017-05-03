@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,15 +15,13 @@ using System.Threading.Tasks;
 using SmartHome.Model;
 using SmartHome.Service;
 using SmartHome.Droid.Common;
+using SmartHome.Util;
 
 namespace SmartHome.Droid.Activities
 {
     public class RoomFragment : Fragment
     {
-        public RoomFragment()
-        {
-            RetainInstance = true;
-        }
+        List<Room> lstRoom = null;
 
         string houseId = string.Empty;
         public string HouseId
@@ -31,26 +29,14 @@ namespace SmartHome.Droid.Activities
             get { return houseId; }
         }
 
-        //HouseResponseCollection houseResponseCollection;
-
-        GridView grdHouse;
-
-        //public static RoomFragment NewInstance(string _houseId)
-        //{
-        //    var roomFragment = new RoomFragment { Arguments = new Bundle() };
-        //    //roomFragment.Arguments.PutString("houseId", houseId);
-        //    return roomFragment;
-        //}
-
-        private async Task GetRoomData(string houseId, View view)
+        public RoomFragment()
         {
-            //HouseActivity objHouse = await APIManager.GetHouseByHouseId(houseId);
-            //if (objHouse != null)
-            //{
-            //    List<Room> lstRoom = objHouse.rooms;
-            //    var grdHouse = view.FindViewById<GridView>(Resource.Id.grdHouse);
-            //    grdHouse.Adapter = new RoomAdapter(Activity, lstRoom);
-            //}
+            RetainInstance = true;
+        }
+
+        public RoomFragment(string houseId)
+        {
+            this.houseId = houseId;
         }
 
         public override void OnCreate(Bundle savedInstanceState)
@@ -63,17 +49,62 @@ namespace SmartHome.Droid.Activities
         {
             base.OnCreateView(inflater, container, savedInstanceState);
 
-            // Use this to return your custom view for this Fragment
-            // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
-
-            //View view = inflater.Inflate(Resource.Layout.Room, container, false);
-            //GetRoomData(houseId, view);
-
-
+            View view = inflater.Inflate(Resource.Layout.Room, container, false);
+            GetRoomData(view);
 
             return view;
+        }
 
-            //base.OnCreateView (inflater.Inflate(Resource.Layout.homeLayout, container, savedInstanceState);
+        private async Task GetRoomData(View view)
+        {
+            //// Init toolbar
+            //var toolbar = FindViewById<Toolbar>(Resource.Id.app_bar);
+            //SetSupportActionBar(toolbar);
+            //SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            //SupportActionBar.SetDisplayShowHomeEnabled(true);
+
+            //Lấy obj house đã lưu trước đó
+            House objHouse_Result = AppInstance.houseData;
+
+            //Nếu house trước đó == NULL, thì gọi lại API GetHouse
+            if (objHouse_Result == null)
+            {
+                objHouse_Result = await APIManager.GetHouseByHouseId(houseId);
+            }
+            else
+            {
+                lstRoom = objHouse_Result.rooms;
+            }
+
+            if (objHouse_Result != null)
+            {
+                houseId = objHouse_Result.houseId;
+               
+                //view.Title = objHouse_Result.name ?? "houseName not available";
+
+                var grdHouse = view.FindViewById<GridView>(Resource.Id.grdHouse);
+                grdHouse.Adapter = new RoomAdapter(Activity, lstRoom);
+                grdHouse.ItemClick += GrdHouse_ItemClick;
+            }
+        }
+
+        private void GrdHouse_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            string roomId = lstRoom[e.Position].roomId;
+            string roomName = lstRoom[e.Position].name;
+
+            DeviceFragment fragment = new DeviceFragment(houseId, roomId);
+            var ft = FragmentManager.BeginTransaction();
+            ft.AddToBackStack("fdsa");
+            ft.Replace(Resource.Id.HomeFrameLayout, fragment);
+            ft.SetTransition(FragmentTransit.EnterMask);
+            ft.Commit();
+
+            //var deviceActivity = new Intent(this, typeof(DeviceActivity));
+            //deviceActivity.PutExtra("houseId", houseId);
+            //deviceActivity.PutExtra("roomId", roomId);
+            //deviceActivity.PutExtra("roomName", roomName);
+            //StartActivity(deviceActivity);
         }
     }
 }

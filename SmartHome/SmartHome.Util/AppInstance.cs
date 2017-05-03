@@ -10,7 +10,8 @@ namespace SmartHome.Util
         //  public static double wScreen = App.Current.MainPage.Width;
 
         public static User user { get; set; }
-        public static House house { get; set; }
+        public static House houseData { get; set; }
+        public static Room roomData { get; set; }
 
         #endregion
 
@@ -22,7 +23,7 @@ namespace SmartHome.Util
         #endregion
 
         #region Địa chỉ API
-        
+
         public static string api = "http://magnetapptest.herokuapp.com";
 
         public static string api_LoginByUser = string.Format("{0}/{1}", api, "api/user/login");

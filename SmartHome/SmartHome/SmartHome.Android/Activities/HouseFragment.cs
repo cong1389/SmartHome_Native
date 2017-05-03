@@ -59,27 +59,33 @@ namespace SmartHome.Droid.Activities
 
         private void GrdHouse_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
+
+            //var details = FragmentManager.FindFragmentById(Resource.Id.HomeFrameLayout) as HouseFragment;
+            //if (details == null )
+            //{
+
+            // Make new fragment to show this selection.
+
+            // Execute a transaction, replacing any existing
+            // fragment with this one inside the frame.
+
+
+            //}
+
             string houseId = e.View.FindViewById<TextView>(Resource.Id.txtHouseId).Text;
-            string houseName = lstHouse[e.Position].name;
+            //string houseName = lstHouse[e.Position].name;
 
-            var roomActivity = new Intent(Activity, typeof(RoomActivity));
-            roomActivity.PutExtra("houseId", houseId);
-            roomActivity.PutExtra("houseName", houseName);
+            //var roomActivity = new Intent(Activity, typeof(RoomActivity));
+            //roomActivity.PutExtra("houseId", houseId);
+            //roomActivity.PutExtra("houseName", houseName);
 
-            StartActivity(roomActivity);          
+            //StartActivity(roomActivity);
 
-            //////load default home screen
-            //var ft = FragmentManager.BeginTransaction();
-            //ft.AddToBackStack(null);
-            //ft.Replace(Resource.Id.HomeFrameLayout, new RoomFragment());
-            //ft.Commit();
-
-
-            // start the roomActivity
-            // StartActivity(roomActivity);
-
-            //Toast.MakeText(this, "You Click on name " + houseId, ToastLength.Long).Show();
-
+            RoomFragment fragment = new RoomFragment(houseId);            
+            var ft = FragmentManager.BeginTransaction();
+            ft.Replace(Resource.Id.HomeFrameLayout, fragment);
+            ft.SetTransition(FragmentTransit.EnterMask);
+            ft.Commit();
         }
     }
 }

@@ -29,7 +29,7 @@ namespace SmartHome.Droid.Activities
         #endregion
 
         #region Common
-               
+
 
         #endregion
 
@@ -48,11 +48,14 @@ namespace SmartHome.Droid.Activities
                 var toolbar = FindViewById<Toolbar>(Resource.Id.app_bar);
                 SetSupportActionBar(toolbar);
                 SupportActionBar.SetTitle(Resource.String.app_name);
-                SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-                SupportActionBar.SetDisplayShowHomeEnabled(true);
-                
+                //SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+                //SupportActionBar.SetDisplayShowHomeEnabled(true);
+
+
+                //headerdrawerlayout.
                 // Attach item selected handler to navigation view
                 var navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
+                var nav_usr = navigationView.FindViewById<TextView>(Resource.Id.nav_usr);
                 navigationView.NavigationItemSelected += NavigationView_NavigationItemSelected;
 
                 // Create ActionBarDrawerToggle button and add it to the toolbar
@@ -140,9 +143,12 @@ namespace SmartHome.Droid.Activities
                     fragment = new HouseFragment();
                     break;
                 case 1:
-                   // fragment = new RoomFragment();
+                    fragment = new RoomFragment();
                     break;
-                
+                case 2:
+                    fragment = new DeviceFragment();
+                    break;
+
             }
 
             var ft = FragmentManager.BeginTransaction();
@@ -159,11 +165,12 @@ namespace SmartHome.Droid.Activities
                 case (Resource.Id.nav_home):
                     ListItemClicked(0);
                     break;
-                case (Resource.Id.nav_messages):
-                    Toast.MakeText(this, "Message selected!", ToastLength.Short).Show();
+                case (Resource.Id.nav_room):
+                    ListItemClicked(1);
+                    // Toast.MakeText(this, "Message selected!", ToastLength.Short).Show();
                     break;
-                case (Resource.Id.nav_friends):
-                    // React on 'Friends' selection
+                case (Resource.Id.nav_device):
+                    ListItemClicked(2);
                     break;
             }
             // Close drawer
