@@ -79,7 +79,7 @@
             android:layout_height="96dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="15dp"
-            android:id="@+id/imageView2"
+            android:id="@+id/imgScan"
             android:layout_marginTop="50dp" />
         <RelativeLayout
             android:minWidth="25px"

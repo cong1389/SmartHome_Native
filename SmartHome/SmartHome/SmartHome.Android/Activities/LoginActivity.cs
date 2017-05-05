@@ -17,6 +17,7 @@ using System.Diagnostics;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using SmartHome.Model;
+using SmartHome.Droid.Fragments;
 
 namespace SmartHome.Droid.Activities
 {
@@ -56,6 +57,23 @@ namespace SmartHome.Droid.Activities
             //Event login
             Button btnLogin = FindViewById<Button>(Resource.Id.btnLogin);
             btnLogin.Click += BtnLogin_Click;
+
+            ImageView imgScan = FindViewById<ImageView>(Resource.Id.imgScan);
+            imgScan.Click += ImgScan_Click;
+        }
+
+        private void ImgScan_Click(object sender, EventArgs e)
+        {
+            FragmentTransaction fragmentTransaction = FragmentManager.BeginTransaction();
+
+            Fragment fragmentPrev = FragmentManager.FindFragmentByTag("dialog");
+            if (fragmentPrev != null)
+                fragmentTransaction.Remove(fragmentPrev);
+
+            fragmentTransaction.AddToBackStack(null);
+            //create and show the dialog
+            ScanIPFragment dialogFragment = ScanIPFragment.NewInstance(null);
+            dialogFragment.Show(fragmentTransaction, "dialog");
         }
 
         private async void BtnLogin_Click(object sender, EventArgs e)

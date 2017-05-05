@@ -79,7 +79,6 @@ D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\re
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\res\layout\main.xml
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\res\layout\headerdrawerlayout.xml
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\res\layout\app_bar.xml
-D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\res\layout\homelayout.xml
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\res\layout\devicegridviewitem.xml
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\res\layout\house.xml
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\res\values\strings.xml
@@ -121,7 +120,6 @@ D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\re
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\res\drawable\ic_home_black_24dp.png
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\res\drawable\ic_question_answer_black_24dp.png
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\res\drawable\ic_supervisor_account_black_24dp.png
-D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\res\drawable\imgbg.png
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\res\menu\action_menu.xml
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\R.cs.flag
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\uploadflags.txt
@@ -169,5 +167,11 @@ D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\an
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\android\assets\Xamarin.Forms.Core.dll.mdb
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\android\assets\Xamarin.Forms.Xaml.dll.mdb
+D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Release\CarouselViewSample.dll
+D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Release\Xamarin.Forms.CarouselView.dll
+D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Release\CarouselViewSample.pdb
+D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Release\CarouselViewSample.dll.mdb
+D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\res\layout\scanip.xml
+D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\res\drawable\navleft_top.jpg
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\SmartHome.Android.dll.mdb
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Release\SmartHome.Android.dll.mdb

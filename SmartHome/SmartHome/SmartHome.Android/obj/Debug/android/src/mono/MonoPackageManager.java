@@ -99,6 +99,7 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "SmartHome.Android.dll" comes first in this list. */
 		"SmartHome.Android.dll",
+		"CarouselViewSample.dll",
 		"FormsViewGroup.dll",
 		"Newtonsoft.Json.dll",
 		"SmartHome.Abstract.dll",
@@ -119,6 +120,7 @@ class MonoPackageManager_Resources {
 		"Xamarin.Android.Support.v7.Preference.dll",
 		"Xamarin.Android.Support.v7.RecyclerView.dll",
 		"Xamarin.Android.Support.Vector.Drawable.dll",
+		"Xamarin.Forms.CarouselView.dll",
 		"Xamarin.Forms.Core.dll",
 		"Xamarin.Forms.Platform.Android.dll",
 		"Xamarin.Forms.Platform.dll",
