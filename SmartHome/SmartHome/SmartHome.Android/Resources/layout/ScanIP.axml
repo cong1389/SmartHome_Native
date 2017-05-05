@@ -7,24 +7,28 @@
     android:minHeight="25px"
     android:background="#ff80d8ff">
     <EditText
-        android:inputType="textPassword"
+        android:inputType="textPersonName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtPw1"
-        android:hint="Password" />
+        android:id="@+id/txtScanIP"
+        android:hint="InputIP" />
     <LinearLayout
         android:id="@+id/linearLayoutBtns"
-        android:layout_below="@+id/txtPassword"
+        android:layout_below="@+id/txtScanIP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp">
         <Button
-            android:text="fsdfasdfasf"
+            android:text="Scan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btnScanIP" />
-       
+        <Button
+            android:text="Close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnScanClose" />
     </LinearLayout>
 </RelativeLayout>

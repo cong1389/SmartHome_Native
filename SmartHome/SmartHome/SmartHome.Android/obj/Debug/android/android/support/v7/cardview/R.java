@@ -3324,7 +3324,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int beginning=0x7f0a0020;
         public static final int bottom=0x7f0a0028;
         public static final int btnLogin=0x7f0a008e;
-        public static final int btnScanIP=0x7f0a00d0;
+        public static final int btnScanClose=0x7f0a00d0;
+        public static final int btnScanIP=0x7f0a00cf;
         public static final int buttonPanel=0x7f0a004b;
         public static final int cancel_action=0x7f0a00b6;
         public static final int center=0x7f0a0030;
@@ -3501,9 +3502,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int transition_scene_layoutid_cache=0x7f0a000b;
         public static final int txtHouseId=0x7f0a0086;
         public static final int txtName=0x7f0a0085;
-        public static final int txtPassword=0x7f0a00cf;
         public static final int txtPw=0x7f0a008b;
-        public static final int txtPw1=0x7f0a00cd;
+        public static final int txtScanIP=0x7f0a00cd;
         public static final int txtUsr=0x7f0a008a;
         public static final int up=0x7f0a0009;
         public static final int useLogo=0x7f0a0018;
@@ -3689,6 +3689,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int path_password_eye_mask_strike_through=0x7f08003c;
         public static final int path_password_eye_mask_visible=0x7f08003d;
         public static final int path_password_strike_through=0x7f08003e;
+        public static final int save_fail=0x7f080045;
+        public static final int save_success=0x7f080044;
         public static final int search_menu_title=0x7f080029;
         public static final int status_bar_notification_info_overflow=0x7f08002a;
         public static final int strBottomLine=0x7f080041;

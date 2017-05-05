@@ -164,6 +164,7 @@
     <Compile Include="Common\DeviceAdapter.cs" />
     <Compile Include="Common\RoomAdapter.cs" />
     <Compile Include="Common\HouseAdapter.cs" />
+    <Compile Include="Common\Util.cs" />
     <Compile Include="Fragments\ScanIPFragment.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />

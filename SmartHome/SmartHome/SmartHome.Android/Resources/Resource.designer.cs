@@ -3052,7 +3052,10 @@ namespace SmartHome.Droid
 			public const int btnLogin = 2131361934;
 			
 			// aapt resource value: 0x7f0a00d0
-			public const int btnScanIP = 2131362000;
+			public const int btnScanClose = 2131362000;
+			
+			// aapt resource value: 0x7f0a00cf
+			public const int btnScanIP = 2131361999;
 			
 			// aapt resource value: 0x7f0a004b
 			public const int buttonPanel = 2131361867;
@@ -3582,14 +3585,11 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f0a0085
 			public const int txtName = 2131361925;
 			
-			// aapt resource value: 0x7f0a00cf
-			public const int txtPassword = 2131361999;
-			
 			// aapt resource value: 0x7f0a008b
 			public const int txtPw = 2131361931;
 			
 			// aapt resource value: 0x7f0a00cd
-			public const int txtPw1 = 2131361997;
+			public const int txtScanIP = 2131361997;
 			
 			// aapt resource value: 0x7f0a008a
 			public const int txtUsr = 2131361930;
@@ -4180,6 +4180,12 @@ namespace SmartHome.Droid
 			
 			// aapt resource value: 0x7f08003e
 			public const int path_password_strike_through = 2131230782;
+			
+			// aapt resource value: 0x7f080045
+			public const int save_fail = 2131230789;
+			
+			// aapt resource value: 0x7f080044
+			public const int save_success = 2131230788;
 			
 			// aapt resource value: 0x7f080029
 			public const int search_menu_title = 2131230761;

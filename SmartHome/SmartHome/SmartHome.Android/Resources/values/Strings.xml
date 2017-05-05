@@ -5,4 +5,6 @@
   <string name="strBottomLine">From android material design</string>
   <string name="open_drawer">Open drawer</string>
   <string name="close_drawer">Close drawer</string>
+  <string name="save_success">Save IP success.</string>
+  <string name="save_fail">Save IP fail.</string>
 </resources>

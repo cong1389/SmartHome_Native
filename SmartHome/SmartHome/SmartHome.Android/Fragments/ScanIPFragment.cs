@@ -32,13 +32,30 @@ namespace SmartHome.Droid.Fragments
         {
             // Use this to return your custom view for this Fragment
             View view = inflater.Inflate(Resource.Layout.ScanIP, container, false);
-            Button button = view.FindViewById<Button>(Resource.Id.btnScanIP);
+
             Dialog.Window.RequestFeature(WindowFeatures.NoTitle); //remove title area
             Dialog.SetCanceledOnTouchOutside(false); //dismiss window on touch outside
 
-            button.Click += delegate {
+            Button btnScanClose = view.FindViewById<Button>(Resource.Id.btnScanClose);
+            btnScanClose.Click += delegate
+            {
                 Dismiss();
-                Toast.MakeText(Activity, "Dialog fragment dismissed!", ToastLength.Short).Show();
+                //Toast.MakeText(Activity, "Dialog fragment dismissed!", ToastLength.Short).Show();
+            };
+
+            Button btnScanIP = view.FindViewById<Button>(Resource.Id.btnScanIP);
+            btnScanIP.Click += async delegate
+            {
+                string msg = string.Empty;
+                bool result = await Common.Util.IsCheckController();
+                if (result)
+                    msg = "Save IP success.";
+                else
+                    msg = "Save IP fail.";
+
+                Dismiss();
+                Toast.MakeText(Activity, msg, ToastLength.Short).Show();
+
             };
 
             return view;
