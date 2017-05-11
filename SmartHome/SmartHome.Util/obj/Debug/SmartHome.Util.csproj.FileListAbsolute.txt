@@ -33,3 +33,11 @@ D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\obj\Debug\SmartHom
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\bin\Debug\SmartHome.Util.dll.mdb
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\obj\Debug\SmartHome.Util.dll.mdb
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\bin\Debug\SmartHome.Util.dll.mdb
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\obj\Debug\SmartHome.Util.dll.mdb
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\bin\Debug\SmartHome.Util.dll.mdb
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\obj\Debug\SmartHome.Util.dll.mdb
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\bin\Debug\SmartHome.Util.dll.mdb
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\obj\Debug\SmartHome.Util.dll.mdb
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\bin\Debug\SmartHome.Util.dll.mdb
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\obj\Debug\SmartHome.Util.dll.mdb
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\bin\Debug\SmartHome.Util.dll.mdb
