@@ -149,9 +149,9 @@ namespace SmartHome.Droid.Activities
                 case 2:
                     fragment = new DeviceFragment();
                     break;
-                //case 3:
-                //    fragment = new UserListFragment();
-                //    break;
+                case 3:
+                    fragment = new UserListFragment();
+                    break;
             }
 
             var ft = FragmentManager.BeginTransaction();

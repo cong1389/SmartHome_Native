@@ -29,7 +29,7 @@ namespace SmartHome.Droid.Common
             var item = lstUser[position];
 
             if (convertView == null)
-                //convertView = currentContext.LayoutInflater.Inflate(Resource.Layout.UserListItem, null);
+                convertView = currentContext.LayoutInflater.Inflate(Resource.Layout.UserListItem, null);
             //else
             //{
             convertView.FindViewById<TextView>(Resource.Id.txtName).Text = item.name;

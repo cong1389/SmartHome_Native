@@ -169,12 +169,14 @@
     <Compile Include="Activities\LoginActivity.cs" />
     <Compile Include="Activities\DeviceFragment.cs" />
     <Compile Include="Activities\RoomFragment.cs" />
+    <Compile Include="Activities\UserEditActivity.cs" />
     <Compile Include="Common\DeviceAdapter.cs" />
     <Compile Include="Common\UserAdapter.cs" />
     <Compile Include="Common\RoomAdapter.cs" />
     <Compile Include="Common\HouseAdapter.cs" />
     <Compile Include="Common\Util.cs" />
     <Compile Include="Fragments\ScanIPFragment.cs" />
+    <Compile Include="Fragments\UserListFragment.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -223,6 +225,12 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\ScanIP.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\UserListLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\UserListItem.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

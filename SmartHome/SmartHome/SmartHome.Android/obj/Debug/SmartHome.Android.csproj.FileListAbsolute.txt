@@ -55,9 +55,7 @@ D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\D
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Debug\FormsViewGroup.dll.mdb
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Debug\Newtonsoft.Json.xml
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Debug\SmartHome.Abstract.pdb
-D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Debug\SmartHome.Abstract.dll.mdb
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Debug\SmartHome.Model.pdb
-D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Debug\SmartHome.Model.dll.mdb
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Debug\Xamarin.Forms.Core.pdb
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Debug\Xamarin.Forms.Core.xml
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Debug\Xamarin.Forms.Core.dll.mdb
@@ -130,9 +128,13 @@ D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\D
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\mipmap\save.png
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\R.cs.flag
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\uploadflags.txt
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\layout\userlistlayout.xml
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\layout\userlistitem.xml
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Debug\SmartHome.Android.dll.mdb
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Debug\SmartHome.Service.dll.mdb
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Debug\SmartHome.Util.dll.mdb
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Debug\SmartHome.Abstract.dll.mdb
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Debug\SmartHome.Model.dll.mdb
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Debug\Java.Interop.dll.mdb
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Debug\Microsoft.CSharp.dll.mdb
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Debug\Mono.Android.dll.mdb

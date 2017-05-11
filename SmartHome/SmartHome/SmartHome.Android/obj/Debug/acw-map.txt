@@ -6,6 +6,10 @@ SmartHome.Droid.Fragments.ScanIPFragment, SmartHome.Android;md5c48d5fd2ef7e15546
 SmartHome.Droid.Fragments.ScanIPFragment, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5c48d5fd2ef7e15546de38dddf4285994.ScanIPFragment
 SmartHome.Droid.Fragments.ScanIPFragment;md5c48d5fd2ef7e15546de38dddf4285994.ScanIPFragment
 smarthome.droid.fragments.ScanIPFragment;md5c48d5fd2ef7e15546de38dddf4285994.ScanIPFragment
+SmartHome.Droid.Fragments.UserListFragment, SmartHome.Android;md5c48d5fd2ef7e15546de38dddf4285994.UserListFragment
+SmartHome.Droid.Fragments.UserListFragment, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5c48d5fd2ef7e15546de38dddf4285994.UserListFragment
+SmartHome.Droid.Fragments.UserListFragment;md5c48d5fd2ef7e15546de38dddf4285994.UserListFragment
+smarthome.droid.fragments.UserListFragment;md5c48d5fd2ef7e15546de38dddf4285994.UserListFragment
 SmartHome.Droid.Common.DeviceAdapter, SmartHome.Android;md593c15f89dd0535b40c3a6874b15ca363.DeviceAdapter
 SmartHome.Droid.Common.DeviceAdapter, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md593c15f89dd0535b40c3a6874b15ca363.DeviceAdapter
 SmartHome.Droid.Common.DeviceAdapter;md593c15f89dd0535b40c3a6874b15ca363.DeviceAdapter
@@ -42,6 +46,10 @@ SmartHome.Droid.Activities.RoomFragment, SmartHome.Android;md50bc25531ae266a1f73
 SmartHome.Droid.Activities.RoomFragment, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50bc25531ae266a1f73d9f8430c1d471f.RoomFragment
 SmartHome.Droid.Activities.RoomFragment;md50bc25531ae266a1f73d9f8430c1d471f.RoomFragment
 smarthome.droid.activities.RoomFragment;md50bc25531ae266a1f73d9f8430c1d471f.RoomFragment
+SmartHome.Droid.Activities.UserEditActivity, SmartHome.Android;md50bc25531ae266a1f73d9f8430c1d471f.UserEditActivity
+SmartHome.Droid.Activities.UserEditActivity, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50bc25531ae266a1f73d9f8430c1d471f.UserEditActivity
+SmartHome.Droid.Activities.UserEditActivity;md50bc25531ae266a1f73d9f8430c1d471f.UserEditActivity
+smarthome.droid.activities.UserEditActivity;md50bc25531ae266a1f73d9f8430c1d471f.UserEditActivity
 Android.Support.V4.App.SharedElementCallback/IOnSharedElementsReadyListenerImplementor, Xamarin.Android.Support.Compat;mono.android.support.v4.app.SharedElementCallback_OnSharedElementsReadyListenerImplementor
 Android.Support.V4.App.SharedElementCallback+IOnSharedElementsReadyListenerImplementor, Xamarin.Android.Support.Compat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.app.SharedElementCallback_OnSharedElementsReadyListenerImplementor
 Android.Support.V4.App.SharedElementCallback.IOnSharedElementsReadyListenerImplementor;mono.android.support.v4.app.SharedElementCallback_OnSharedElementsReadyListenerImplementor

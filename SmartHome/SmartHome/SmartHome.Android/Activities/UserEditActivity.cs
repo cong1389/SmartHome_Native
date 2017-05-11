@@ -22,7 +22,7 @@ namespace SmartHome.Droid.Activities
         {
             base.OnCreate(savedInstanceState);
 
-            SetContentView(Resource.Layout.ScanIP);
+            SetContentView(Resource.Layout.UserListLayout);
         }
     }
 }

@@ -3340,7 +3340,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     public static final class id {
         public static final int HomeFrameLayout=0x7f090094;
         public static final int action0=0x7f0900b5;
-        public static final int action_attach=0x7f0900d7;
+        public static final int action_attach=0x7f0900d8;
         public static final int action_bar=0x7f090064;
         public static final int action_bar_activity_content=0x7f090001;
         public static final int action_bar_container=0x7f090063;
@@ -3357,7 +3357,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int action_mode_bar=0x7f090061;
         public static final int action_mode_bar_stub=0x7f090060;
         public static final int action_mode_close_button=0x7f090043;
-        public static final int action_refresh=0x7f0900d6;
+        public static final int action_refresh=0x7f0900d7;
         public static final int action_text=0x7f0900b4;
         public static final int actions=0x7f0900c2;
         public static final int activity_chooser_view_content=0x7f090044;
@@ -3369,6 +3369,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int auto=0x7f09002f;
         public static final int beginning=0x7f090020;
         public static final int bottom=0x7f090028;
+        public static final int btnAddUser=0x7f0900d4;
         public static final int btnLogin=0x7f09008e;
         public static final int btnScanClose=0x7f0900d2;
         public static final int btnScanIP=0x7f0900d1;
@@ -3433,10 +3434,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int listMode=0x7f09000f;
         public static final int list_item=0x7f090048;
         public static final int main_content=0x7f090080;
-        public static final int masked=0x7f0900d5;
+        public static final int masked=0x7f0900d6;
         public static final int media_actions=0x7f0900b8;
-        public static final int menu_settings=0x7f0900d9;
-        public static final int menu_share=0x7f0900d8;
+        public static final int menu_settings=0x7f0900da;
+        public static final int menu_share=0x7f0900d9;
         public static final int middle=0x7f090022;
         public static final int mini=0x7f09003e;
         public static final int mr_art=0x7f0900a4;
@@ -3465,12 +3466,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int mr_volume_item_icon=0x7f0900ab;
         public static final int mr_volume_slider=0x7f0900ac;
         public static final int multiply=0x7f09001a;
-        public static final int nav_SearchApartment=0x7f0900dd;
-        public static final int nav_device=0x7f0900dc;
-        public static final int nav_home=0x7f0900da;
-        public static final int nav_logout=0x7f0900df;
-        public static final int nav_room=0x7f0900db;
-        public static final int nav_userlist=0x7f0900de;
+        public static final int nav_SearchApartment=0x7f0900de;
+        public static final int nav_device=0x7f0900dd;
+        public static final int nav_home=0x7f0900db;
+        public static final int nav_logout=0x7f0900e0;
+        public static final int nav_room=0x7f0900dc;
+        public static final int nav_userlist=0x7f0900df;
         public static final int nav_usr=0x7f090088;
         public static final int nav_view=0x7f090097;
         public static final int navigation_header_container=0x7f09007a;
@@ -3558,7 +3559,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int up=0x7f090009;
         public static final int useLogo=0x7f090018;
         public static final int view_offset_helper=0x7f09000e;
-        public static final int visible=0x7f0900d4;
+        public static final int visible=0x7f0900d5;
         public static final int volume_item_container=0x7f0900aa;
         public static final int withText=0x7f090027;
         public static final int wrap_content=0x7f09001f;
@@ -3670,6 +3671,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int select_dialog_singlechoice_material=0x7f040055;
         public static final int support_simple_spinner_dropdown_item=0x7f040056;
         public static final int toolbar=0x7f040057;
+        public static final int userlistitem=0x7f040058;
+        public static final int userlistlayout=0x7f040059;
     }
     public static final class menu {
         public static final int action_menu=0x7f0f0000;

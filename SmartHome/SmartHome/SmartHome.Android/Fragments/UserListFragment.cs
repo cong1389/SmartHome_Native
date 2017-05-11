@@ -43,12 +43,11 @@ namespace SmartHome.Droid.Fragments
             View view = inflater.Inflate(Resource.Layout.UserListLayout, container, false);
             GetData(view);
 
-            //var addButton = (FloatingActionButton)view.FindViewById(Resource.Id.btnAddUser);
-
-            //addButton.Click += (sender, e) =>
-            //{
-            //    StartActivity(new Intent(Application.Context, typeof(UserEditActivity)));
-            //};
+            var addButton = (FloatingActionButton)view.FindViewById(Resource.Id.btnAddUser);
+            addButton.Click += (sender, e) =>
+            {
+                StartActivity(new Intent(Application.Context, typeof(UserEditActivity)));
+            };
 
             return view;
         }
@@ -62,20 +61,19 @@ namespace SmartHome.Droid.Fragments
             //SupportActionBar.SetDisplayShowHomeEnabled(true);
 
             //Lấy obj house đã lưu trước đó
-            //User obj_Result = AppInstance.user;
+            User obj_Result = AppInstance.user;
             List<User> lstUser = await APIManager.GetUserAll();
 
-
-            //Nếu house trước đó == NULL, thì gọi lại API GetHouse
+            ////Nếu house trước đó == NULL, thì gọi lại API GetHouse
             //if (obj_Result == null)
             //{
             //    userResponseCollection = await APIManager.GetUserAll();
             //    lstUser = (List<User>)userResponseCollection.data;
             //}
-            ////else
-            ////{
-            ////    lstUser = obj_Result;
-            ////}
+            //else
+            //{
+            //    lstUser = obj_Result;
+            //}
 
             //if (obj_Result != null)
             //{
