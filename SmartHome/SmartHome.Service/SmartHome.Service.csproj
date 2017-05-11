@@ -38,6 +38,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Response\HouseResponse.cs" />
     <Compile Include="Response\HouseResponseCollection.cs" />
+    <Compile Include="Response\UserResponseCollection.cs" />
     <Compile Include="Response\LoginResponse.cs" />
     <Compile Include="Response\StatusResponse.cs" />
   </ItemGroup>

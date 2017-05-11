@@ -17,6 +17,14 @@
       android:id="@+id/nav_SearchApartment"
       android:icon="@drawable/ic_devices_black_24dp"
       android:title="Scene Setting" />
+    <item
+     android:id="@+id/nav_userlist"
+     android:icon="@drawable/ic_devices_black_24dp"
+     android:title="User List" />
+    <item
+     android:id="@+id/nav_logout"
+     android:icon="@drawable/ic_devices_black_24dp"
+     android:title="Logout" />
   </group>
   <!--<item android:title="Review">
     <menu>

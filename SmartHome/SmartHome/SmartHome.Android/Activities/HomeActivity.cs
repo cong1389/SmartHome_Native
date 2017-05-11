@@ -14,6 +14,7 @@ using Android.Content;
 using Android.Support.V4.Widget;
 using Android.Support.Design.Widget;
 using Android.Views;
+using SmartHome.Droid.Fragments;
 
 namespace SmartHome.Droid.Activities
 {
@@ -22,7 +23,7 @@ namespace SmartHome.Droid.Activities
     {
         #region Parameter
 
-        HouseResponseCollection houseResponseCollection;
+        UserResponseCollection houseResponseCollection;
 
         GridView grdHouse;
 
@@ -148,7 +149,9 @@ namespace SmartHome.Droid.Activities
                 case 2:
                     fragment = new DeviceFragment();
                     break;
-
+                case 3:
+                    fragment = new UserListFragment();
+                    break;
             }
 
             var ft = FragmentManager.BeginTransaction();
@@ -161,7 +164,7 @@ namespace SmartHome.Droid.Activities
         private void NavigationView_NavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e)
         {
             switch (e.MenuItem.ItemId)
-            {
+            {                
                 case (Resource.Id.nav_home):
                     ListItemClicked(0);
                     break;
@@ -169,8 +172,11 @@ namespace SmartHome.Droid.Activities
                     ListItemClicked(1);
                     // Toast.MakeText(this, "Message selected!", ToastLength.Short).Show();
                     break;
-                case (Resource.Id.nav_device):
-                    ListItemClicked(2);
+                case (Resource.Id.nav_userlist):
+                    ListItemClicked(3);
+                    break;
+                case (Resource.Id.nav_logout):
+                    StartActivity(new Intent(Application.Context, typeof(LoginActivity)));
                     break;
             }
             // Close drawer

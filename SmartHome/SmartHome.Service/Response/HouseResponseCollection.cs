@@ -3,7 +3,7 @@ using SmartHome.Model;
 
 namespace SmartHome.Service.Response
 {
-    public class HouseResponseCollection :ResponseCollection<House>
+    public class HouseResponseCollection : ResponseCollection<House>
     {
     }
 

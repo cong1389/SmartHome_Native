@@ -18,3 +18,14 @@ D:\Working\SmartHome_Native\SmartHome\SmartHome.Util\obj\Release\SmartHome.Util.
 D:\Working\SmartHome_Native\SmartHome\SmartHome.Util\obj\Release\SmartHome.Util.pdb
 D:\Working\SmartHome_Native\SmartHome\SmartHome.Util\obj\Release\SmartHome.Util.dll.mdb
 D:\Working\SmartHome_Native\SmartHome\SmartHome.Util\bin\Release\SmartHome.Util.dll.mdb
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\bin\Release\SmartHome.Util.dll
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\bin\Release\SmartHome.Util.pdb
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\bin\Release\SmartHome.Model.dll
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\bin\Release\Newtonsoft.Json.dll
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\bin\Release\SmartHome.Model.pdb
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\bin\Release\Newtonsoft.Json.xml
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\obj\Release\SmartHome.Util.csprojResolveAssemblyReference.cache
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\obj\Release\SmartHome.Util.dll
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\obj\Release\SmartHome.Util.pdb
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\obj\Release\SmartHome.Util.dll.mdb
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\bin\Release\SmartHome.Util.dll.mdb

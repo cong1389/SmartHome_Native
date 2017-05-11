@@ -69,7 +69,9 @@ namespace SmartHome.Droid.Activities
             //Nếu house trước đó == NULL, thì gọi lại API GetHouse
             if (objHouse_Result == null)
             {
-                objHouse_Result = await APIManager.GetHouseByHouseId(houseId);
+                List<House> lstHouse = await APIManager.GetHouseByHouseId(houseId);
+                objHouse_Result = lstHouse[0];
+                lstRoom = objHouse_Result.rooms;
             }
             else
             {

@@ -14,14 +14,22 @@ namespace SmartHome.Model
         [JsonProperty("name")]
         public string name { get; set; }
 
+        [JsonProperty("description")]
+        public string description { get; set; }
+
         [JsonProperty("code")]
         public string code { get; set; }
+
+        [JsonProperty("address")]
+        public string address { get; set; }
+
+        [JsonProperty("active")]
+        public bool active { get; set; }
 
         [JsonProperty("rooms")]
         public List<Room> rooms { get; set; }
 
-        [JsonProperty("description")]
-        public string description { get; set; }
+       
 
 
     }

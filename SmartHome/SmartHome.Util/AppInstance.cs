@@ -26,7 +26,11 @@ namespace SmartHome.Util
 
         public static string api = "http://magnetapptest.herokuapp.com";
 
+        public static string api_UserAll = string.Format("{0}/{1}", api, "api/user/get");
         public static string api_LoginByUser = string.Format("{0}/{1}", api, "api/user/login");
+        public static string api_UserActive = string.Format("{0}/{1}", api, "api/user/active");
+        public static string api_UserDeActive = string.Format("{0}/{1}", api, "api/user/deactive");
+
 
         public static string api_HouseAll = string.Format("{0}/{1}", api, "api/house/getAll");
         public static string api_HouseByUser = string.Format("{0}/{1}", api, "api/house/getHouseByUserId");

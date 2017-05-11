@@ -43,13 +43,13 @@ namespace SmartHome.Droid.Activities
 
         private async Task GetHouseData(View view)
         {
-            User user = AppInstance.user;
-            lstHouse = user.houses;
-            if (lstHouse != null && lstHouse.Count > 0)
+            User user = AppInstance.user;          
+            if (user.houses != null && user.houses.Count > 0)
             {
-                House objHouse = await APIManager.GetHouseByHouseId(lstHouse[0].houseId);
-                lstHouse.Clear();
-                lstHouse.Add(objHouse);
+                List<House> lstHouse = await APIManager.GetHouseByHouseId(user.houses[0].houseId);
+                //House objHouse = await APIManager.GetHouseByHouseId(lstHouse[0].houseId);
+                //lstHouse.Clear();
+                //lstHouse.Add(objHouse);
 
                 var grdHouse = view.FindViewById<GridView>(Resource.Id.grdHouse);
                 grdHouse.Adapter = new HouseAdapter(Activity, lstHouse);
@@ -81,7 +81,7 @@ namespace SmartHome.Droid.Activities
 
             //StartActivity(roomActivity);
 
-            RoomFragment fragment = new RoomFragment(houseId);            
+            RoomFragment fragment = new RoomFragment(houseId);
             var ft = FragmentManager.BeginTransaction();
             ft.Replace(Resource.Id.HomeFrameLayout, fragment);
             ft.SetTransition(FragmentTransit.EnterMask);

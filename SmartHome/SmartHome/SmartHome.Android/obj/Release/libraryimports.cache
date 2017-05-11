@@ -14,6 +14,7 @@
     <ManifestDocument>obj\Release\__library_projects__\Xamarin.Android.Support.v7.CardView\library_project_imports\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Release\__library_projects__\Xamarin.Android.Support.v7.MediaRouter\library_project_imports\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Release\__library_projects__\Xamarin.Android.Support.v7.Palette\library_project_imports\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Release\__library_projects__\Xamarin.Android.Support.v7.Preference\library_project_imports\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Release\__library_projects__\Xamarin.Android.Support.v7.RecyclerView\library_project_imports\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Release\__library_projects__\Xamarin.Android.Support.Vector.Drawable\library_project_imports\AndroidManifest.xml</ManifestDocument>
   </ManifestDocuments>
@@ -21,6 +22,7 @@
   <Jars>
     <Jar>obj\Release\__library_projects__\FormsViewGroup\library_project_imports\formsviewgroup.jar</Jar>
     <Jar>obj\Release\__library_projects__\Xamarin.Android.Support.Animated.Vector.Drawable\library_project_imports\classes.jar</Jar>
+    <Jar>obj\Release\__library_projects__\Xamarin.Android.Support.Annotations\library_project_imports\support-annotations.jar</Jar>
     <Jar>obj\Release\__library_projects__\Xamarin.Android.Support.Compat\library_project_imports\classes.jar</Jar>
     <Jar>obj\Release\__library_projects__\Xamarin.Android.Support.Core.UI\library_project_imports\classes.jar</Jar>
     <Jar>obj\Release\__library_projects__\Xamarin.Android.Support.Core.Utils\library_project_imports\classes.jar</Jar>
@@ -33,6 +35,7 @@
     <Jar>obj\Release\__library_projects__\Xamarin.Android.Support.v7.CardView\library_project_imports\classes.jar</Jar>
     <Jar>obj\Release\__library_projects__\Xamarin.Android.Support.v7.MediaRouter\library_project_imports\classes.jar</Jar>
     <Jar>obj\Release\__library_projects__\Xamarin.Android.Support.v7.Palette\library_project_imports\classes.jar</Jar>
+    <Jar>obj\Release\__library_projects__\Xamarin.Android.Support.v7.Preference\library_project_imports\classes.jar</Jar>
     <Jar>obj\Release\__library_projects__\Xamarin.Android.Support.v7.RecyclerView\library_project_imports\classes.jar</Jar>
     <Jar>obj\Release\__library_projects__\Xamarin.Android.Support.Vector.Drawable\library_project_imports\classes.jar</Jar>
   </Jars>

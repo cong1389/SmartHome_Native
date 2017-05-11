@@ -55,7 +55,7 @@ namespace SmartHome.Droid.Common
 
             //    Xamarin.Forms.ResourceDictionary dic = new Xamarin.Forms.ResourceDictionary();
             Switch switch1 = convertView.FindViewById<Switch>(Resource.Id.switch1);
-            switch1.Checked = bool.Parse(item.status);
+            switch1.Checked = item.status;
             switch1.Tag = item.deviceId;
             switch1.CheckedChange += switcher_Toggled;
             //}

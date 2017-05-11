@@ -44,7 +44,7 @@ namespace SmartHome.Model
         [JsonProperty("active")]
         public bool active { get; set; }
 
-        [JsonProperty("acccessToken")]
-        public string acccessToken { get; set; }
+        [JsonProperty("accessToken")]
+        public string accessToken { get; set; }
     }
 }
