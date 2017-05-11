@@ -4,6 +4,6 @@
     <SelectedDevice>Genymotion Custom Phone - 4.1.1 - API 16 - 768x1280</SelectedDevice>
     <AndroidDesignerPreferredDevice>Custom Device %28notround%29</AndroidDesignerPreferredDevice>
     <DefaultDevice>AVD_GalaxyNexus_ToolsForApacheCordova</DefaultDevice>
-    <ProjectView>ProjectFiles</ProjectView>
+    <ProjectView>ShowAllFiles</ProjectView>
   </PropertyGroup>
 </Project>
