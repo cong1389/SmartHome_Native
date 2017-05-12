@@ -32,31 +32,31 @@ namespace SmartHome.Droid.Common
                 convertView = currentContext.LayoutInflater.Inflate(Resource.Layout.UserListItem, null);
             //else
             //{
-            convertView.FindViewById<TextView>(Resource.Id.txtName).Text = item.name;
+            convertView.FindViewById<TextView>(Resource.Id.userList_txtName).Text = item.name;
             //convertView.FindViewById<TextView>(Resource.Id.txtHouseId).Text = item.houseId;
             //convertView.FindViewById<ImageView>(Resource.Id.img).SetImageResource(Resource.Drawable.monkey);
             //}
 
-            Switch switch1 = convertView.FindViewById<Switch>(Resource.Id.switch1);
-            switch1.Checked = item.active;
-            switch1.Tag = item.userId;
-            switch1.CheckedChange += switcher_Toggled;
+            //Switch switch1 = convertView.FindViewById<Switch>(Resource.Id.switch1);
+            //switch1.Checked = item.active;
+            //switch1.Tag = item.userId;
+            //switch1.CheckedChange += switcher_Toggled;
 
             return convertView;
         }
 
-        private void switcher_Toggled(object sender, CompoundButton.CheckedChangeEventArgs e)
-        {
-            Switch switch1 = (Switch)sender;
-            string id = (string)switch1.Tag;
+        //private void switcher_Toggled(object sender, CompoundButton.CheckedChangeEventArgs e)
+        //{
+        //    Switch switch1 = (Switch)sender;
+        //    string id = (string)switch1.Tag;
 
-            Switche(id, e.IsChecked);
-        }
+        //    Switche(id, e.IsChecked);
+        //}
 
-        private async Task Switche(string userId,  bool status)
-        {
-            await APIManager.IsUserSetActive(userId,  status);
-        }
+        //private async Task Switche(string userId,  bool status)
+        //{
+        //    await APIManager.IsUserSetActive(userId,  status);
+        //}
 
         //Fill in cound here, currently 0
         public override int Count

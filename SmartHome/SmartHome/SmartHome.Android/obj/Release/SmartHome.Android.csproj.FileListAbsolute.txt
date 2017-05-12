@@ -151,4 +151,9 @@ D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\R
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Release\System.Transactions.dll.mdb
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Release\System.Xml.dll.mdb
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Release\System.Xml.Linq.dll.mdb
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\res\layout\userlistlayout.xml
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\res\layout\userlistitem.xml
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\res\layout\usereditlayout.xml
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\res\menu\usereditmenu.xml
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\SmartHome.Android.dll.mdb
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Release\SmartHome.Android.dll.mdb

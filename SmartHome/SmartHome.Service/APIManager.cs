@@ -53,6 +53,30 @@ namespace SmartHome.Service
 
         public static LoginResponse loginResponse { get; set; }
 
+        public static async Task<User> GetUserByUserId(string userId)
+        {
+            User objUser = new User();
+            try
+            {
+                var client = new HttpClient();
+                client.BaseAddress = new Uri(AppInstance.api);
+                client.DefaultRequestHeaders.Add("x-access-token", AppInstance.user.accessToken);
+
+                var response = await client.GetAsync(string.Format("{0}/{1}", AppInstance.api_UserGetByUserId, userId));
+                var statusCode = response.StatusCode; //get status return from api 
+                if (statusCode == HttpStatusCode.OK && response.IsSuccessStatusCode)
+                {
+                    var result = response.Content.ReadAsStringAsync().Result;
+                    objUser = !string.IsNullOrWhiteSpace(result) ? JsonConvert.DeserializeObject<User>(result) : null;
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+
+            return objUser;
+        }
+
         public static async Task<List<User>> GetUserAll()
         {
             List<User> lstUser = new List<User>();
@@ -148,9 +172,9 @@ namespace SmartHome.Service
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 client.DefaultRequestHeaders.Add("x-access-token", AppInstance.user.accessToken);
 
-                var str = new StringContent(string.Format("name={0}&deviceId={1}&tenantId={2}&username={3}&password={4}&mobile={5}&email={6}&address={7}&userId={}"
-                    , objUser.name, objUser.deviceId, objUser.tenantId, objUser.username, objUser.password, objUser.mobile, objUser.email, objUser.address, objUser.userId), Encoding.UTF8, "application/x-www-form-urlencoded");
-                var response = await client.PostAsync(new Uri(AppInstance.api_UserUpdate), str);
+                var str = new StringContent(string.Format("userId={0}&name={1}&mobile={2}&email={3}&address={4}&active={5}"
+                    , objUser.userId, objUser.name, objUser.mobile, objUser.email, objUser.address, objUser.active), Encoding.UTF8, "application/x-www-form-urlencoded");
+                var response = await client.PutAsync(new Uri(AppInstance.api_UserUpdate), str);
                 var statusCode = response.StatusCode; //get status return from api 
                 if (statusCode == HttpStatusCode.OK && response.IsSuccessStatusCode)
                 {
@@ -161,6 +185,67 @@ namespace SmartHome.Service
             catch (Exception ex)
             {
                 string msg = ex.Message;
+            }
+
+            return statusResponse;
+        }
+
+        public static async Task<StatusResponse> UserDelete(string userId)
+        {
+            try
+            {
+                var client = new HttpClient();
+                client.BaseAddress = new Uri(AppInstance.api);
+                client.DefaultRequestHeaders.Add("x-access-token", AppInstance.user.accessToken);
+
+                var response = await client.DeleteAsync(string.Format("{0}/{1}", AppInstance.api_UserDelete, userId));
+                var statusCode = response.StatusCode; //get status return from api 
+                if (statusCode == HttpStatusCode.OK && response.IsSuccessStatusCode)
+                {
+                    var result = response.Content.ReadAsStringAsync().Result;
+                    statusResponse = JsonConvert.DeserializeObject<StatusResponse>(result);
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+
+            return statusResponse;
+        }
+
+        public static async Task<StatusResponse> GetUserAddHouse(string houseId, string userId, bool statusCurrent)
+        {
+            try
+            {
+                var client = new HttpClient();
+                client.BaseAddress = new Uri(AppInstance.api);
+                client.DefaultRequestHeaders.Add("x-access-token", AppInstance.user.accessToken);
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                if (!statusCurrent)
+                {
+                    HttpRequestMessage request = new HttpRequestMessage
+                    {
+                        Content = new StringContent(string.Format("houseId={0}&userId={1}", houseId, userId), System.Text.Encoding.UTF8, "application/x-www-form-urlencoded"),
+                        Method = HttpMethod.Delete,
+                        RequestUri = new Uri(AppInstance.api_UserDeleteHouse)
+                    };
+                    client.SendAsync(request);
+                }
+                else
+                {
+                    HttpContent str = new StringContent(string.Format("houseId={0}&userId={1}", houseId, userId), System.Text.Encoding.UTF8, "application/x-www-form-urlencoded");
+                    var response = await client.PutAsync(AppInstance.api_UserAddHouse, str);
+                    var statusCode = response.StatusCode; //get status return from api 
+                    if (statusCode == HttpStatusCode.OK && response.IsSuccessStatusCode)
+                    {
+                        var result = response.Content.ReadAsStringAsync().Result;
+                        statusResponse = JsonConvert.DeserializeObject<StatusResponse>(result);
+                    }
+                }                
+            }
+            catch (Exception ex)
+            {
             }
 
             return statusResponse;
@@ -256,28 +341,30 @@ namespace SmartHome.Service
             //return AppInstance.houseData;
         }
 
-        public static async Task<HouseResponseCollection> GetHouseAll()
+        public static async Task<List<House>> GetHouseAll()
         {
+            List<House> lstHouse = new List<House>();
             try
             {
                 var client = new HttpClient();
                 client.BaseAddress = new Uri(AppInstance.api);
-                var response = await client.GetAsync(AppInstance.api_HouseAll);
+                client.DefaultRequestHeaders.Add("x-access-token", AppInstance.user.accessToken);
+
+                var response = await client.GetAsync(AppInstance.api_HouseGetAll);
                 var statusCode = response.StatusCode; //get status return from api 
                 if (statusCode == HttpStatusCode.OK && response.IsSuccessStatusCode)
                 {
                     //string messge = await response.RequestMessage.Content.ReadAsStringAsync(); //get message return from api
                     //checke message here before deserialize object
                     var result = response.Content.ReadAsStringAsync().Result;
-
-                    houseResponseCollection = !string.IsNullOrWhiteSpace(result) ? JsonConvert.DeserializeObject<HouseResponseCollection>(result) : null;
+                    lstHouse = !string.IsNullOrWhiteSpace(result) ? JsonConvert.DeserializeObject<List<House>>(result) : null;
                 }
             }
             catch (Exception ex)
             {
             }
 
-            return houseResponseCollection;
+            return lstHouse;
         }
 
         #endregion

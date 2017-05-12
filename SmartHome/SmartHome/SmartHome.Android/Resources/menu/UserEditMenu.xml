@@ -4,4 +4,8 @@
         android:icon="@mipmap/save"
         android:title="Refresh"
         myapp:showAsAction="always" />
+  <item android:id="@+id/userEdit_mnuDelete"
+        android:icon="@mipmap/save"
+        android:title="Delete"
+        myapp:showAsAction="always" />
 </menu>

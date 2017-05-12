@@ -32,7 +32,66 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="60dp">
-          <TextView             
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textSize="14dp"
+              android:layout_gravity="center_vertical"
+              android:text="Active/Deactive" />
+          <Switch
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/userEdit_switActive" />
+        </LinearLayout>
+
+        <GridView
+      android:id="@+id/userEdit_grdHouse"
+      android:paddingTop="8dp"
+      android:paddingBottom="8dp"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:numColumns="auto_fit"
+      android:longClickable="true"
+      android:stretchMode="columnWidth"
+      android:drawSelectorOnTop="true"
+      android:clipChildren="false"
+      android:clipToPadding="false"
+      android:horizontalSpacing="8dp"
+      android:verticalSpacing="8dp"
+      android:gravity="center"
+      android:fastScrollEnabled="true"
+      android:fastScrollAlwaysVisible="true"
+      android:scrollbarAlwaysDrawVerticalTrack="true"
+      android:scrollbars="vertical"
+      android:scrollbarStyle="outsideInset"
+      android:smoothScrollbar="true"
+      android:paddingRight="8dp"
+      android:paddingLeft="8dp"
+      android:paddingEnd="8dp"
+      android:paddingStart="8dp" />
+
+        <LinearLayout
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="60dp">
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textSize="14dp"
+              android:layout_gravity="center_vertical"
+              android:text="House" />
+          <Spinner
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:id="@+id/userEdit_spinHouse" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+          <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:textSize="14dp"
@@ -46,12 +105,11 @@
               android:inputType="text"
               android:layout_gravity="center_vertical" />
         </LinearLayout>
-
         <LinearLayout
-              android:orientation="horizontal"
-              android:layout_width="match_parent"
-              android:layout_height="60dp">
-          <TextView           
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+          <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:textSize="14dp"
@@ -65,12 +123,11 @@
               android:inputType="text"
               android:layout_gravity="center_vertical" />
         </LinearLayout>
-
         <LinearLayout
-              android:orientation="horizontal"
-              android:layout_width="match_parent"
-              android:layout_height="60dp">
-          <TextView              
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+          <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:textSize="14dp"
@@ -84,11 +141,10 @@
               android:inputType="text"
               android:layout_gravity="center_vertical" />
         </LinearLayout>
-
         <LinearLayout
-              android:orientation="horizontal"
-              android:layout_width="match_parent"
-              android:layout_height="60dp">
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
           <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
@@ -103,11 +159,10 @@
               android:inputType="text"
               android:layout_gravity="center_vertical" />
         </LinearLayout>
-
         <LinearLayout
-              android:orientation="horizontal"
-              android:layout_width="match_parent"
-              android:layout_height="60dp">
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
           <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
@@ -122,11 +177,10 @@
               android:inputType="text"
               android:layout_gravity="center_vertical" />
         </LinearLayout>
-
         <LinearLayout
-              android:orientation="horizontal"
-              android:layout_width="match_parent"
-              android:layout_height="60dp">
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
           <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
@@ -141,11 +195,10 @@
               android:inputType="text"
               android:layout_gravity="center_vertical" />
         </LinearLayout>
-
         <LinearLayout
-              android:orientation="horizontal"
-              android:layout_width="match_parent"
-              android:layout_height="60dp">
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
           <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
@@ -160,11 +213,10 @@
               android:inputType="text"
               android:layout_gravity="center_vertical" />
         </LinearLayout>
-
         <LinearLayout
-              android:orientation="horizontal"
-              android:layout_width="match_parent"
-              android:layout_height="60dp">
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
           <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
@@ -179,7 +231,6 @@
               android:inputType="text"
               android:layout_gravity="center_vertical" />
         </LinearLayout>
-
       </LinearLayout>
     </ScrollView>
   </LinearLayout>

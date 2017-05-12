@@ -170,6 +170,7 @@
     <Compile Include="Activities\DeviceFragment.cs" />
     <Compile Include="Activities\RoomFragment.cs" />
     <Compile Include="Activities\UserEditActivity.cs" />
+    <Compile Include="Common\HouseItemAdapter.cs" />
     <Compile Include="Common\DeviceAdapter.cs" />
     <Compile Include="Common\UserAdapter.cs" />
     <Compile Include="Common\RoomAdapter.cs" />
@@ -234,6 +235,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\UserEditLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\UserEdit_HouseItem.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

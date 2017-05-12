@@ -182,5 +182,6 @@ D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\D
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\layout\useredit_houseitem.xml
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\SmartHome.Android.dll.mdb
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Debug\SmartHome.Android.dll.mdb

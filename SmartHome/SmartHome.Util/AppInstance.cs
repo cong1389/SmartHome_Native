@@ -30,13 +30,18 @@ namespace SmartHome.Util
         public static string api_LoginByUser = string.Format("{0}/{1}", api, "api/user/login");
         public static string api_UserActive = string.Format("{0}/{1}", api, "api/user/active");
         public static string api_UserDeActive = string.Format("{0}/{1}", api, "api/user/deactive");
+        public static string api_UserGetByUserId = string.Format("{0}/{1}", api, "api/user/get");
         public static string api_UserCreate = string.Format("{0}/{1}", api, "api/user/create");
         public static string api_UserUpdate = string.Format("{0}/{1}", api, "api/user/update");
+        public static string api_UserDelete = string.Format("{0}/{1}", api, "api/user/delete");
+        public static string api_UserAddHouse = string.Format("{0}/{1}", api, "api/user/addHouse");
+        public static string api_UserDeleteHouse = string.Format("{0}/{1}", api, "api/user/removehouse");
 
-
-        public static string api_HouseAll = string.Format("{0}/{1}", api, "api/house/getAll");
+        public static string api_HouseGetAll = string.Format("{0}/{1}", api, "api/house/get");
         public static string api_HouseByUser = string.Format("{0}/{1}", api, "api/house/getHouseByUserId");
         public static string api_HouseGet = string.Format("{0}/{1}", api, "api/house/get");
+
+       
 
         public static string api_RoomByRoomId = string.Format("{0}/{1}", api, "api/room/get");
 

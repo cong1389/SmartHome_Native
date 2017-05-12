@@ -15,12 +15,16 @@ using Android.Support.V4.Widget;
 using Android.Support.Design.Widget;
 using Android.Views;
 using SmartHome.Droid.Fragments;
+using System;
+using System.Collections;
 
 namespace SmartHome.Droid.Activities
 {
     [Activity(Label = "UserEditActivity")]
     public class UserEditActivity : AppCompatActivity
     {
+        #region Parameter
+
         View _MainLayout;
         View _ContentLayout;
 
@@ -36,7 +40,54 @@ namespace SmartHome.Droid.Activities
         EditText userEdit_Email;
         EditText userEdit_Address;
 
-        void Save()
+        Switch userEdit_switActive;
+        AutoCompleteTextView userEdit_cboHouse;
+
+        #endregion
+
+        #region Common
+
+        private async void GetData()
+        {
+            objUser = await APIManager.GetUserByUserId(userId);
+
+            if (objUser != null)
+            {
+                userEdit_Name.Text = objUser.name;
+                userEdit_DeviceId.Text = objUser.deviceId;
+                userEdit_TenantId.Text = objUser.tenantId;
+                userEdit_UserName.Text = objUser.username;
+                userEdit_PassWord.Text = objUser.password;
+                userEdit_Mobile.Text = objUser.mobile;
+                userEdit_Email.Text = objUser.email;
+                userEdit_Address.Text = objUser.address;
+
+                //switch active/deactive user
+                userEdit_switActive.Checked = objUser.active;
+                userEdit_switActive.Tag = objUser.userId;
+                userEdit_switActive.CheckedChange += UserEdit_switActive_CheckedChange;
+
+                // Get all house bind vào adapter           
+                List<House> lstHouse = await APIManager.GetHouseAll();
+                List<House> lstHouseOld = objUser.houses;
+                var userEdit_grdHouse = FindViewById<GridView>(Resource.Id.userEdit_grdHouse);
+                userEdit_grdHouse.Adapter = new HouseItemAdapter(this, lstHouse,userId, lstHouseOld);
+
+                ArrayList arrHouse = new ArrayList();
+                foreach (House item in lstHouse)
+                {
+                    arrHouse.Add(item.name);
+                }
+                
+                Spinner userEdit_spinHouse = FindViewById<Spinner>(Resource.Id.userEdit_spinHouse);                
+
+                ArrayAdapter dynamicAdapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleSpinnerItem, arrHouse);                
+                dynamicAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleListItemChecked);                
+                userEdit_spinHouse.Adapter = dynamicAdapter;
+            }
+        }
+
+        private void Save()
         {
             //set alert for executing the task
             var alert = new Android.App.AlertDialog.Builder(this);
@@ -61,14 +112,13 @@ namespace SmartHome.Droid.Activities
                 return;
             }
             objUser = new User();
-            objUser.name = userEdit_Name.Text;
-            objUser.deviceId = userEdit_DeviceId.Text;
+            objUser.name = userEdit_Name.Text;  objUser.deviceId = userEdit_DeviceId.Text;
             objUser.tenantId = userEdit_TenantId.Text;
             objUser.username = userEdit_UserName.Text;
             objUser.password = userEdit_PassWord.Text;
             objUser.mobile = userEdit_Mobile.Text;
             objUser.email = userEdit_Email.Text;
-            objUser.address = userEdit_Address.Text;
+            objUser.address = userEdit_Address.Text;          
 
             if (userId == null)
             {
@@ -77,6 +127,7 @@ namespace SmartHome.Droid.Activities
             else
             {
                 objUser.userId = this.userId;
+                objUser.active = userEdit_switActive.Checked;
                 APIManager.UserUpdate(objUser);
             }
 
@@ -84,6 +135,14 @@ namespace SmartHome.Droid.Activities
 
             OnBackPressed();
         }
+
+        private void Delete()
+        {
+            APIManager.UserDelete(userId);
+            OnBackPressed();
+        }
+
+        #endregion
 
         #region Event        
 
@@ -122,6 +181,20 @@ namespace SmartHome.Droid.Activities
             userEdit_Email = FindViewById<EditText>(Resource.Id.userEdit_Email);
             userEdit_Address = FindViewById<EditText>(Resource.Id.userEdit_Address);
 
+            userEdit_switActive = FindViewById<Switch>(Resource.Id.userEdit_switActive);
+            //userEdit_cboHouse = FindViewById<AutoCompleteTextView>(Resource.Id.userEdit_cboHouse);
+
+            GetData();
+
+            
+        }
+
+        private async void UserEdit_switActive_CheckedChange(object sender, CompoundButton.CheckedChangeEventArgs e)
+        {
+            Switch switch1 = (Switch)sender;
+            string id = (string)switch1.Tag;
+
+            await APIManager.IsUserSetActive(id, e.IsChecked);
         }
 
         public override bool OnCreateOptionsMenu(Android.Views.IMenu menu)
@@ -145,10 +218,15 @@ namespace SmartHome.Droid.Activities
                 case Resource.Id.userEditMenuSaveButton:
                     Save();
                     break;
+                case Resource.Id.userEdit_mnuDelete:
+                    Delete();
+                    break;
             }
 
             return base.OnOptionsItemSelected(item);
         }
+
+       
 
         #endregion
     }

@@ -62,36 +62,10 @@ namespace SmartHome.Droid.Fragments
 
         private async Task GetData(View view)
         {
-            //// Init toolbar
-            //var toolbar = FindViewById<Toolbar>(Resource.Id.app_bar);
-            //SetSupportActionBar(toolbar);
-            //SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            //SupportActionBar.SetDisplayShowHomeEnabled(true);
-
-            //Lấy obj house đã lưu trước đó
-            User obj_Result = AppInstance.user;
-            List<User> lstUser = await APIManager.GetUserAll();
-
-            ////Nếu house trước đó == NULL, thì gọi lại API GetHouse
-            //if (obj_Result == null)
-            //{
-            //    userResponseCollection = await APIManager.GetUserAll();
-            //    lstUser = (List<User>)userResponseCollection.data;
-            //}
-            //else
-            //{
-            //    lstUser = obj_Result;
-            //}
-
-            //if (obj_Result != null)
-            //{
-            //    //houseId = obj_Result.houseId;
-
-            //    //view.Title = objHouse_Result.name ?? "houseName not available";
-
+            lstUser = await APIManager.GetUserAll();
             var userList_grd = view.FindViewById<GridView>(Resource.Id.userList_grd);
             userList_grd.Adapter = new UserAdapter(Activity, lstUser);
-            userList_grd.ItemClick += UserList_grd_ItemClick; ;
+            userList_grd.ItemClick += UserList_grd_ItemClick; 
         }
 
         private void UserList_grd_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
@@ -100,7 +74,7 @@ namespace SmartHome.Droid.Fragments
 
             var userEditActivity = new Intent(Activity, typeof(UserEditActivity));
             userEditActivity.PutExtra("userId", userId);
-            StartActivity(new Intent(Activity, typeof(UserEditActivity)));
+            StartActivity(userEditActivity);
         }
     }
 }
