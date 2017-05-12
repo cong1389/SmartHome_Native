@@ -233,6 +233,9 @@
     <AndroidResource Include="Resources\layout\UserListItem.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\UserEditLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\House.axml">
@@ -379,6 +382,7 @@
     <AndroidResource Include="Resources\mipmap\save.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\menu\UserEditMenu.xml" />
     <Content Include="THIRD-PARTY-NOTICES.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

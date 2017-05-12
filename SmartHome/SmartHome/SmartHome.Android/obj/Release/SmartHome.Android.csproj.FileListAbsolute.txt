@@ -152,4 +152,3 @@ D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\R
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Release\System.Xml.dll.mdb
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Release\System.Xml.Linq.dll.mdb
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Release\SmartHome.Android.dll.mdb
-D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Release\SmartHome.Android.dll.mdb

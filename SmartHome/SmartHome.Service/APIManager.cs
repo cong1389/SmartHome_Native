@@ -27,7 +27,6 @@ namespace SmartHome.Service
 
         public static async Task<StatusResponse> IsUserSetActive(string userId, bool statusCurrent)
         {
-            Status status = null;
             try
             {
                 var client = new HttpClient();
@@ -111,6 +110,60 @@ namespace SmartHome.Service
 
             return loginResponse;
             //return AppInstance.Data_HouseResponseCollection;
+        }
+
+        public static async Task<StatusResponse> UserCreate(User objUser)
+        {
+            try
+            {
+                var client = new HttpClient();
+                client.BaseAddress = new Uri(AppInstance.api);
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Add("x-access-token", AppInstance.user.accessToken);
+
+                var str = new StringContent(string.Format("name={0}&deviceId={1}&tenantId={2}&username={3}&password={4}&mobile={5}&email={6}&address={7}"
+                    , objUser.name, objUser.deviceId, objUser.tenantId, objUser.username, objUser.password, objUser.mobile, objUser.email, objUser.address), Encoding.UTF8, "application/x-www-form-urlencoded");
+                var response = await client.PostAsync(new Uri(AppInstance.api_UserCreate), str);
+                var statusCode = response.StatusCode; //get status return from api 
+                if (statusCode == HttpStatusCode.OK && response.IsSuccessStatusCode)
+                {
+                    var result = response.Content.ReadAsStringAsync().Result;
+                    statusResponse = JsonConvert.DeserializeObject<StatusResponse>(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                string msg = ex.Message;
+            }
+
+            return statusResponse;
+        }
+
+        public static async Task<StatusResponse> UserUpdate(User objUser)
+        {
+            try
+            {
+                var client = new HttpClient();
+                client.BaseAddress = new Uri(AppInstance.api);
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Add("x-access-token", AppInstance.user.accessToken);
+
+                var str = new StringContent(string.Format("name={0}&deviceId={1}&tenantId={2}&username={3}&password={4}&mobile={5}&email={6}&address={7}&userId={}"
+                    , objUser.name, objUser.deviceId, objUser.tenantId, objUser.username, objUser.password, objUser.mobile, objUser.email, objUser.address, objUser.userId), Encoding.UTF8, "application/x-www-form-urlencoded");
+                var response = await client.PostAsync(new Uri(AppInstance.api_UserUpdate), str);
+                var statusCode = response.StatusCode; //get status return from api 
+                if (statusCode == HttpStatusCode.OK && response.IsSuccessStatusCode)
+                {
+                    var result = response.Content.ReadAsStringAsync().Result;
+                    statusResponse = JsonConvert.DeserializeObject<StatusResponse>(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                string msg = ex.Message;
+            }
+
+            return statusResponse;
         }
 
         #endregion

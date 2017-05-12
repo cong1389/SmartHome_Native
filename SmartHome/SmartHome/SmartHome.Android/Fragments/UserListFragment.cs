@@ -24,6 +24,7 @@ namespace SmartHome.Droid.Fragments
     public class UserListFragment : Fragment
     {
         List<User> lstUser = null;
+        View view;
 
         public UserListFragment()
         {
@@ -36,15 +37,22 @@ namespace SmartHome.Droid.Fragments
             // Create your fragment here
         }
 
+        //protected override void OnResume()
+        //{
+        //    base.OnResume();
+
+        //    GetData(view);
+        //}
+
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             base.OnCreateView(inflater, container, savedInstanceState);
 
-            View view = inflater.Inflate(Resource.Layout.UserListLayout, container, false);
+            view = inflater.Inflate(Resource.Layout.UserListLayout, container, false);
             GetData(view);
 
-            var addButton = (FloatingActionButton)view.FindViewById(Resource.Id.btnAddUser);
-            addButton.Click += (sender, e) =>
+            var btnAddUser = (FloatingActionButton)view.FindViewById(Resource.Id.btnAddUser);
+            btnAddUser.Click += (sender, e) =>
             {
                 StartActivity(new Intent(Application.Context, typeof(UserEditActivity)));
             };
@@ -81,29 +89,18 @@ namespace SmartHome.Droid.Fragments
 
             //    //view.Title = objHouse_Result.name ?? "houseName not available";
 
-            var grdHouse = view.FindViewById<GridView>(Resource.Id.grdHouse);
-            grdHouse.Adapter = new UserAdapter(Activity, lstUser);
-            //    //grdHouse.ItemClick += GrdHouse_ItemClick;
-            //}
+            var userList_grd = view.FindViewById<GridView>(Resource.Id.userList_grd);
+            userList_grd.Adapter = new UserAdapter(Activity, lstUser);
+            userList_grd.ItemClick += UserList_grd_ItemClick; ;
         }
 
-        //private void GrdHouse_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
-        //{
-        //    string roomId = lstUser[e.Position].roomId;
-        //    string roomName = lstUser[e.Position].name;
+        private void UserList_grd_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            string userId = lstUser[e.Position].userId;
 
-        //    DeviceFragment fragment = new DeviceFragment(houseId, roomId);
-        //    var ft = FragmentManager.BeginTransaction();
-        //    ft.AddToBackStack("fdsa");
-        //    ft.Replace(Resource.Id.HomeFrameLayout, fragment);
-        //    ft.SetTransition(FragmentTransit.EnterMask);
-        //    ft.Commit();
-
-        //    //var deviceActivity = new Intent(this, typeof(DeviceActivity));
-        //    //deviceActivity.PutExtra("houseId", houseId);
-        //    //deviceActivity.PutExtra("roomId", roomId);
-        //    //deviceActivity.PutExtra("roomName", roomName);
-        //    //StartActivity(deviceActivity);
-        //}
+            var userEditActivity = new Intent(Activity, typeof(UserEditActivity));
+            userEditActivity.PutExtra("userId", userId);
+            StartActivity(new Intent(Activity, typeof(UserEditActivity)));
+        }
     }
 }

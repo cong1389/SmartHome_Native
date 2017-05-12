@@ -30,6 +30,8 @@ namespace SmartHome.Util
         public static string api_LoginByUser = string.Format("{0}/{1}", api, "api/user/login");
         public static string api_UserActive = string.Format("{0}/{1}", api, "api/user/active");
         public static string api_UserDeActive = string.Format("{0}/{1}", api, "api/user/deactive");
+        public static string api_UserCreate = string.Format("{0}/{1}", api, "api/user/create");
+        public static string api_UserUpdate = string.Format("{0}/{1}", api, "api/user/update");
 
 
         public static string api_HouseAll = string.Format("{0}/{1}", api, "api/house/getAll");

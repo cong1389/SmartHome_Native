@@ -9,7 +9,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:id="@+id/main_content">
-      <include layout="@layout/app_bar" />
+    
         <GridView
             android:id="@+id/grdHouse"
             android:paddingTop="8dp"

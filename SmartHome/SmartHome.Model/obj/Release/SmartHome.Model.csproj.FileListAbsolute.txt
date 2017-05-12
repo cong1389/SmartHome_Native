@@ -21,7 +21,3 @@ D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Model\bin\Release\Newto
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Model\obj\Release\SmartHome.Model.csprojResolveAssemblyReference.cache
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Model\obj\Release\SmartHome.Model.dll
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Model\obj\Release\SmartHome.Model.pdb
-D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Model\obj\Release\SmartHome.Model.dll.mdb
-D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Model\bin\Release\SmartHome.Model.dll.mdb
-D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Model\obj\Release\SmartHome.Model.dll.mdb
-D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Model\bin\Release\SmartHome.Model.dll.mdb

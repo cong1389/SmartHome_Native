@@ -34,7 +34,7 @@ namespace SmartHome.Droid.Fragments
             View view = inflater.Inflate(Resource.Layout.ScanIP, container, false);
 
             Dialog.Window.RequestFeature(WindowFeatures.NoTitle); //remove title area
-            Dialog.SetCanceledOnTouchOutside(false); //dismiss window on touch outside
+            //Dialog.SetCanceledOnTouchOutside(false); //dismiss window on touch outside
 
             Button btnScanClose = view.FindViewById<Button>(Resource.Id.btnScanClose);
             btnScanClose.Click += delegate

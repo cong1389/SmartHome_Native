@@ -6,7 +6,7 @@ namespace SmartHome.Model
     public class Status
     {
         [JsonProperty("Success")]
-        public string Success { get; set; }
+        public bool Success { get; set; }
 
         [JsonProperty("data")]
         public string data { get; set; }
