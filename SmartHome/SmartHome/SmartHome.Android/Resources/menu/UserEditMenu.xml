@@ -5,7 +5,7 @@
         android:title="Refresh"
         myapp:showAsAction="always" />
   <item android:id="@+id/userEdit_mnuDelete"
-        android:icon="@mipmap/save"
+        android:icon="@mipmap/delete"
         android:title="Delete"
         myapp:showAsAction="always" />
 </menu>

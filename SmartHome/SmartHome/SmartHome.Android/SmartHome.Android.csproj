@@ -387,6 +387,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\menu\UserEditMenu.xml" />
+    <AndroidResource Include="Resources\mipmap\delete.png" />
+    <AndroidResource Include="Resources\mipmap\cancel.png" />
+    <AndroidResource Include="Resources\mipmap\edit.png" />
     <Content Include="THIRD-PARTY-NOTICES.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

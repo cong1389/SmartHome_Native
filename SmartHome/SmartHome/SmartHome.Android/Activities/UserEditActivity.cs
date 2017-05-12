@@ -66,24 +66,24 @@ namespace SmartHome.Droid.Activities
                 userEdit_switActive.Checked = objUser.active;
                 userEdit_switActive.Tag = objUser.userId;
                 userEdit_switActive.CheckedChange += UserEdit_switActive_CheckedChange;
+                userEdit_switActive.Text = "Active/Deactive";
 
                 // Get all house bind vào adapter           
                 List<House> lstHouse = await APIManager.GetHouseAll();
                 List<House> lstHouseOld = objUser.houses;
                 var userEdit_grdHouse = FindViewById<GridView>(Resource.Id.userEdit_grdHouse);
-                userEdit_grdHouse.Adapter = new HouseItemAdapter(this, lstHouse,userId, lstHouseOld);
+                userEdit_grdHouse.Adapter = new HouseItemAdapter(this, lstHouse, userId, lstHouseOld);
 
                 ArrayList arrHouse = new ArrayList();
                 foreach (House item in lstHouse)
                 {
                     arrHouse.Add(item.name);
                 }
-                
-                Spinner userEdit_spinHouse = FindViewById<Spinner>(Resource.Id.userEdit_spinHouse);                
 
-                ArrayAdapter dynamicAdapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleSpinnerItem, arrHouse);                
-                dynamicAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleListItemChecked);                
-                userEdit_spinHouse.Adapter = dynamicAdapter;
+                //Spinner userEdit_spinHouse = FindViewById<Spinner>(Resource.Id.userEdit_spinHouse);
+                //ArrayAdapter dynamicAdapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleSpinnerItem, arrHouse);
+                //dynamicAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleListItemChecked);
+                //userEdit_spinHouse.Adapter = dynamicAdapter;
             }
         }
 
@@ -112,13 +112,13 @@ namespace SmartHome.Droid.Activities
                 return;
             }
             objUser = new User();
-            objUser.name = userEdit_Name.Text;  objUser.deviceId = userEdit_DeviceId.Text;
+            objUser.name = userEdit_Name.Text; objUser.deviceId = userEdit_DeviceId.Text;
             objUser.tenantId = userEdit_TenantId.Text;
             objUser.username = userEdit_UserName.Text;
             objUser.password = userEdit_PassWord.Text;
             objUser.mobile = userEdit_Mobile.Text;
             objUser.email = userEdit_Email.Text;
-            objUser.address = userEdit_Address.Text;          
+            objUser.address = userEdit_Address.Text;
 
             if (userId == null)
             {
@@ -186,7 +186,7 @@ namespace SmartHome.Droid.Activities
 
             GetData();
 
-            
+
         }
 
         private async void UserEdit_switActive_CheckedChange(object sender, CompoundButton.CheckedChangeEventArgs e)
@@ -226,7 +226,7 @@ namespace SmartHome.Droid.Activities
             return base.OnOptionsItemSelected(item);
         }
 
-       
+
 
         #endregion
     }
