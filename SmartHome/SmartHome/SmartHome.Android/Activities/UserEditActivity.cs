@@ -43,7 +43,10 @@ namespace SmartHome.Droid.Activities
         Switch userEdit_switActive;
         AutoCompleteTextView userEdit_cboHouse;
 
+        LinearLayout userEdit_linearResetPassword;
+        LinearLayout userEdit_linearChangePassword;
         TextView userEdit_txtResetPassword;
+        TextView userEdit_txtChangePassword;
 
         #endregion
 
@@ -88,10 +91,24 @@ namespace SmartHome.Droid.Activities
                 ArrayAdapter dynamicAdapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleSpinnerItem, data);
                 userEdit_spinHouse.Adapter = dynamicAdapter;
                 userEdit_spinHouse.ItemSelected += UserEdit_spinHouse_ItemSelected;
-                                
-                List<object> objRole = objUserCurrent.roles;
-                string roleCurrent = objRole != null ? objRole[0].ToString() : string.Empty;
+                List<object> lstRoleCurrent = objUserCurrent.roles;
+                string roleCurrent = lstRoleCurrent != null ? lstRoleCurrent[0].ToString() : string.Empty;
                 userEdit_spinHouse.SetSelection(roleCurrent == "admin" ? 0 : 1); ;
+
+
+                User objUser = AppInstance.user;
+                List<object> lstRole = objUser != null ? objUser.roles : null;
+                string roleAdmin = lstRole != null ? lstRole[0].ToString() : string.Empty;
+
+                switch (roleAdmin)
+                {
+                    case "admin":
+                        userEdit_linearChangePassword.Visibility = ViewStates.Invisible;
+                        break;
+                    case "user":
+                        userEdit_linearResetPassword.Visibility = ViewStates.Invisible;
+                        break;
+                }
                 //ArrayAdapter dynamicAdapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleSpinnerItem, arrHouse);
                 //dynamicAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleListItemChecked);
                 //userEdit_spinHouse.Adapter = dynamicAdapter;
@@ -179,6 +196,11 @@ namespace SmartHome.Droid.Activities
             StartActivity(new Intent(Application.Context, typeof(ResetPasswordActivity)));
         }
 
+        private void ChagePassword()
+        {
+            StartActivity(new Intent(Application.Context, typeof(ResetPasswordActivity)));
+        }
+
         #endregion
 
         #region Event        
@@ -224,8 +246,27 @@ namespace SmartHome.Droid.Activities
             GetData();
 
             //Reset password
+            userEdit_linearResetPassword = FindViewById<LinearLayout>(Resource.Id.userEdit_linearResetPassword);
             userEdit_txtResetPassword = FindViewById<TextView>(Resource.Id.userEdit_txtResetPassword);
             userEdit_txtResetPassword.Click += UserEdit_txtResetPassword_Click;
+
+            //Change password
+            userEdit_linearChangePassword = FindViewById<LinearLayout>(Resource.Id.userEdit_linearChangePassword);
+            userEdit_txtChangePassword = FindViewById<TextView>(Resource.Id.userEdit_txtChangePassword);
+            userEdit_txtChangePassword.Click += UserEdit_txtChangePassword_Click; ;
+        }
+
+        private async void UserEdit_txtChangePassword_Click(object sender, EventArgs e)
+        {
+            //Get admin userId
+            User objUserAdmin = AppInstance.user;
+            string adminId = objUserAdmin.userId;
+
+            SmartHome.Model.Message objMessage = await APIManager.ResetPasswordUser(adminId, objUserCurrent.userId, objUserCurrent.name);
+            if (objMessage != null)
+            {
+                Toast.MakeText(this, string.Format("New password: {0}", objMessage.message), ToastLength.Long).Show();
+            }
         }
 
         /// <summary>
@@ -239,10 +280,10 @@ namespace SmartHome.Droid.Activities
             User objUserAdmin = AppInstance.user;
             string adminId = objUserAdmin.userId;
 
-            SmartHome.Model.Message objMessage =  await APIManager.ResetPasswordUser(adminId, objUserCurrent.userId, objUserCurrent.name);
+            SmartHome.Model.Message objMessage = await APIManager.ResetPasswordUser(adminId, objUserCurrent.userId, objUserCurrent.name);
             if (objMessage != null)
             {
-                Toast.MakeText(this,string.Format("New password: {0}", objMessage.message) , ToastLength.Long).Show();
+                Toast.MakeText(this, string.Format("New password: {0}", objMessage.message), ToastLength.Long).Show();
             }
         }
 

@@ -42,6 +42,7 @@ namespace SmartHome.Util
         public static string api_HouseGet = string.Format("{0}/{1}", api, "api/house/get");
 
         public static string api_UserResetPassword = string.Format("{0}/{1}", api, "api/user/resetPassword");
+        public static string api_UserChangePassword = string.Format("{0}/{1}", api, "api/user/changePassword");
 
         //User role
         public static string api_UserAddRole = string.Format("{0}/{1}", api, "api/user/addAdminRole");

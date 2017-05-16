@@ -304,6 +304,32 @@ namespace SmartHome.Service
             return objMessage;
         }
 
+        public static async Task<Message> ChangePasswordUser(string username, string oldPassword, string newPassword,string userId)
+        {
+            SmartHome.Model.Message objMessage = new SmartHome.Model.Message();
+            try
+            {
+                var client = new HttpClient();
+                client.BaseAddress = new Uri(AppInstance.api);
+                client.DefaultRequestHeaders.Add("x-access-token", AppInstance.user.accessToken);
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                HttpContent str = new StringContent(string.Format("username={0}&oldPassword={1}&newPassword={2}&userId={3}", username, oldPassword, newPassword, userId), System.Text.Encoding.UTF8, "application/x-www-form-urlencoded");
+                var response = await client.PutAsync(AppInstance.api_UserChangePassword, str);
+                var statusCode = response.StatusCode; //get status return from api 
+                if (statusCode == HttpStatusCode.OK && response.IsSuccessStatusCode)
+                {
+                    var result = response.Content.ReadAsStringAsync().Result;
+                    objMessage = JsonConvert.DeserializeObject<Message>(result);
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+
+            return objMessage;
+        }
+
         #endregion
 
         #region House        
