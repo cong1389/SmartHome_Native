@@ -28,8 +28,8 @@ namespace SmartHome.Droid.Activities
         View _MainLayout;
         View _ContentLayout;
 
-        User objUser;
-        string userId = string.Empty;
+        User objUserCurrent;
+        string userIdCurrent = string.Empty;
 
         EditText userEdit_Name;
         EditText userEdit_DeviceId;
@@ -43,36 +43,38 @@ namespace SmartHome.Droid.Activities
         Switch userEdit_switActive;
         AutoCompleteTextView userEdit_cboHouse;
 
+        TextView userEdit_txtResetPassword;
+
         #endregion
 
         #region Common
 
         private async void GetData()
         {
-            objUser = await APIManager.GetUserByUserId(userId);
+            objUserCurrent = await APIManager.GetUserByUserId(userIdCurrent);
 
-            if (objUser != null)
+            if (objUserCurrent != null)
             {
-                userEdit_Name.Text = objUser.name;
-                userEdit_DeviceId.Text = objUser.deviceId;
-                userEdit_TenantId.Text = objUser.tenantId;
-                userEdit_UserName.Text = objUser.username;
-                userEdit_PassWord.Text = objUser.password;
-                userEdit_Mobile.Text = objUser.mobile;
-                userEdit_Email.Text = objUser.email;
-                userEdit_Address.Text = objUser.address;
+                userEdit_Name.Text = objUserCurrent.name;
+                userEdit_DeviceId.Text = objUserCurrent.deviceId;
+                userEdit_TenantId.Text = objUserCurrent.tenantId;
+                userEdit_UserName.Text = objUserCurrent.username;
+                userEdit_PassWord.Text = objUserCurrent.password;
+                userEdit_Mobile.Text = objUserCurrent.mobile;
+                userEdit_Email.Text = objUserCurrent.email;
+                userEdit_Address.Text = objUserCurrent.address;
 
                 //switch active/deactive user
-                userEdit_switActive.Checked = objUser.active;
-                userEdit_switActive.Tag = objUser.userId;
+                userEdit_switActive.Checked = objUserCurrent.active;
+                userEdit_switActive.Tag = objUserCurrent.userId;
                 userEdit_switActive.CheckedChange += UserEdit_switActive_CheckedChange;
                 userEdit_switActive.Text = "Active/Deactive";
 
                 // Get all house bind vào adapter           
                 List<House> lstHouse = await APIManager.GetHouseAll();
-                List<House> lstHouseOld = objUser.houses;
+                List<House> lstHouseOld = objUserCurrent.houses;
                 var userEdit_grdHouse = FindViewById<GridView>(Resource.Id.userEdit_grdHouse);
-                userEdit_grdHouse.Adapter = new HouseItemAdapter(this, lstHouse, userId, lstHouseOld);
+                userEdit_grdHouse.Adapter = new HouseItemAdapter(this, lstHouse, userIdCurrent, lstHouseOld);
 
                 ArrayList arrHouse = new ArrayList();
                 foreach (House item in lstHouse)
@@ -80,11 +82,41 @@ namespace SmartHome.Droid.Activities
                     arrHouse.Add(item.name);
                 }
 
-                //Spinner userEdit_spinHouse = FindViewById<Spinner>(Resource.Id.userEdit_spinHouse);
+                Spinner userEdit_spinHouse = FindViewById<Spinner>(Resource.Id.userEdit_spinHouse);
+
+                string[] data = { "admin", "user" };
+                ArrayAdapter dynamicAdapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleSpinnerItem, data);
+                userEdit_spinHouse.Adapter = dynamicAdapter;
+                userEdit_spinHouse.ItemSelected += UserEdit_spinHouse_ItemSelected;
+                                
+                List<object> objRole = objUserCurrent.roles;
+                string roleCurrent = objRole != null ? objRole[0].ToString() : string.Empty;
+                userEdit_spinHouse.SetSelection(roleCurrent == "admin" ? 0 : 1); ;
                 //ArrayAdapter dynamicAdapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleSpinnerItem, arrHouse);
                 //dynamicAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleListItemChecked);
                 //userEdit_spinHouse.Adapter = dynamicAdapter;
             }
+        }
+
+        private async void UserEdit_spinHouse_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            Spinner spinner = (Spinner)sender;
+            string roleName = spinner.GetItemAtPosition(e.Position).ToString();
+            User objUser = AppInstance.user;
+            List<object> objRole = objUser.roles;
+            string roleCurrent = objRole != null ? objRole[0].ToString() : string.Empty;
+
+            if (roleCurrent == roleName)
+            {
+                await APIManager.UserAddDeleteRole(userIdCurrent, "admin", true);
+            }
+            else
+            {
+                await APIManager.UserAddDeleteRole(userIdCurrent, "admin", false);
+            }
+
+            //string toast = string.Format("The planet is {0}", spinner.GetItemAtPosition(e.Position));
+            //Toast.MakeText(this, toast, ToastLength.Long).Show();
         }
 
         private void Save()
@@ -111,24 +143,24 @@ namespace SmartHome.Droid.Activities
 
                 return;
             }
-            objUser = new User();
-            objUser.name = userEdit_Name.Text; objUser.deviceId = userEdit_DeviceId.Text;
-            objUser.tenantId = userEdit_TenantId.Text;
-            objUser.username = userEdit_UserName.Text;
-            objUser.password = userEdit_PassWord.Text;
-            objUser.mobile = userEdit_Mobile.Text;
-            objUser.email = userEdit_Email.Text;
-            objUser.address = userEdit_Address.Text;
+            objUserCurrent = new User();
+            objUserCurrent.name = userEdit_Name.Text; objUserCurrent.deviceId = userEdit_DeviceId.Text;
+            objUserCurrent.tenantId = userEdit_TenantId.Text;
+            objUserCurrent.username = userEdit_UserName.Text;
+            objUserCurrent.password = userEdit_PassWord.Text;
+            objUserCurrent.mobile = userEdit_Mobile.Text;
+            objUserCurrent.email = userEdit_Email.Text;
+            objUserCurrent.address = userEdit_Address.Text;
 
-            if (userId == null)
+            if (userIdCurrent == null)
             {
-                APIManager.UserCreate(objUser);
+                APIManager.UserCreate(objUserCurrent);
             }
             else
             {
-                objUser.userId = this.userId;
-                objUser.active = userEdit_switActive.Checked;
-                APIManager.UserUpdate(objUser);
+                objUserCurrent.userId = this.userIdCurrent;
+                objUserCurrent.active = userEdit_switActive.Checked;
+                APIManager.UserUpdate(objUserCurrent);
             }
 
             //Task<StatusResponse> statusResponse= userId == string.Empty ? APIManager.UserCreate(objUser) : APIManager.UserUpdate(objUser);            
@@ -138,8 +170,13 @@ namespace SmartHome.Droid.Activities
 
         private void Delete()
         {
-            APIManager.UserDelete(userId);
+            APIManager.UserDelete(userIdCurrent);
             OnBackPressed();
+        }
+
+        private void ResetPassword()
+        {
+            StartActivity(new Intent(Application.Context, typeof(ResetPasswordActivity)));
         }
 
         #endregion
@@ -170,7 +207,7 @@ namespace SmartHome.Droid.Activities
         {
             base.OnResume();
 
-            userId = Intent.GetStringExtra("userId");
+            userIdCurrent = Intent.GetStringExtra("userId");
 
             userEdit_Name = FindViewById<EditText>(Resource.Id.userEdit_Name);
             userEdit_DeviceId = FindViewById<EditText>(Resource.Id.userEdit_DeviceId);
@@ -186,7 +223,27 @@ namespace SmartHome.Droid.Activities
 
             GetData();
 
+            //Reset password
+            userEdit_txtResetPassword = FindViewById<TextView>(Resource.Id.userEdit_txtResetPassword);
+            userEdit_txtResetPassword.Click += UserEdit_txtResetPassword_Click;
+        }
 
+        /// <summary>
+        /// chỉ có admin reset pass của user thuộc role user, admin k tự reset pass của mình
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void UserEdit_txtResetPassword_Click(object sender, EventArgs e)
+        {
+            //Get admin userId
+            User objUserAdmin = AppInstance.user;
+            string adminId = objUserAdmin.userId;
+
+            SmartHome.Model.Message objMessage =  await APIManager.ResetPasswordUser(adminId, objUserCurrent.userId, objUserCurrent.name);
+            if (objMessage != null)
+            {
+                Toast.MakeText(this,string.Format("New password: {0}", objMessage.message) , ToastLength.Long).Show();
+            }
         }
 
         private async void UserEdit_switActive_CheckedChange(object sender, CompoundButton.CheckedChangeEventArgs e)
@@ -220,6 +277,9 @@ namespace SmartHome.Droid.Activities
                     break;
                 case Resource.Id.userEdit_mnuDelete:
                     Delete();
+                    break;
+                case Resource.Id.userEdit_mnuResetPw:
+                    ResetPassword();
                     break;
             }
 

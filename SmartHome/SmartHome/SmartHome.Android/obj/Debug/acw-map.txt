@@ -46,6 +46,10 @@ SmartHome.Droid.Activities.DeviceFragment, SmartHome.Android;md50bc25531ae266a1f
 SmartHome.Droid.Activities.DeviceFragment, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50bc25531ae266a1f73d9f8430c1d471f.DeviceFragment
 SmartHome.Droid.Activities.DeviceFragment;md50bc25531ae266a1f73d9f8430c1d471f.DeviceFragment
 smarthome.droid.activities.DeviceFragment;md50bc25531ae266a1f73d9f8430c1d471f.DeviceFragment
+SmartHome.Droid.Activities.ResetPasswordActivity, SmartHome.Android;md50bc25531ae266a1f73d9f8430c1d471f.ResetPasswordActivity
+SmartHome.Droid.Activities.ResetPasswordActivity, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50bc25531ae266a1f73d9f8430c1d471f.ResetPasswordActivity
+SmartHome.Droid.Activities.ResetPasswordActivity;md50bc25531ae266a1f73d9f8430c1d471f.ResetPasswordActivity
+smarthome.droid.activities.ResetPasswordActivity;md50bc25531ae266a1f73d9f8430c1d471f.ResetPasswordActivity
 SmartHome.Droid.Activities.RoomFragment, SmartHome.Android;md50bc25531ae266a1f73d9f8430c1d471f.RoomFragment
 SmartHome.Droid.Activities.RoomFragment, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50bc25531ae266a1f73d9f8430c1d471f.RoomFragment
 SmartHome.Droid.Activities.RoomFragment;md50bc25531ae266a1f73d9f8430c1d471f.RoomFragment

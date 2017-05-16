@@ -25,6 +25,32 @@ namespace SmartHome.Service
 
         #region User
 
+        public static async Task<StatusResponse> UserAddDeleteRole(string userId, string roleId,bool isAdd)
+        {
+            try
+            {
+                var client = new HttpClient();
+                client.BaseAddress = new Uri(AppInstance.api);
+                client.DefaultRequestHeaders.Add("x-access-token", AppInstance.user.accessToken);
+
+                HttpContent str = new StringContent(string.Format("userId={0}&roleId={1}", userId,roleId), System.Text.Encoding.UTF8, "application/x-www-form-urlencoded");
+                var response = isAdd == true ? await client.PutAsync(AppInstance.api_UserAddRole, str) : await client.PutAsync(AppInstance.api_UserRemoveRole, str);
+                var statusCode = response.StatusCode;
+                if (statusCode == HttpStatusCode.OK && response.IsSuccessStatusCode)
+                {
+                    var result = response.Content.ReadAsStringAsync().Result;
+                    statusResponse = JsonConvert.DeserializeObject<StatusResponse>(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                //houseResponseCollection.Error = ex.Message;
+            }
+
+            //return houseResponseCollection;
+            return statusResponse;
+        }
+        
         public static async Task<StatusResponse> IsUserSetActive(string userId, bool statusCurrent)
         {
             try
@@ -224,13 +250,14 @@ namespace SmartHome.Service
 
                 if (!statusCurrent)
                 {
-                    HttpRequestMessage request = new HttpRequestMessage
+                    HttpContent str = new StringContent(string.Format("houseId={0}&userId={1}", houseId, userId), System.Text.Encoding.UTF8, "application/x-www-form-urlencoded");
+                    var response = await client.PutAsync(AppInstance.api_UserRemoveHouse, str);
+                    var statusCode = response.StatusCode; //get status return from api 
+                    if (statusCode == HttpStatusCode.OK && response.IsSuccessStatusCode)
                     {
-                        Content = new StringContent(string.Format("houseId={0}&userId={1}", houseId, userId), System.Text.Encoding.UTF8, "application/x-www-form-urlencoded"),
-                        Method = HttpMethod.Delete,
-                        RequestUri = new Uri(AppInstance.api_UserDeleteHouse)
-                    };
-                    client.SendAsync(request);
+                        var result = response.Content.ReadAsStringAsync().Result;
+                        statusResponse = JsonConvert.DeserializeObject<StatusResponse>(result);
+                    }
                 }
                 else
                 {
@@ -249,6 +276,32 @@ namespace SmartHome.Service
             }
 
             return statusResponse;
+        }
+
+        public static async Task<Message> ResetPasswordUser(string adminId, string userId, string username)
+        {
+            SmartHome.Model.Message objMessage = new SmartHome.Model.Message();
+            try
+            {
+                var client = new HttpClient();
+                client.BaseAddress = new Uri(AppInstance.api);
+                client.DefaultRequestHeaders.Add("x-access-token", AppInstance.user.accessToken);
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                HttpContent str = new StringContent(string.Format("adminId={0}&userId={1}&username={2}", adminId, userId, username), System.Text.Encoding.UTF8, "application/x-www-form-urlencoded");
+                var response = await client.PutAsync(AppInstance.api_UserResetPassword, str);
+                var statusCode = response.StatusCode; //get status return from api 
+                if (statusCode == HttpStatusCode.OK && response.IsSuccessStatusCode)
+                {
+                    var result = response.Content.ReadAsStringAsync().Result;
+                    objMessage = JsonConvert.DeserializeObject<Message>(result);
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+
+            return objMessage;
         }
 
         #endregion

@@ -8,4 +8,8 @@
         android:icon="@mipmap/delete"
         android:title="Delete"
         myapp:showAsAction="always" />
+  <item android:id="@+id/userEdit_mnuResetPw"
+        android:icon="@mipmap/delete"
+        android:title="Change Password"
+        myapp:showAsAction="always" />
 </menu>

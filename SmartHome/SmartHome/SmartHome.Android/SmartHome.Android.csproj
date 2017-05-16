@@ -168,6 +168,7 @@
     <Compile Include="Activities\HomeActivity.cs" />
     <Compile Include="Activities\LoginActivity.cs" />
     <Compile Include="Activities\DeviceFragment.cs" />
+    <Compile Include="Activities\ResetPasswordActivity.cs" />
     <Compile Include="Activities\RoomFragment.cs" />
     <Compile Include="Activities\UserEditActivity.cs" />
     <Compile Include="Common\HouseItemAdapter.cs" />
@@ -184,6 +185,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml">
@@ -238,6 +240,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\UserEdit_HouseItem.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ResetPasswordLayout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

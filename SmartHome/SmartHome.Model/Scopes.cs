@@ -1,10 +1,12 @@
 ﻿using Newtonsoft.Json;
+using System;
+using System.Collections;
 
 namespace SmartHome.Model
 {
-    public class Scopes
+    public class Roles
     {
-        [JsonProperty("scopeId")]
-        public string scopeId { get; set; }
+        [JsonProperty("roles")]
+        public Array roles { get; set; }
     }
 }

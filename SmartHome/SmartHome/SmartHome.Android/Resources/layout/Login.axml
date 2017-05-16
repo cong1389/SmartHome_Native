@@ -62,7 +62,7 @@
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView1"
+                    android:id="@+id/txtForgotPassword"
                     android:textAlignment="center"
                     android:textColorLink="@color/abc_primary_text_disable_only_material_light"
                     android:gravity="right" />

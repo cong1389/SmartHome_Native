@@ -186,5 +186,6 @@ D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\D
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\mipmap\delete.png
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\mipmap\cancel.png
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\mipmap\edit.png
+D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\layout\resetpasswordlayout.xml
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\SmartHome.Android.dll.mdb
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Debug\SmartHome.Android.dll.mdb

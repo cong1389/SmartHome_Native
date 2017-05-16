@@ -8,8 +8,8 @@ namespace SmartHome.Model
         [JsonProperty("userId")]
         public string userId { get; set; }        
 
-        [JsonProperty("apps")]
-        public List<Apps> apps { get; set; }
+        [JsonProperty("appTokens")]
+        public List<Apps> appTokens { get; set; }
 
         [JsonProperty("houses")]
         public List<House> houses { get; set; }
@@ -17,8 +17,8 @@ namespace SmartHome.Model
         [JsonProperty("name")]
         public string name { get; set; }
 
-        [JsonProperty("scopes")]
-        public List<Scopes> scopes { get; set; }        
+        [JsonProperty("roles")]
+        public List<object> roles { get; set; }        
 
         [JsonProperty("deviceId")]
         public string deviceId { get; set; }

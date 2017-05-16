@@ -58,8 +58,16 @@ namespace SmartHome.Droid.Activities
             Button btnLogin = FindViewById<Button>(Resource.Id.btnLogin);
             btnLogin.Click += BtnLogin_Click;
 
+            TextView txtForgotPassword = FindViewById<TextView>(Resource.Id.txtForgotPassword);
+            txtForgotPassword.Click += TxtForgotPassword_Click;
+
             ImageView imgScan = FindViewById<ImageView>(Resource.Id.imgScan);
             imgScan.Click += ImgScan_Click;
+        }
+
+        private void TxtForgotPassword_Click(object sender, EventArgs e)
+        {
+            StartActivity(new Intent(Application.Context, typeof(ResetPasswordActivity)));
         }
 
         private void ImgScan_Click(object sender, EventArgs e)

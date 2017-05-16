@@ -34,10 +34,9 @@ namespace SmartHome.Droid.Common
             if (convertView == null)
                 convertView = currentContext.LayoutInflater.Inflate(Resource.Layout.UserEdit_HouseItem, null);
 
-            //convertView.FindViewById<TextView>(Resource.Id.userEdit_HouseItem_txtHouse).Text = item.name;
-
+            convertView.FindViewById<TextView>(Resource.Id.userEdit_HouseItem_txtName).Text = item.name;
             Switch switch1 = convertView.FindViewById<Switch>(Resource.Id.userEdit_HouseItem_switch);
-            switch1.Text = item.name;
+            //switch1.Text = item.name;
             //set status house
             if (lstHouseOld != null)
             {
@@ -48,8 +47,6 @@ namespace SmartHome.Droid.Common
             }
             switch1.Tag = item.houseId;
             switch1.CheckedChange += switcher_Toggled;
-
-           
 
             return convertView;
         }
