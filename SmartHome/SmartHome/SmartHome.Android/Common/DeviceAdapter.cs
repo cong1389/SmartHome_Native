@@ -63,12 +63,14 @@ namespace SmartHome.Droid.Common
             return convertView;
         }
 
-        private void switcher_Toggled(object sender, CompoundButton.CheckedChangeEventArgs e)
+        private async void switcher_Toggled(object sender, CompoundButton.CheckedChangeEventArgs e)
         {
             Switch switch1 = (Switch)sender;
             string deviceId = (string)switch1.Tag;
+            string userId = AppInstance.user.userId;
 
-            Switche(houseId, roomId, deviceId, e.IsChecked);
+            await APIManager.DeviceExecutePair(userId, houseId, roomId, deviceId);
+            //  Switche(houseId, roomId, deviceId, e.IsChecked);
         }
 
         private async Task Switche(string houseId, string roomId, string deviceId, bool status)

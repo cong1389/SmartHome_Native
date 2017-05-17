@@ -47,6 +47,7 @@ namespace SmartHome.Droid.Activities
             if (user.houses != null && user.houses.Count > 0)
             {
                 List<House> lstHouse = await APIManager.GetHouseByHouseId(user.houses[0].houseId);
+                
                 //House objHouse = await APIManager.GetHouseByHouseId(lstHouse[0].houseId);
                 //lstHouse.Clear();
                 //lstHouse.Add(objHouse);

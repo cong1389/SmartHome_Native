@@ -562,6 +562,32 @@ namespace SmartHome.Service
             return statusResponse;
         }
 
+        public static async Task<StatusResponse> DeviceExecutePair(string userId, string houseId, string roomId, string deviceId)
+        {
+            Status status = null;
+            try
+            {
+                var client = new HttpClient();
+                client.BaseAddress = new Uri(AppInstance.api);
+                client.DefaultRequestHeaders.Add("x-access-token", AppInstance.user.accessToken);
+
+                var str = new StringContent(string.Format("userId={0}&houseId={1}&roomId={2}&deviceId={3}", userId, houseId, roomId, deviceId), Encoding.UTF8, "application/x-www-form-urlencoded");
+                var response = await client.PostAsync(AppInstance.api_DeviExecutePair, str);
+                var statusCode = response.StatusCode;
+                if (statusCode == HttpStatusCode.OK && response.IsSuccessStatusCode)
+                {
+                    var result = response.Content.ReadAsStringAsync().Result;
+                    statusResponse = JsonConvert.DeserializeObject<StatusResponse>(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                //houseResponseCollection.Error = ex.Message;
+            }
+            
+            return statusResponse;
+        }
+
         #endregion
 
         #region Hello

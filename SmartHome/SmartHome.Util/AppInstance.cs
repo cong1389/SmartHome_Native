@@ -56,6 +56,8 @@ namespace SmartHome.Util
         public static string api_DeviceTestOn = string.Format("{0}/{1}", api, "api/Manager/testOn");
         public static string api_DeviceTestOff = string.Format("{0}/{1}", api, "api/Manager/testOff");
 
+        public static string api_DeviExecutePair = string.Format("{0}/{1}", api, "api/Manager/executePairByDevice");
+
         public static string api_hello = string.Format("{0}/{1}", api, "api/hello");
 
         #endregion

@@ -17,7 +17,7 @@ namespace SmartHome.Droid.Common
     class HouseAdapter : BaseAdapter<House>
     {
         Activity currentContext;
-        List<House> lstHouse;        
+        List<House> lstHouse;
 
         public HouseAdapter(Activity currentContext, List<House> lstHouse)
         {
@@ -38,9 +38,9 @@ namespace SmartHome.Droid.Common
                 convertView = currentContext.LayoutInflater.Inflate(Resource.Layout.HouseGridViewItem, null);
             //else
             //{
-                convertView.FindViewById<TextView>(Resource.Id.txtName).Text = item.name;
-                convertView.FindViewById<TextView>(Resource.Id.txtHouseId).Text = item.houseId;
-                //convertView.FindViewById<ImageView>(Resource.Id.img).SetImageResource(Resource.Drawable.monkey);
+            convertView.FindViewById<TextView>(Resource.Id.txtName).Text = item.name;
+            convertView.FindViewById<TextView>(Resource.Id.txtHouseId).Text = item.houseId;
+            //convertView.FindViewById<ImageView>(Resource.Id.img).SetImageResource(Resource.Drawable.monkey);
             //}
 
             return convertView;
