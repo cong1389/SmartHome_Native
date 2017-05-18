@@ -77,6 +77,9 @@ namespace SmartHome.Droid.Activities
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             SupportActionBar.SetDisplayShowHomeEnabled(true);
 
+            TextView room_txtUserName = FindViewById<TextView>(Resource.Id.room_txtUserName);
+            room_txtUserName.Text = AppInstance.user.username.ToUpper();
+
             await GetRoomData();
         }
 
@@ -84,7 +87,6 @@ namespace SmartHome.Droid.Activities
         {
             base.OnCreate(savedInstanceState);
         }
-
      
         private void GrdHouse_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
