@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    <LinearLayout
-        android:orientation="vertical"
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Vegetable Groups"
+        android:textSize="30dp"
+        android:background="#00000000"
+        android:textColor="#FF267F00"
+        android:textStyle="bold"
+        android:padding="5dp" />
+    <ListView
+        android:id="@+id/listViewHouse"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/main_content"
-        android:paddingRight="10dp"
-        android:paddingLeft="10dp">
-        <GridView
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:numColumns="auto_fit"
-            android:id="@+id/grdHouse"
-            android:columnWidth="150dp" />
-    </LinearLayout>
-</RelativeLayout>
+        android:cacheColorHint="#FFDAFF7F"
+         />
+</LinearLayout>

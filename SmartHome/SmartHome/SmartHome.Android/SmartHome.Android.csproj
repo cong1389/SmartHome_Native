@@ -169,6 +169,7 @@
     <Compile Include="Activities\LoginActivity.cs" />
     <Compile Include="Activities\DeviceFragment.cs" />
     <Compile Include="Activities\ResetPasswordActivity.cs" />
+    <Compile Include="Activities\RoomActivity.cs" />
     <Compile Include="Activities\RoomFragment.cs" />
     <Compile Include="Activities\UserEditActivity.cs" />
     <Compile Include="Common\HouseItemAdapter.cs" />

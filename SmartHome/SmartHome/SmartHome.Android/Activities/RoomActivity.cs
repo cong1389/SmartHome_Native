@@ -30,19 +30,34 @@ namespace SmartHome.Droid.Activities
         #endregion
 
         #region Common
+        private async Task GetRoomData()
+        {
+            //Lấy obj house đã lưu trước đó
+            House objHouse_Result = AppInstance.houseData;
 
-        //private async Task GetRoomData(string houseId)
-        //{
-        //    House objHouse = await APIManager.GetHouseByHouseId(houseId);
-          
-        //    if (objHouse != null)
-        //    {
-        //        lstRoom = objHouse.rooms;
-        //        var grdHouse = FindViewById<GridView>(Resource.Id.grdHouse);
-        //        grdHouse.Adapter = new RoomAdapter(this, lstRoom);
-        //        grdHouse.ItemClick += GrdHouse_ItemClick;
-        //    }
-        //}
+            //Nếu house trước đó == NULL, thì gọi lại API GetHouse
+            if (objHouse_Result == null)
+            {
+                List<House> lstHouse = await APIManager.GetHouseByHouseId(houseId);
+                objHouse_Result = lstHouse[0];
+                lstRoom = objHouse_Result.rooms;
+            }
+            else
+            {
+                lstRoom = objHouse_Result.rooms;
+            }
+
+            if (objHouse_Result != null)
+            {
+                houseId = objHouse_Result.houseId;
+
+                //view.Title = objHouse_Result.name ?? "houseName not available";
+
+                ListView listViewRoom = FindViewById<ListView>(Resource.Id.listViewRoom);
+                listViewRoom.Adapter = new RoomAdapter(this, lstRoom);
+                listViewRoom.ItemClick += GrdHouse_ItemClick;
+            }
+        }
 
         #endregion
 
@@ -52,56 +67,35 @@ namespace SmartHome.Droid.Activities
         {
             base.OnResume();
 
+            houseId = Intent.GetStringExtra("houseId");
+
             // Create your application here
             SetContentView(Resource.Layout.Room);
-            
-            //// Init toolbar
+
             var toolbar = FindViewById<Toolbar>(Resource.Id.app_bar);
             SetSupportActionBar(toolbar);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetDisplayShowHomeEnabled(true);            
+            SupportActionBar.SetDisplayShowHomeEnabled(true);
 
-            //Lấy obj house đã lưu trước đó
-            House objHouse_Result = AppInstance.houseData;
-
-            //Nếu house trước đó ==NULL, thì gọi lại API GetHouse
-            if (objHouse_Result == null)
-            {
-                houseId = Intent.GetStringExtra("houseId") ?? "houseId not available";                
-
-                objHouse_Result = await APIManager.GetHouseByHouseId(houseId);
-            }
-            else
-            {
-                lstRoom = objHouse_Result.rooms;               
-            }
-
-            if (objHouse_Result !=null)
-            {
-                houseId = objHouse_Result.houseId;
-                Title = objHouse_Result.name ?? "houseName not available";
-
-                var grdHouse = FindViewById<GridView>(Resource.Id.grdHouse);
-                grdHouse.Adapter = new RoomAdapter(this, lstRoom);
-                grdHouse.ItemClick += GrdHouse_ItemClick;
-            }
+            await GetRoomData();
         }
 
-        protected override async void OnCreate(Bundle savedInstanceState)
+        protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
         }
 
+     
         private void GrdHouse_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             string roomId = lstRoom[e.Position].roomId;
             string roomName = lstRoom[e.Position].name;
 
-            var deviceActivity = new Intent(this, typeof(DeviceActivity));
-            deviceActivity.PutExtra("houseId", houseId);
-            deviceActivity.PutExtra("roomId", roomId);
-            deviceActivity.PutExtra("roomName", roomName);
-            StartActivity(deviceActivity);
+            //var deviceActivity = new Intent(this, typeof(DeviceActivity));
+            //deviceActivity.PutExtra("houseId", houseId);
+            //deviceActivity.PutExtra("roomId", roomId);
+            //deviceActivity.PutExtra("roomName", roomName);
+            //StartActivity(deviceActivity);
         }
 
         #endregion

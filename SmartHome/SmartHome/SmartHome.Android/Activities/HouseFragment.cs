@@ -51,41 +51,26 @@ namespace SmartHome.Droid.Activities
                 //lstHouse.Clear();
                 //lstHouse.Add(objHouse);
 
-                var grdHouse = view.FindViewById<GridView>(Resource.Id.grdHouse);
-                grdHouse.Adapter = new HouseAdapter(Activity, lstHouse);
-                grdHouse.ItemClick += GrdHouse_ItemClick;
+                ListView listViewHouse = view.FindViewById<ListView>(Resource.Id.listViewHouse);
+                listViewHouse.Adapter = new HouseAdapter(Activity, lstHouse);
+                listViewHouse.ItemClick += GrdHouse_ItemClick;
             }
         }
 
         private void GrdHouse_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-
-            //var details = FragmentManager.FindFragmentById(Resource.Id.HomeFrameLayout) as HouseFragment;
-            //if (details == null )
-            //{
-
-            // Make new fragment to show this selection.
-
-            // Execute a transaction, replacing any existing
-            // fragment with this one inside the frame.
-
-
-            //}
-
             string houseId = e.View.FindViewById<TextView>(Resource.Id.txtHouseId).Text;
-            //string houseName = lstHouse[e.Position].name;
 
-            //var roomActivity = new Intent(Activity, typeof(RoomActivity));
-            //roomActivity.PutExtra("houseId", houseId);
-            //roomActivity.PutExtra("houseName", houseName);
+            var roomActivity = new Intent(Application.Context, typeof(RoomActivity));
+            roomActivity.PutExtra("houseId", houseId);           
+            StartActivity(roomActivity);
 
-            //StartActivity(roomActivity);
-
-            RoomFragment fragment = new RoomFragment(houseId);
-            var ft = FragmentManager.BeginTransaction();
-            ft.Replace(Resource.Id.HomeFrameLayout, fragment);
-            ft.SetTransition(FragmentTransit.EnterMask);
-            ft.Commit();
+            
+            //RoomFragment fragment = new RoomFragment(houseId);
+            //var ft = FragmentManager.BeginTransaction();
+            //ft.Replace(Resource.Id.HomeFrameLayout, fragment);
+            //ft.SetTransition(FragmentTransit.EnterMask);
+            //ft.Commit();
         }
     }
 }

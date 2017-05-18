@@ -52,17 +52,14 @@ namespace SmartHome.Droid.Activities
             View view = inflater.Inflate(Resource.Layout.Room, container, false);
             GetRoomData(view);
 
+            // Toolbar bottom
+            Toolbar toolbar_bottom = view.FindViewById<Toolbar>(Resource.Id.toolbar_bottom);
+            toolbar_bottom.Visibility= ViewStates.Invisible;
             return view;
         }
 
         private async Task GetRoomData(View view)
         {
-            //// Init toolbar
-            //var toolbar = FindViewById<Toolbar>(Resource.Id.app_bar);
-            //SetSupportActionBar(toolbar);
-            //SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            //SupportActionBar.SetDisplayShowHomeEnabled(true);
-
             //Lấy obj house đã lưu trước đó
             House objHouse_Result = AppInstance.houseData;
 
@@ -84,9 +81,9 @@ namespace SmartHome.Droid.Activities
                
                 //view.Title = objHouse_Result.name ?? "houseName not available";
 
-                var grdHouse = view.FindViewById<GridView>(Resource.Id.grdHouse);
-                grdHouse.Adapter = new RoomAdapter(Activity, lstRoom);
-                grdHouse.ItemClick += GrdHouse_ItemClick;
+                ListView listViewRoom = view.FindViewById<ListView>(Resource.Id.listViewRoom);
+                listViewRoom.Adapter = new RoomAdapter(Activity, lstRoom);
+                listViewRoom.ItemClick += GrdHouse_ItemClick;
             }
         }
 

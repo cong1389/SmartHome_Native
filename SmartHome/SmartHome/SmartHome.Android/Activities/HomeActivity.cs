@@ -26,6 +26,7 @@ namespace SmartHome.Droid.Activities
         UserResponseCollection houseResponseCollection;
 
         GridView grdHouse;
+        Toolbar toolbar_bottom;
 
         #endregion
 
@@ -49,9 +50,13 @@ namespace SmartHome.Droid.Activities
                 var toolbar = FindViewById<Toolbar>(Resource.Id.app_bar);
                 SetSupportActionBar(toolbar);
                 SupportActionBar.SetTitle(Resource.String.app_name);
-                //SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-                //SupportActionBar.SetDisplayShowHomeEnabled(true);
+                SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+                SupportActionBar.SetDisplayShowHomeEnabled(true);
 
+                // Toolbar bottom
+                toolbar_bottom = FindViewById<Toolbar>(Resource.Id.toolbar_bottom);
+                toolbar_bottom.Title = "Menu";
+                toolbar_bottom.InflateMenu(Resource.Menu.photo_edit);
 
                 //headerdrawerlayout.
                 // Attach item selected handler to navigation view
@@ -69,59 +74,6 @@ namespace SmartHome.Droid.Activities
                     ListItemClicked(0);
                     navigationView.SetCheckedItem(Resource.Id.nav_home);
                 }
-
-                // Toolbar bottom
-                var toolbar_bottom = FindViewById<Toolbar>(Resource.Id.toolbar_bottom);
-                toolbar_bottom.Title = "Menu";
-                toolbar_bottom.InflateMenu(Resource.Menu.photo_edit);
-
-                //var toolbarBottom = FindViewById<Toolbar>(Resource.Id.toolbar_bottom);
-                //toolbarBottom.Title = "Photo Editing";
-                //toolbarBottom.InflateMenu(Resource.Menu.photo_edit);
-                //toolbarBottom.MenuItemClick += (sender, e) =>
-                //{
-                //    Toast.MakeText(this, "Bottom toolbar pressed: " + e.Item.TitleFormatted, ToastLength.Short).Show();
-                //};
-
-                //GetHouseData();
-
-                ////load default home screen
-                //var ft = FragmentManager.BeginTransaction();
-                //ft.AddToBackStack(null);
-                //ft.Add(Resource.Id.HomeFrameLayout, new HomeFragment());
-                //ft.Commit();
-
-                #region Code cũ
-                /*
-                SetTheme(Resource.Style.MyTheme);
-                base.OnCreate(savedInstanceState);
-
-                // Create your application here
-                SetContentView(Resource.Layout.Home);
-
-                //Set title House
-                //Title =  "Smart Home DashBoard";
-                //await GetHouseData();
-
-                //var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-                //SetSupportActionBar(toolbar);
-                //SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
-
-                //Title = SupportActionBar.Title = "Smart Home DashBoard";
-
-                var toolbarBottom = FindViewById<Toolbar>(Resource.Id.toolbar_bottom);
-                toolbarBottom.Title = "Menu";
-                toolbarBottom.InflateMenu(Resource.Menu.photo_edit);
-
-                //toolbarBottom.MenuItemClick += (sender, e) =>
-                //{
-                //    Toast.MakeText(this, "Bottom toolbar pressed: " + e.Item.TitleFormatted, ToastLength.Short).Show();
-                //};
-
-                //GetHouseData();
-                //grdHouse = FindViewById<GridView>(Resource.Id.grdHouse);*/
-                #endregion
-
             }
             catch (System.Exception ex)
             {
@@ -142,9 +94,11 @@ namespace SmartHome.Droid.Activities
             {
                 case 0:
                     fragment = new HouseFragment();
+                    toolbar_bottom.Visibility = ViewStates.Visible;
                     break;
                 case 1:
                     fragment = new RoomFragment();
+                   
                     break;
                 case 2:
                     fragment = new DeviceFragment();

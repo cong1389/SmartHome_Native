@@ -1,39 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/main_content">
-    
-        <GridView
-            android:id="@+id/grdHouse"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:numColumns="auto_fit"
-            android:longClickable="true"
-            android:stretchMode="columnWidth"
-            android:drawSelectorOnTop="true"
-            android:clipChildren="false"
-            android:clipToPadding="false"
-            android:horizontalSpacing="8dp"
-            android:verticalSpacing="8dp"
-            android:gravity="center"
-            android:fastScrollEnabled="true"
-            android:fastScrollAlwaysVisible="true"
-            android:scrollbarAlwaysDrawVerticalTrack="true"
-            android:scrollbars="vertical"
-            android:scrollbarStyle="outsideInset"
-            android:smoothScrollbar="true"
-            android:paddingRight="8dp"
-            android:paddingLeft="8dp"
-            android:paddingEnd="8dp"
-            android:paddingStart="8dp" />
-    </LinearLayout>
-</RelativeLayout>
+    android:layout_height="fill_parent"
+    android:padding="5dp">
+  <include
+                layout="@layout/app_bar" />
+  <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="Vegetable Groups"
+      android:textSize="30dp"
+      android:background="#00000000"
+      android:textColor="#FF267F00"
+      android:textStyle="bold"
+      android:padding="5dp" />
+  <ListView
+      android:id="@+id/listViewRoom"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:cacheColorHint="#FFDAFF7F" />
+</LinearLayout>

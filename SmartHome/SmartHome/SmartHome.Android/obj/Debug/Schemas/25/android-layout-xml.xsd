@@ -5,7 +5,7 @@
   <xs:import schemaLocation="schemas.android.com.tools.xsd" namespace="http://schemas.android.com/tools" />
   <xs:annotation>
     <xs:documentation>v25</xs:documentation>
-    <xs:documentation>16/05/2017 1:03:05 PM</xs:documentation>
+    <xs:documentation>5/18/2017 11:56:19 AM</xs:documentation>
   </xs:annotation>
   <xs:group name="any-view">
     <xs:choice>
@@ -82,7 +82,6 @@
       <xs:element ref="RadioGroup" />
       <xs:element ref="TextSwitcher" />
       <xs:element ref="fragment" />
-      <xs:element ref="com.xamarin.forms.platform.android.FormsViewGroup" />
       <xs:element ref="android.support.design.widget.TextInputEditText" />
       <xs:element ref="android.support.design.widget.TabItem" />
       <xs:element ref="android.support.design.widget.NavigationView" />
@@ -120,8 +119,6 @@
       <xs:element ref="android.support.v7.view.menu.ListMenuItemView" />
       <xs:element ref="android.support.v7.view.menu.ActionMenuItemView" />
       <xs:element ref="android.support.v7.app.MediaRouteButton" />
-      <xs:element ref="android.support.v7.preference.UnPressableLinearLayout" />
-      <xs:element ref="android.support.v7.internal.widget.PreferenceImageView" />
       <xs:element ref="android.support.v7.widget.CardView" />
       <xs:element ref="android.support.v7.widget.ViewStubCompat" />
       <xs:element ref="android.support.v7.widget.SwitchCompat" />
@@ -147,7 +144,9 @@
       <xs:element ref="android.support.v7.widget.AbsActionBarView" />
       <xs:element ref="android.support.v7.widget.Toolbar" />
       <xs:element ref="android.support.v7.widget.RecyclerView" />
-      <xs:element ref="merge" />
+      <xs:element ref="android.support.v7.preference.UnPressableLinearLayout" />
+      <xs:element ref="android.support.v7.internal.widget.PreferenceImageView" />
+      <xs:element ref="com.xamarin.forms.platform.android.FormsViewGroup" />
     </xs:choice>
   </xs:group>
   <xs:element name="CheckedTextView" type="CheckedTextView">
@@ -1466,16 +1465,6 @@
     <xs:attribute ref="android:layout_marginEnd" />
     <xs:attribute ref="android:style" />
   </xs:complexType>
-  <xs:element name="com.xamarin.forms.platform.android.FormsViewGroup" type="com.xamarin.forms.platform.android.FormsViewGroup">
-    <xs:annotation>
-      <xs:documentation>Runtime Type: Xamarin.Forms.Platform.Android.FormsViewGroup</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="com.xamarin.forms.platform.android.FormsViewGroup">
-    <xs:complexContent mixed="false">
-      <xs:extension base="ViewGroup" />
-    </xs:complexContent>
-  </xs:complexType>
   <xs:element name="android.support.design.widget.TextInputEditText" type="android.support.design.widget.TextInputEditText">
     <xs:annotation>
       <xs:documentation>Runtime Type: Android.Support.Design.Widget.TextInputEditText</xs:documentation>
@@ -1936,29 +1925,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="android.support.v7.preference.UnPressableLinearLayout" type="android.support.v7.preference.UnPressableLinearLayout">
-    <xs:annotation>
-      <xs:documentation>Runtime Type: Android.Support.V7.Preferences.UnPressableLinearLayout</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="android.support.v7.preference.UnPressableLinearLayout">
-    <xs:complexContent mixed="false">
-      <xs:extension base="LinearLayout" />
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="android.support.v7.internal.widget.PreferenceImageView" type="android.support.v7.internal.widget.PreferenceImageView">
-    <xs:annotation>
-      <xs:documentation>Runtime Type: Android.Support.V7.Internal.Widget.PreferenceImageView</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="android.support.v7.internal.widget.PreferenceImageView">
-    <xs:complexContent mixed="false">
-      <xs:extension base="ImageView">
-        <xs:attribute ref="app:maxWidth" />
-        <xs:attribute ref="app:maxHeight" />
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
   <xs:element name="android.support.v7.widget.CardView" type="android.support.v7.widget.CardView">
     <xs:annotation>
       <xs:documentation>Runtime Type: Android.Support.V7.Widget.CardView</xs:documentation>
@@ -2291,17 +2257,37 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="merge" type="merge">
+  <xs:element name="android.support.v7.preference.UnPressableLinearLayout" type="android.support.v7.preference.UnPressableLinearLayout">
     <xs:annotation>
-      <xs:documentation>Runtime Type: merge</xs:documentation>
+      <xs:documentation>Runtime Type: Android.Support.V7.Preferences.UnPressableLinearLayout</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:complexType name="merge">
+  <xs:complexType name="android.support.v7.preference.UnPressableLinearLayout">
     <xs:complexContent mixed="false">
-      <xs:extension base="java.lang.Object">
-        <xs:attribute ref="tools:parentTag" />
-        <xs:attribute ref="android:style" />
+      <xs:extension base="LinearLayout" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="android.support.v7.internal.widget.PreferenceImageView" type="android.support.v7.internal.widget.PreferenceImageView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Android.Support.V7.Internal.Widget.PreferenceImageView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="android.support.v7.internal.widget.PreferenceImageView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ImageView">
+        <xs:attribute ref="app:maxWidth" />
+        <xs:attribute ref="app:maxHeight" />
       </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.xamarin.forms.platform.android.FormsViewGroup" type="com.xamarin.forms.platform.android.FormsViewGroup">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Xamarin.Forms.Platform.Android.FormsViewGroup</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.xamarin.forms.platform.android.FormsViewGroup">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
     </xs:complexContent>
   </xs:complexType>
 </xs:schema>
