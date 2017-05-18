@@ -15,6 +15,7 @@ namespace SmartHome.Droid.Common
     class DeviceListItemAdapter : BaseAdapter<Devices>
     {
         Activity currentContext;
+
         List<Devices> lstDevices;
         string houseId = string.Empty;
         string roomId = string.Empty;
@@ -41,10 +42,10 @@ namespace SmartHome.Droid.Common
 
             convertView.FindViewById<TextView>(Resource.Id.txtName).Text = item.name;
                         
-            Switch switch1 = convertView.FindViewById<Switch>(Resource.Id.switch1);
-            switch1.Checked = item.status;
-            switch1.Tag = item.deviceId;
-            switch1.CheckedChange += switcher_Toggled;
+            //Switch switch1 = convertView.FindViewById<Switch>(Resource.Id.switch1);
+            //switch1.Checked = item.status;
+            //switch1.Tag = item.deviceId;
+            //switch1.CheckedChange += switcher_Toggled;
             
             return convertView;
         }
