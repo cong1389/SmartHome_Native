@@ -377,5 +377,6 @@ D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\andr
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
+D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\layout\devicelistitem.xml
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\SmartHome.Android.dll.mdb
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Debug\SmartHome.Android.dll.mdb

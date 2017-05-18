@@ -40,26 +40,12 @@ namespace SmartHome.Droid.Common
                 convertView = currentContext.LayoutInflater.Inflate(Resource.Layout.DeviceGridViewItem, null);
 
             convertView.FindViewById<TextView>(Resource.Id.txtName).Text = item.name;
-            //else
-            //{
-            //    convertView.FindViewById<TextView>(Resource.Id.txtName).Text = item.name;
-            //    //convertView.FindViewById<TextView>(Resource.Id.txtHouseId).Text = item.houseId;
-            //    //convertView.FindViewById<ImageView>(Resource.Id.img).SetImageResource(Resource.Drawable.monkey);
-
-            //    //Lưu value sử dụng khi change value Switch
-            //    //Dictionary<object, string> dic = new Dictionary<object, string>();
-            //    //dic.Add("houseId", houseId);
-            //    //dic.Add("roomId", roomId);
-            //    //dic.Add("deviceId", item.deviceId);
-
-
-            //    Xamarin.Forms.ResourceDictionary dic = new Xamarin.Forms.ResourceDictionary();
+            
             Switch switch1 = convertView.FindViewById<Switch>(Resource.Id.switch1);
             switch1.Checked = item.status;
             switch1.Tag = item.deviceId;
             switch1.CheckedChange += switcher_Toggled;
-            //}
-
+            
             return convertView;
         }
 

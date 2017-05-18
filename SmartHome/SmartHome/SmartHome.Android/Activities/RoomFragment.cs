@@ -81,9 +81,9 @@ namespace SmartHome.Droid.Activities
                
                 //view.Title = objHouse_Result.name ?? "houseName not available";
 
-                ListView listViewRoom = view.FindViewById<ListView>(Resource.Id.listViewRoom);
-                listViewRoom.Adapter = new RoomAdapter(Activity, lstRoom);
-                listViewRoom.ItemClick += GrdHouse_ItemClick;
+                //ListView listViewRoom = view.FindViewById<ListView>(Resource.Id.listViewRoom);
+                //listViewRoom.Adapter = new RoomAdapter(Activity, lstRoom);
+                //listViewRoom.ItemClick += GrdHouse_ItemClick;
             }
         }
 

@@ -38,6 +38,9 @@ namespace SmartHome.Droid.Activities
             View view = inflater.Inflate(Resource.Layout.House, container, false);
             GetHouseData(view);
 
+            TextView room_txtUserName = view.FindViewById<TextView>(Resource.Id.room_txtUserName);
+            room_txtUserName.Text = AppInstance.user.username.ToUpper();
+
             return view;//base.OnCreateView (inflater.Inflate(Resource.Layout.homeLayout, container, savedInstanceState);
         }
 

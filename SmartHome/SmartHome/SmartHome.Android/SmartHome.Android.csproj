@@ -172,6 +172,7 @@
     <Compile Include="Activities\RoomActivity.cs" />
     <Compile Include="Activities\RoomFragment.cs" />
     <Compile Include="Activities\UserEditActivity.cs" />
+    <Compile Include="Common\DeviceListItemAdapter.cs" />
     <Compile Include="Common\HouseItemAdapter.cs" />
     <Compile Include="Common\DeviceAdapter.cs" />
     <Compile Include="Common\UserAdapter.cs" />
@@ -244,6 +245,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\ResetPasswordLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\DeviceListItem.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
