@@ -133,10 +133,10 @@ namespace SmartHome.Service
             {
                 var client = new HttpClient();
                 client.BaseAddress = new Uri(AppInstance.api);
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                client.DefaultRequestHeaders.Add("x-app-id", "test");
+                //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                //client.DefaultRequestHeaders.Add("x-app-id", "test");
 
-                var str = new StringContent(string.Format("username={0}&password={1}", usr, pw), Encoding.UTF8, "application/x-www-form-urlencoded");
+                var str = new StringContent(string.Format("username={0}&password={1}&appTokenId={2}", usr, pw,"test"), Encoding.UTF8, "application/x-www-form-urlencoded");
                 var response = await client.PostAsync(new Uri(AppInstance.api_LoginByUser), str);
                 var statusCode = response.StatusCode; //get status return from api 
                 if (statusCode == HttpStatusCode.OK && response.IsSuccessStatusCode)
