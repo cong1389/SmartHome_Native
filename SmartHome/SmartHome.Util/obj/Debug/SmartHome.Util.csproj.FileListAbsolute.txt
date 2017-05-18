@@ -27,11 +27,3 @@ D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\bin\Debug\Newtonso
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\obj\Debug\SmartHome.Util.csprojResolveAssemblyReference.cache
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\obj\Debug\SmartHome.Util.dll
 D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\obj\Debug\SmartHome.Util.pdb
-D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\obj\Debug\SmartHome.Util.dll.mdb
-D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\bin\Debug\SmartHome.Util.dll.mdb
-D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\obj\Debug\SmartHome.Util.dll.mdb
-D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\bin\Debug\SmartHome.Util.dll.mdb
-D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\obj\Debug\SmartHome.Util.dll.mdb
-D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\bin\Debug\SmartHome.Util.dll.mdb
-D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\obj\Debug\SmartHome.Util.dll.mdb
-D:\Magnetvn\Project\SmartHome_Native\SmartHome\SmartHome.Util\bin\Debug\SmartHome.Util.dll.mdb
