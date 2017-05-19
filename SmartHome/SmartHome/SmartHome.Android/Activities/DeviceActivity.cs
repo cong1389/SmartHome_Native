@@ -12,7 +12,6 @@ using SmartHome.Model;
 using System.Collections.Generic;
 using SmartHome.Droid.Common;
 using Android.Support.V4.App;
-using System.Linq;
 
 namespace SmartHome.Droid.Activities
 {
@@ -21,7 +20,7 @@ namespace SmartHome.Droid.Activities
     {
         #region Parameter
 
-        string roomId = string.Empty, houseId = string.Empty,deviceId=string.Empty;
+        string roomId = string.Empty, houseId = string.Empty;
 
         #endregion
 
@@ -32,7 +31,7 @@ namespace SmartHome.Droid.Activities
             Room objRoom = await APIManager.GetDeviceByRoomId(houseId, roomId);
             if (objRoom != null)
             {
-                List<Devices> lstDevice = objRoom.devices.Where(m=>m.deviceId==deviceId).ToList();
+                List<Devices> lstDevice = objRoom.devices;
                 var grdHouse = FindViewById<GridView>(Resource.Id.grdHouse);
                 grdHouse.Adapter = new DeviceAdapter(this, lstDevice, houseId, roomId);
 
@@ -47,7 +46,7 @@ namespace SmartHome.Droid.Activities
         {
             base.OnResume();
 
-            deviceId = Intent.GetStringExtra("deviceId") ?? "deviceId not available";
+            // Create your application here
             houseId = Intent.GetStringExtra("houseId") ?? "houseId not available";
             roomId = Intent.GetStringExtra("roomId") ?? "roomId not available";
             Title = Intent.GetStringExtra("roomName") ?? "roomName not available";

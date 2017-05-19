@@ -39,12 +39,12 @@ namespace SmartHome.Droid.Common
             if (convertView == null)
                 convertView = currentContext.LayoutInflater.Inflate(Resource.Layout.DeviceGridViewItem, null);
 
-            convertView.FindViewById<TextView>(Resource.Id.txtName).Text = item.name;
-            
-            Switch switch1 = convertView.FindViewById<Switch>(Resource.Id.switch1);
-            switch1.Checked = item.status;
-            switch1.Tag = item.deviceId;
-            switch1.CheckedChange += switcher_Toggled;
+            convertView.FindViewById<TextView>(Resource.Id.DeviceGirdViewItem_txtUserName).Text = item.name;
+
+            Switch DeviceGirdViewItem_switch1 = convertView.FindViewById<Switch>(Resource.Id.DeviceGirdViewItem_switch1);
+            DeviceGirdViewItem_switch1.Checked = item.status;         
+            DeviceGirdViewItem_switch1.Tag = item.deviceId;
+            DeviceGirdViewItem_switch1.CheckedChange += switcher_Toggled;
             
             return convertView;
         }

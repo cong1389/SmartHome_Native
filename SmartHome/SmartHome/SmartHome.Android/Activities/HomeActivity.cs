@@ -102,10 +102,7 @@ namespace SmartHome.Droid.Activities
                     break;
                 case 2:
                     fragment = new DeviceFragment();
-                    break;
-                case 3:
-                    fragment = new UserListFragment();
-                    break;
+                    break;              
             }
 
             var ft = FragmentManager.BeginTransaction();
@@ -127,7 +124,7 @@ namespace SmartHome.Droid.Activities
                     // Toast.MakeText(this, "Message selected!", ToastLength.Short).Show();
                     break;
                 case (Resource.Id.nav_userlist):
-                    ListItemClicked(3);
+                    StartActivity(new Intent(Application.Context, typeof(UserListActivity)));
                     break;
                 case (Resource.Id.nav_logout):
                     StartActivity(new Intent(Application.Context, typeof(LoginActivity)));

@@ -7,17 +7,7 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayoutHorizontal">
-        <ImageView
-            android:src="@drawable/room"
-            android:layout_height="73.0dp"
-            android:id="@+id/userList_Img"
-            android:layout_gravity="left"
-            android:paddingRight="2pt"
-            android:scaleType="fitCenter"
-            android:layout_width="68.0dp"
-            android:layout_marginBottom="0.0dp"
-            android:layout_marginRight="0.0dp" />
+        android:id="@+id/linearLayoutHorizontal">        
         <LinearLayout
             android:orientation="vertical"
             android:minWidth="25px"

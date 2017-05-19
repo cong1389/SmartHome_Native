@@ -173,6 +173,7 @@
     <Compile Include="Activities\RoomActivity.cs" />
     <Compile Include="Activities\RoomFragment.cs" />
     <Compile Include="Activities\UserEditActivity.cs" />
+    <Compile Include="Activities\UserListActivity.cs" />
     <Compile Include="Common\DeviceListItemAdapter.cs" />
     <Compile Include="Common\HouseItemAdapter.cs" />
     <Compile Include="Common\DeviceAdapter.cs" />
@@ -181,7 +182,6 @@
     <Compile Include="Common\HouseAdapter.cs" />
     <Compile Include="Common\Util.cs" />
     <Compile Include="Fragments\ScanIPFragment.cs" />
-    <Compile Include="Fragments\UserListFragment.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
