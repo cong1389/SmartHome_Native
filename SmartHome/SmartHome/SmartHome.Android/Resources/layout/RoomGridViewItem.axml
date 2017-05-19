@@ -17,12 +17,10 @@
             android:id="@+id/linearLayout1">
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="36.3dp"
+                android:layout_height="15dp"
                 android:id="@+id/txtName"
                 android:textSize="12dp"
-                android:foreground="@drawable/abc_btn_colored_material"
-                android:background="@android:color/holo_blue_bright"
-                android:backgroundTint="#ffb4b4b4"
+                android:background="@android:color/holo_blue_bright"              
                 android:text="fsafasfasf"
                 android:textAlignment="textStart"
                 android:textColor="#000"
@@ -31,18 +29,21 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="fill_parent"
-                android:id="@+id/txtHouseId"
+                android:id="@+id/RoomGridItem_txtDeviceCount"
                 android:typeface="normal"
                 android:textSize="5pt"
-                android:paddingLeft="1pt"
-                android:layout_marginLeft="1.0dp"
-                android:layout_marginRight="56.5dp"
-                android:visibility="visible" />
+                android:paddingLeft="5dp"
+                android:layout_marginLeft="1.0dp"              
+                android:text="aa"
+                android:textColor="#000"
+                android:height="15dp"
+                android:background="@android:color/holo_blue_bright" />
             <ListView
                 android:id="@+id/listViewDevice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:cacheColorHint="#FFDAFF7F" />
+                android:cacheColorHint="#FFDAFF7F"
+                   android:minHeight="50px"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

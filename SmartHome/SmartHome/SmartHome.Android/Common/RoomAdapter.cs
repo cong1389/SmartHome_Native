@@ -37,9 +37,10 @@ namespace SmartHome.Droid.Common
                 lstDevices = objRoom.devices;
                 ListView listViewDevice = convertView.FindViewById<ListView>(Resource.Id.listViewDevice);
                 listViewDevice.Adapter = new DeviceListItemAdapter(currentContext, lstDevices, houseId, roomId);
+                
             }
         }
-
+        
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
             var item = lstRoom[position];
@@ -48,9 +49,11 @@ namespace SmartHome.Droid.Common
                 convertView = currentContext.LayoutInflater.Inflate(Resource.Layout.RoomGridViewItem, null);
 
             TextView txtName = convertView.FindViewById<TextView>(Resource.Id.txtName);
-            txtName.Text = item.name;
-            
+            txtName.Text = item.name;            
             txtName.Click += TxtName_Click;
+
+            TextView RoomGridItem_txtDeviceCount = convertView.FindViewById<TextView>(Resource.Id.RoomGridItem_txtDeviceCount);
+            RoomGridItem_txtDeviceCount.Text =string.Format("Device: {0}", lstRoom.Count.ToString());
 
             GetDeviceDataAsync(item.roomId,  convertView);
 

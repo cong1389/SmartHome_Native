@@ -40,14 +40,16 @@ namespace SmartHome.Droid.Common
             if (convertView == null)
                 convertView = currentContext.LayoutInflater.Inflate(Resource.Layout.DeviceListItem, null);
 
-            convertView.FindViewById<TextView>(Resource.Id.txtName).Text = item.name;
-                        
-            //Switch switch1 = convertView.FindViewById<Switch>(Resource.Id.switch1);
-            //switch1.Checked = item.status;
-            //switch1.Tag = item.deviceId;
-            //switch1.CheckedChange += switcher_Toggled;
+            TextView txtName = convertView.FindViewById<TextView>(Resource.Id.txtName);
+            txtName.Text = item.name;
+            txtName.Click += TxtName_Click;
             
             return convertView;
+        }
+
+        private void TxtName_Click(object sender, System.EventArgs e)
+        {
+            //Toast.MakeText(currentContext, "adfas", ToastLength.Long).Show();
         }
 
         private void switcher_Toggled(object sender, CompoundButton.CheckedChangeEventArgs e)
