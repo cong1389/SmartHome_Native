@@ -3219,8 +3219,8 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f09008b
 			public const int imageView2 = 2131296395;
 			
-			// aapt resource value: 0x7f090083
-			public const int img = 2131296387;
+			// aapt resource value: 0x7f090089
+			public const int img = 2131296393;
 			
 			// aapt resource value: 0x7f090092
 			public const int imgScan = 2131296402;
@@ -3249,8 +3249,8 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f0900c9
 			public const int line3 = 2131296457;
 			
-			// aapt resource value: 0x7f090084
-			public const int linearLayout1 = 2131296388;
+			// aapt resource value: 0x7f090083
+			public const int linearLayout1 = 2131296387;
 			
 			// aapt resource value: 0x7f09008e
 			public const int linearLayout2 = 2131296398;
@@ -3270,8 +3270,8 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f0900d7
 			public const int listViewDevice = 2131296471;
 			
-			// aapt resource value: 0x7f09008a
-			public const int listViewHouse = 2131296394;
+			// aapt resource value: 0x7f090088
+			public const int listViewHouse = 2131296392;
 			
 			// aapt resource value: 0x7f0900d5
 			public const int listViewRoom = 2131296469;
@@ -3399,8 +3399,8 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f0900fd
 			public const int nav_userlist = 2131296509;
 			
-			// aapt resource value: 0x7f090088
-			public const int nav_usr = 2131296392;
+			// aapt resource value: 0x7f090086
+			public const int nav_usr = 2131296390;
 			
 			// aapt resource value: 0x7f09009a
 			public const int nav_view = 2131296410;
@@ -3456,8 +3456,8 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f0900bf
 			public const int right_side = 2131296447;
 			
-			// aapt resource value: 0x7f090089
-			public const int room_txtUserName = 2131296393;
+			// aapt resource value: 0x7f090087
+			public const int room_txtUserName = 2131296391;
 			
 			// aapt resource value: 0x7f09001b
 			public const int screen = 2131296283;
@@ -3570,8 +3570,8 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f09006f
 			public const int submit_area = 2131296367;
 			
-			// aapt resource value: 0x7f090087
-			public const int switch1 = 2131296391;
+			// aapt resource value: 0x7f090085
+			public const int switch1 = 2131296389;
 			
 			// aapt resource value: 0x7f0900d1
 			public const int switchWidget = 2131296465;
@@ -3642,11 +3642,11 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f090090
 			public const int txtForgotPassword = 2131296400;
 			
-			// aapt resource value: 0x7f090086
-			public const int txtHouseId = 2131296390;
+			// aapt resource value: 0x7f09008a
+			public const int txtHouseId = 2131296394;
 			
-			// aapt resource value: 0x7f090085
-			public const int txtName = 2131296389;
+			// aapt resource value: 0x7f090084
+			public const int txtName = 2131296388;
 			
 			// aapt resource value: 0x7f0900d4
 			public const int txtNewPw = 2131296468;

@@ -164,6 +164,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities\DeviceActivity.cs" />
     <Compile Include="Activities\HouseFragment.cs" />
     <Compile Include="Activities\HomeActivity.cs" />
     <Compile Include="Activities\LoginActivity.cs" />

@@ -9,6 +9,8 @@ using SmartHome.Service;
 using Android.Content.Res;
 using Android.Graphics;
 using System.Threading.Tasks;
+using SmartHome.Droid.Activities;
+using Android.Content;
 
 namespace SmartHome.Droid.Common
 {
@@ -42,6 +44,7 @@ namespace SmartHome.Droid.Common
 
             TextView txtName = convertView.FindViewById<TextView>(Resource.Id.txtName);
             txtName.Text = item.name;
+            txtName.Tag = item.deviceId;
             txtName.Click += TxtName_Click;
             
             return convertView;
@@ -49,6 +52,15 @@ namespace SmartHome.Droid.Common
 
         private void TxtName_Click(object sender, System.EventArgs e)
         {
+            TextView txtName = (TextView)sender;
+
+            var deviceActivity = new Intent(currentContext, typeof(DeviceActivity));
+            deviceActivity.PutExtra("deviceId", txtName.Tag.ToString());
+            deviceActivity.PutExtra("houseId", houseId);
+            deviceActivity.PutExtra("roomId", roomId);
+            deviceActivity.PutExtra("roomName",txtName.Text);
+            currentContext.StartActivity(deviceActivity);
+
             //Toast.MakeText(currentContext, "adfas", ToastLength.Long).Show();
         }
 

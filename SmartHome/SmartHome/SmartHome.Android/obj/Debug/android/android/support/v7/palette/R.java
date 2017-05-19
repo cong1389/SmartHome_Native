@@ -3417,7 +3417,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int ifRoom=0x7f090025;
         public static final int image=0x7f090046;
         public static final int imageView2=0x7f09008b;
-        public static final int img=0x7f090083;
+        public static final int img=0x7f090089;
         public static final int imgScan=0x7f090092;
         public static final int info=0x7f0900c2;
         public static final int item_touch_helper_previous_elevation=0x7f090000;
@@ -3427,14 +3427,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int left=0x7f090034;
         public static final int line1=0x7f0900c7;
         public static final int line3=0x7f0900c9;
-        public static final int linearLayout1=0x7f090084;
+        public static final int linearLayout1=0x7f090083;
         public static final int linearLayout2=0x7f09008e;
         public static final int linearLayoutBtns=0x7f0900d9;
         public static final int linearLayoutHorizontal=0x7f090082;
         public static final int list=0x7f0900ce;
         public static final int listMode=0x7f09000f;
         public static final int listViewDevice=0x7f0900d7;
-        public static final int listViewHouse=0x7f09008a;
+        public static final int listViewHouse=0x7f090088;
         public static final int listViewRoom=0x7f0900d5;
         public static final int list_item=0x7f090048;
         public static final int main_content=0x7f090080;
@@ -3477,7 +3477,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int nav_logout=0x7f0900fe;
         public static final int nav_room=0x7f0900fa;
         public static final int nav_userlist=0x7f0900fd;
-        public static final int nav_usr=0x7f090088;
+        public static final int nav_usr=0x7f090086;
         public static final int nav_view=0x7f09009a;
         public static final int navigation_header_container=0x7f09007a;
         public static final int never=0x7f090026;
@@ -3496,7 +3496,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int right=0x7f090035;
         public static final int right_icon=0x7f0900c3;
         public static final int right_side=0x7f0900bf;
-        public static final int room_txtUserName=0x7f090089;
+        public static final int room_txtUserName=0x7f090087;
         public static final int screen=0x7f09001b;
         public static final int scroll=0x7f09002d;
         public static final int scrollIndicatorDown=0x7f090053;
@@ -3534,7 +3534,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int status_bar_latest_event_content=0x7f0900ba;
         public static final int submenuarrow=0x7f09005e;
         public static final int submit_area=0x7f09006f;
-        public static final int switch1=0x7f090087;
+        public static final int switch1=0x7f090085;
         public static final int switchWidget=0x7f0900d1;
         public static final int tabMode=0x7f090011;
         public static final int text=0x7f0900ca;
@@ -3558,8 +3558,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int transition_current_scene=0x7f09000a;
         public static final int transition_scene_layoutid_cache=0x7f09000b;
         public static final int txtForgotPassword=0x7f090090;
-        public static final int txtHouseId=0x7f090086;
-        public static final int txtName=0x7f090085;
+        public static final int txtHouseId=0x7f09008a;
+        public static final int txtName=0x7f090084;
         public static final int txtNewPw=0x7f0900d4;
         public static final int txtOldPw=0x7f0900d3;
         public static final int txtPw=0x7f09008d;

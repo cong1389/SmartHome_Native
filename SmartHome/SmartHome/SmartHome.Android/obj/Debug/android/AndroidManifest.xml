@@ -6,6 +6,7 @@
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <application android:label="SmartHome.Android" android:theme="@style/MyTheme" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
     <activity android:name="md51f91605b37b1bd3f3eb21b5db56573be.MainActivity" />
+    <activity android:label="DeviceActivity" android:parentActivityName="md50bc25531ae266a1f73d9f8430c1d471f.RoomActivity" android:name="md50bc25531ae266a1f73d9f8430c1d471f.DeviceActivity" />
     <activity android:label="Smart Home DashBoard" android:name="md50bc25531ae266a1f73d9f8430c1d471f.HomeActivity" />
     <activity android:label="LoginActivity" android:name="md50bc25531ae266a1f73d9f8430c1d471f.LoginActivity">
       <intent-filter>

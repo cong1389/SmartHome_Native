@@ -12,6 +12,7 @@ using SmartHome.Model;
 using System.Collections.Generic;
 using SmartHome.Droid.Common;
 using Android.Support.V4.App;
+using System.Linq;
 
 namespace SmartHome.Droid.Activities
 {
@@ -20,7 +21,7 @@ namespace SmartHome.Droid.Activities
     {
         #region Parameter
 
-        string roomId = string.Empty, houseId = string.Empty;
+        string roomId = string.Empty, houseId = string.Empty,deviceId=string.Empty;
 
         #endregion
 
@@ -31,7 +32,7 @@ namespace SmartHome.Droid.Activities
             Room objRoom = await APIManager.GetDeviceByRoomId(houseId, roomId);
             if (objRoom != null)
             {
-                List<Devices> lstDevice = objRoom.devices;
+                List<Devices> lstDevice = objRoom.devices.Where(m=>m.deviceId==deviceId).ToList();
                 var grdHouse = FindViewById<GridView>(Resource.Id.grdHouse);
                 grdHouse.Adapter = new DeviceAdapter(this, lstDevice, houseId, roomId);
 
@@ -42,9 +43,24 @@ namespace SmartHome.Droid.Activities
 
         #region Event
 
-        protected override void OnResume()
+        protected override async void OnResume()
         {
             base.OnResume();
+
+            deviceId = Intent.GetStringExtra("deviceId") ?? "deviceId not available";
+            houseId = Intent.GetStringExtra("houseId") ?? "houseId not available";
+            roomId = Intent.GetStringExtra("roomId") ?? "roomId not available";
+            Title = Intent.GetStringExtra("roomName") ?? "roomName not available";
+
+            SetContentView(Resource.Layout.Device);
+
+            //// Init toolbar
+            var toolbar = FindViewById<Toolbar>(Resource.Id.app_bar);
+            SetSupportActionBar(toolbar);
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            SupportActionBar.SetDisplayShowHomeEnabled(true);
+
+            await GetDeviceData(houseId, roomId);
         }
 
         protected override async void OnCreate(Bundle savedInstanceState)
@@ -53,20 +69,6 @@ namespace SmartHome.Droid.Activities
             {
                 base.OnCreate(savedInstanceState);
 
-                // Create your application here
-                houseId = Intent.GetStringExtra("houseId") ?? "houseId not available";
-                roomId = Intent.GetStringExtra("roomId") ?? "roomId not available";
-                Title = Intent.GetStringExtra("roomName") ?? "roomName not available";
-
-                SetContentView(Resource.Layout.Device);
-
-                //// Init toolbar
-                var toolbar = FindViewById<Toolbar>(Resource.Id.app_bar);
-                SetSupportActionBar(toolbar);                
-                SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-                SupportActionBar.SetDisplayShowHomeEnabled(true);
-
-                await GetDeviceData(houseId, roomId);
             }
             catch (System.Exception ex)
             {

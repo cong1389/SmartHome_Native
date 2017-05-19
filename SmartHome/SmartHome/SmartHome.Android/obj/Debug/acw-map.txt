@@ -34,6 +34,10 @@ SmartHome.Droid.Common.HouseAdapter, SmartHome.Android;md593c15f89dd0535b40c3a68
 SmartHome.Droid.Common.HouseAdapter, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md593c15f89dd0535b40c3a6874b15ca363.HouseAdapter
 SmartHome.Droid.Common.HouseAdapter;md593c15f89dd0535b40c3a6874b15ca363.HouseAdapter
 smarthome.droid.common.HouseAdapter;md593c15f89dd0535b40c3a6874b15ca363.HouseAdapter
+SmartHome.Droid.Activities.DeviceActivity, SmartHome.Android;md50bc25531ae266a1f73d9f8430c1d471f.DeviceActivity
+SmartHome.Droid.Activities.DeviceActivity, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50bc25531ae266a1f73d9f8430c1d471f.DeviceActivity
+SmartHome.Droid.Activities.DeviceActivity;md50bc25531ae266a1f73d9f8430c1d471f.DeviceActivity
+smarthome.droid.activities.DeviceActivity;md50bc25531ae266a1f73d9f8430c1d471f.DeviceActivity
 SmartHome.Droid.Activities.HouseFragment, SmartHome.Android;md50bc25531ae266a1f73d9f8430c1d471f.HouseFragment
 SmartHome.Droid.Activities.HouseFragment, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50bc25531ae266a1f73d9f8430c1d471f.HouseFragment
 SmartHome.Droid.Activities.HouseFragment;md50bc25531ae266a1f73d9f8430c1d471f.HouseFragment
