@@ -22,10 +22,11 @@
                 android:layout_marginRight="10dp"
                 android:maxLines="2"
                 android:textSize="12dp" />
-            <!--<Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/switch1" />-->
+          <ListView
+               android:id="@+id/UserListItem_House"
+               android:layout_width="fill_parent"
+               android:layout_height="fill_parent"
+               android:cacheColorHint="#00000000" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

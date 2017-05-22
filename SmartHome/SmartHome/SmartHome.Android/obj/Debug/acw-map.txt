@@ -6,6 +6,10 @@ SmartHome.Droid.Fragments.ScanIPFragment, SmartHome.Android;md5c48d5fd2ef7e15546
 SmartHome.Droid.Fragments.ScanIPFragment, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5c48d5fd2ef7e15546de38dddf4285994.ScanIPFragment
 SmartHome.Droid.Fragments.ScanIPFragment;md5c48d5fd2ef7e15546de38dddf4285994.ScanIPFragment
 smarthome.droid.fragments.ScanIPFragment;md5c48d5fd2ef7e15546de38dddf4285994.ScanIPFragment
+SmartHome.Droid.Common.UserEdit_HouseItemAdapter, SmartHome.Android;md593c15f89dd0535b40c3a6874b15ca363.UserEdit_HouseItemAdapter
+SmartHome.Droid.Common.UserEdit_HouseItemAdapter, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md593c15f89dd0535b40c3a6874b15ca363.UserEdit_HouseItemAdapter
+SmartHome.Droid.Common.UserEdit_HouseItemAdapter;md593c15f89dd0535b40c3a6874b15ca363.UserEdit_HouseItemAdapter
+smarthome.droid.common.UserEdit_HouseItemAdapter;md593c15f89dd0535b40c3a6874b15ca363.UserEdit_HouseItemAdapter
 SmartHome.Droid.Common.DeviceListItemAdapter, SmartHome.Android;md593c15f89dd0535b40c3a6874b15ca363.DeviceListItemAdapter
 SmartHome.Droid.Common.DeviceListItemAdapter, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md593c15f89dd0535b40c3a6874b15ca363.DeviceListItemAdapter
 SmartHome.Droid.Common.DeviceListItemAdapter;md593c15f89dd0535b40c3a6874b15ca363.DeviceListItemAdapter

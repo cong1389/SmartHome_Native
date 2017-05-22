@@ -5,6 +5,8 @@ using Android.Widget;
 using SmartHome.Model;
 using System.Threading.Tasks;
 using SmartHome.Service;
+using Android.Content;
+using SmartHome.Droid.Activities;
 
 namespace SmartHome.Droid.Common
 {
@@ -30,33 +32,32 @@ namespace SmartHome.Droid.Common
 
             if (convertView == null)
                 convertView = currentContext.LayoutInflater.Inflate(Resource.Layout.UserListItem, null);
-            //else
-            //{
-            convertView.FindViewById<TextView>(Resource.Id.userList_txtName).Text = item.name;
-            //convertView.FindViewById<TextView>(Resource.Id.txtHouseId).Text = item.houseId;
-            //convertView.FindViewById<ImageView>(Resource.Id.img).SetImageResource(Resource.Drawable.monkey);
-            //}
 
-            //Switch switch1 = convertView.FindViewById<Switch>(Resource.Id.switch1);
-            //switch1.Checked = item.active;
-            //switch1.Tag = item.userId;
-            //switch1.CheckedChange += switcher_Toggled;
+            TextView userList_txtName = convertView.FindViewById<TextView>(Resource.Id.userList_txtName);
+            userList_txtName.Text = item.name;
+            userList_txtName.Tag = item.userId;
+            userList_txtName.Click += UserList_txtName_Click;
+            //convertView.FindViewById<TextView>(Resource.Id.userList_txtName).Text = item.name;
+
+            List<House> lstHouse = item.houses;
+            if (lstHouse !=null && lstHouse.Count>0)
+            {
+                ListView UserListItem_House = convertView.FindViewById<ListView>(Resource.Id.UserListItem_House);
+                UserListItem_House.Adapter = new UserEdit_HouseItemAdapter(currentContext, lstHouse);
+            }
 
             return convertView;
         }
 
-        //private void switcher_Toggled(object sender, CompoundButton.CheckedChangeEventArgs e)
-        //{
-        //    Switch switch1 = (Switch)sender;
-        //    string id = (string)switch1.Tag;
+        private void UserList_txtName_Click(object sender, System.EventArgs e)
+        {
+            TextView userList_txtName = (TextView)sender;
+            string userId = userList_txtName.Tag.ToString();
 
-        //    Switche(id, e.IsChecked);
-        //}
-
-        //private async Task Switche(string userId,  bool status)
-        //{
-        //    await APIManager.IsUserSetActive(userId,  status);
-        //}
+            var userEditActivity = new Intent(currentContext, typeof(UserEditActivity));
+            userEditActivity.PutExtra("userId", userId);
+            currentContext.StartActivity(userEditActivity);
+        }
 
         //Fill in cound here, currently 0
         public override int Count

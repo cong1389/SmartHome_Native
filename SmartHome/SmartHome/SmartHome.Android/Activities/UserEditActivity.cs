@@ -39,6 +39,7 @@ namespace SmartHome.Droid.Activities
         EditText userEdit_Mobile;
         EditText userEdit_Email;
         EditText userEdit_Address;
+       
 
         Switch userEdit_switActive;
         AutoCompleteTextView userEdit_cboHouse;
@@ -57,15 +58,30 @@ namespace SmartHome.Droid.Activities
             objUserCurrent = await APIManager.GetUserByUserId(userIdCurrent);
 
             if (objUserCurrent != null)
-            {
+            {                
                 userEdit_Name.Text = objUserCurrent.name;
+                userEdit_Name.Enabled = false;
+
                 userEdit_DeviceId.Text = objUserCurrent.deviceId;
+                userEdit_DeviceId.Enabled = false;
+
                 userEdit_TenantId.Text = objUserCurrent.tenantId;
+                userEdit_TenantId.Enabled = false;
+
                 userEdit_UserName.Text = objUserCurrent.username;
+                userEdit_UserName.Enabled = false;
+
                 userEdit_PassWord.Text = objUserCurrent.password;
+                userEdit_PassWord.Enabled = false;
+
                 userEdit_Mobile.Text = objUserCurrent.mobile;
+                userEdit_Mobile.Enabled = false;
+
                 userEdit_Email.Text = objUserCurrent.email;
+                userEdit_Email.Enabled = false;
+
                 userEdit_Address.Text = objUserCurrent.address;
+                userEdit_Address.Enabled = false;
 
                 //switch active/deactive user
                 userEdit_switActive.Checked = objUserCurrent.active;
@@ -239,6 +255,7 @@ namespace SmartHome.Droid.Activities
             userEdit_Mobile = FindViewById<EditText>(Resource.Id.userEdit_Mobile);
             userEdit_Email = FindViewById<EditText>(Resource.Id.userEdit_Email);
             userEdit_Address = FindViewById<EditText>(Resource.Id.userEdit_Address);
+            
 
             userEdit_switActive = FindViewById<Switch>(Resource.Id.userEdit_switActive);
             //userEdit_cboHouse = FindViewById<AutoCompleteTextView>(Resource.Id.userEdit_cboHouse);
