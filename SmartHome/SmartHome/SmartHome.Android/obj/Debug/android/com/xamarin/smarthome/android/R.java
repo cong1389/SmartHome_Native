@@ -3709,11 +3709,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int select_dialog_singlechoice_material=0x7f040057;
         public static final int support_simple_spinner_dropdown_item=0x7f040058;
         public static final int toolbar=0x7f040059;
-        public static final int useredit_houseitem=0x7f04005a;
-        public static final int usereditlayout=0x7f04005b;
-        public static final int userlistitem=0x7f04005c;
-        public static final int userlistitem_house=0x7f04005d;
-        public static final int userlistlayout=0x7f04005e;
+        public static final int user_houseitem=0x7f04005a;
+        public static final int useredit_houseitem=0x7f04005b;
+        public static final int usereditlayout=0x7f04005c;
+        public static final int userlistitem=0x7f04005d;
+        public static final int userlistitem_house=0x7f04005e;
+        public static final int userlistlayout=0x7f04005f;
     }
     public static final class menu {
         public static final int action_menu=0x7f0f0000;

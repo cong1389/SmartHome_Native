@@ -37,13 +37,14 @@ namespace SmartHome.Droid.Common
             userList_txtName.Text = item.name;
             userList_txtName.Tag = item.userId;
             userList_txtName.Click += UserList_txtName_Click;
-            //convertView.FindViewById<TextView>(Resource.Id.userList_txtName).Text = item.name;
+
+            string roleName = item.roles[0].ToString();
 
             List<House> lstHouse = item.houses;
             if (lstHouse !=null && lstHouse.Count>0)
             {
                 ListView UserListItem_House = convertView.FindViewById<ListView>(Resource.Id.UserListItem_House);
-                UserListItem_House.Adapter = new UserEdit_HouseItemAdapter(currentContext, lstHouse);
+                UserListItem_House.Adapter = new User_HouseItemAdapter(currentContext, lstHouse, roleName);
             }
 
             return convertView;

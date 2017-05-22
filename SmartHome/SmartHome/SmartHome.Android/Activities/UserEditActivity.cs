@@ -90,13 +90,13 @@ namespace SmartHome.Droid.Activities
                 userEdit_switActive.Text = "Active/Deactive";
 
                 // Get all house bind vào adapter           
-                List<House> lstHouse = await APIManager.GetHouseAll();
+                List<House> lstHouseAll = await APIManager.GetHouseAll();
                 List<House> lstHouseOld = objUserCurrent.houses;
                 var userEdit_grdHouse = FindViewById<GridView>(Resource.Id.userEdit_grdHouse);
-                userEdit_grdHouse.Adapter = new HouseItemAdapter(this, lstHouse, userIdCurrent, lstHouseOld);
+                userEdit_grdHouse.Adapter = new HouseItemAdapter(this, lstHouseAll, userIdCurrent, lstHouseOld);
 
                 ArrayList arrHouse = new ArrayList();
-                foreach (House item in lstHouse)
+                foreach (House item in lstHouseAll)
                 {
                     arrHouse.Add(item.name);
                 }
@@ -230,6 +230,8 @@ namespace SmartHome.Droid.Activities
             //// Init toolbar
             var userEditTopMenu = FindViewById<Toolbar>(Resource.Id.app_bar);
             SetSupportActionBar(userEditTopMenu);
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            SupportActionBar.SetDisplayShowHomeEnabled(true);
 
             // ensure that the system bar color gets drawn
             Window.AddFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);

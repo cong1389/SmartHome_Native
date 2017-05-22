@@ -174,7 +174,7 @@
     <Compile Include="Activities\RoomFragment.cs" />
     <Compile Include="Activities\UserEditActivity.cs" />
     <Compile Include="Activities\UserListActivity.cs" />
-    <Compile Include="Common\UserEdit_HouseItemAdapter.cs" />
+    <Compile Include="Common\User_HouseItemAdapter.cs" />
     <Compile Include="Common\DeviceListItemAdapter.cs" />
     <Compile Include="Common\HouseItemAdapter.cs" />
     <Compile Include="Common\DeviceAdapter.cs" />
@@ -253,6 +253,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\UserListItem_House.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\User_HouseItem.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

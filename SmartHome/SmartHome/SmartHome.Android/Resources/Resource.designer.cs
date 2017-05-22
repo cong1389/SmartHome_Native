@@ -4117,19 +4117,22 @@ namespace SmartHome.Droid
 			public const int toolbar = 2130968665;
 			
 			// aapt resource value: 0x7f04005a
-			public const int UserEdit_HouseItem = 2130968666;
+			public const int User_HouseItem = 2130968666;
 			
 			// aapt resource value: 0x7f04005b
-			public const int UserEditLayout = 2130968667;
+			public const int UserEdit_HouseItem = 2130968667;
 			
 			// aapt resource value: 0x7f04005c
-			public const int UserListItem = 2130968668;
+			public const int UserEditLayout = 2130968668;
 			
 			// aapt resource value: 0x7f04005d
-			public const int UserListItem_House = 2130968669;
+			public const int UserListItem = 2130968669;
 			
 			// aapt resource value: 0x7f04005e
-			public const int UserListLayout = 2130968670;
+			public const int UserListItem_House = 2130968670;
+			
+			// aapt resource value: 0x7f04005f
+			public const int UserListLayout = 2130968671;
 			
 			static Layout()
 			{

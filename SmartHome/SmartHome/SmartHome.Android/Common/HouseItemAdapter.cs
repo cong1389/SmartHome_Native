@@ -11,13 +11,13 @@ namespace SmartHome.Droid.Common
     class HouseItemAdapter : BaseAdapter<House>
     {
         Activity currentContext;
-        List<House> lstHouse,lstHouseOld;
+        List<House> lstHouseAll,lstHouseOld;
         string userId = string.Empty;
 
-        public HouseItemAdapter(Activity currentContext, List<House> lstHouse,string userId, List<House> lstHouseOld)
+        public HouseItemAdapter(Activity currentContext, List<House> lstHouseAll,string userId, List<House> lstHouseOld)
         {
             this.currentContext = currentContext;
-            this.lstHouse = lstHouse;
+            this.lstHouseAll = lstHouseAll;
             this.userId = userId;
             this.lstHouseOld = lstHouseOld;
         }
@@ -29,7 +29,7 @@ namespace SmartHome.Droid.Common
 
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
-            var item = lstHouse[position];
+            var item = lstHouseAll[position];
 
             if (convertView == null)
                 convertView = currentContext.LayoutInflater.Inflate(Resource.Layout.UserEdit_HouseItem, null);
@@ -42,7 +42,14 @@ namespace SmartHome.Droid.Common
             {
                 for (int i = 0; i < lstHouseOld.Count; i++)
                 {
-                    switch1.Checked = lstHouseOld[i].houseId == item.houseId ? true : false;
+                    if (lstHouseOld[i].houseId == item.houseId)
+                    {
+                        switch1.Checked = true;
+                        break;
+                    }
+
+                    //switch1.Checked = lstHouseOld[i].houseId == item.houseId ? true : false;
+                    //break;
                 }
             }
             switch1.Tag = item.houseId;
@@ -64,7 +71,7 @@ namespace SmartHome.Droid.Common
         {
             get
             {
-                return lstHouse == null ? -1 : lstHouse.Count;
+                return lstHouseAll == null ? -1 : lstHouseAll.Count;
             }
         }
 
@@ -72,7 +79,7 @@ namespace SmartHome.Droid.Common
         {
             get
             {
-                return lstHouse == null ? null : lstHouse[position];
+                return lstHouseAll == null ? null : lstHouseAll[position];
             }
         }
     }
