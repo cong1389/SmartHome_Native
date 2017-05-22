@@ -380,5 +380,10 @@ D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\andr
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\layout\devicelistitem.xml
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\layout\userlistitem_house.xml
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\layout\user_houseitem.xml
+D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\layout\roomeditlayout.xml
+D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\menu\roombar.xml
+D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\layout\roomcreatelayout.xml
+D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\mipmap\plus.png
+D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\mipmap\save_red.png
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\SmartHome.Android.dll.mdb
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Debug\SmartHome.Android.dll.mdb

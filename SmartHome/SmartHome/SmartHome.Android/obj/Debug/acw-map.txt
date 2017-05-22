@@ -2,6 +2,10 @@ SmartHome.Droid.MainActivity, SmartHome.Android;md51f91605b37b1bd3f3eb21b5db5657
 SmartHome.Droid.MainActivity, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md51f91605b37b1bd3f3eb21b5db56573be.MainActivity
 SmartHome.Droid.MainActivity;md51f91605b37b1bd3f3eb21b5db56573be.MainActivity
 smarthome.droid.MainActivity;md51f91605b37b1bd3f3eb21b5db56573be.MainActivity
+SmartHome.Droid.Fragments.RoomEditFragment, SmartHome.Android;md5c48d5fd2ef7e15546de38dddf4285994.RoomEditFragment
+SmartHome.Droid.Fragments.RoomEditFragment, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5c48d5fd2ef7e15546de38dddf4285994.RoomEditFragment
+SmartHome.Droid.Fragments.RoomEditFragment;md5c48d5fd2ef7e15546de38dddf4285994.RoomEditFragment
+smarthome.droid.fragments.RoomEditFragment;md5c48d5fd2ef7e15546de38dddf4285994.RoomEditFragment
 SmartHome.Droid.Fragments.ScanIPFragment, SmartHome.Android;md5c48d5fd2ef7e15546de38dddf4285994.ScanIPFragment
 SmartHome.Droid.Fragments.ScanIPFragment, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5c48d5fd2ef7e15546de38dddf4285994.ScanIPFragment
 SmartHome.Droid.Fragments.ScanIPFragment;md5c48d5fd2ef7e15546de38dddf4285994.ScanIPFragment
@@ -58,6 +62,10 @@ SmartHome.Droid.Activities.ResetPasswordActivity, SmartHome.Android;md50bc25531a
 SmartHome.Droid.Activities.ResetPasswordActivity, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50bc25531ae266a1f73d9f8430c1d471f.ResetPasswordActivity
 SmartHome.Droid.Activities.ResetPasswordActivity;md50bc25531ae266a1f73d9f8430c1d471f.ResetPasswordActivity
 smarthome.droid.activities.ResetPasswordActivity;md50bc25531ae266a1f73d9f8430c1d471f.ResetPasswordActivity
+SmartHome.Droid.Activities.RoomCreateActivity, SmartHome.Android;md50bc25531ae266a1f73d9f8430c1d471f.RoomCreateActivity
+SmartHome.Droid.Activities.RoomCreateActivity, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50bc25531ae266a1f73d9f8430c1d471f.RoomCreateActivity
+SmartHome.Droid.Activities.RoomCreateActivity;md50bc25531ae266a1f73d9f8430c1d471f.RoomCreateActivity
+smarthome.droid.activities.RoomCreateActivity;md50bc25531ae266a1f73d9f8430c1d471f.RoomCreateActivity
 SmartHome.Droid.Activities.RoomActivity, SmartHome.Android;md50bc25531ae266a1f73d9f8430c1d471f.RoomActivity
 SmartHome.Droid.Activities.RoomActivity, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50bc25531ae266a1f73d9f8430c1d471f.RoomActivity
 SmartHome.Droid.Activities.RoomActivity;md50bc25531ae266a1f73d9f8430c1d471f.RoomActivity

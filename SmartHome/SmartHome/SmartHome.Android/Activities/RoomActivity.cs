@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using SmartHome.Droid.Common;
 using System;
 using Android.Content;
+using Android.Views;
 
 namespace SmartHome.Droid.Activities
 {
@@ -82,12 +83,38 @@ namespace SmartHome.Droid.Activities
 
             await GetRoomData();
         }
+        public override bool OnCreateOptionsMenu(Android.Views.IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.RoomBar, menu);
+            if (menu != null)
+            {
+                menu.FindItem(Resource.Id.RoomBar_mnuSave).SetVisible(false);
+                menu.FindItem(Resource.Id.RoomBar_mnuDelete).SetVisible(false);
+            }
+
+            return base.OnCreateOptionsMenu(menu);
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Resource.Id.RoomBar_mnuCreate:
+                    var roomCreateActivity = new Intent(this, typeof(RoomCreateActivity));
+                    roomCreateActivity.PutExtra("houseId", houseId);
+                    StartActivity(roomCreateActivity);
+                    break;
+                
+            }
+
+            return base.OnOptionsItemSelected(item);
+        }
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
         }
-     
+              
         private void GrdHouse_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             string roomId = lstRoom[e.Position].roomId;

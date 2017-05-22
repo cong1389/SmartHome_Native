@@ -49,6 +49,8 @@ namespace SmartHome.Util
         public static string api_UserRemoveRole = string.Format("{0}/{1}", api, "api/user/removeAdminRole");
 
         public static string api_RoomByRoomId = string.Format("{0}/{1}", api, "api/room/get");
+        public static string api_RoomUpdate = string.Format("{0}/{1}", api, "api/room/update");
+        public static string api_RoomCreate = string.Format("{0}/{1}", api, "api/room/create");
 
         public static string api_DeviceActive = string.Format("{0}/{1}", api, "api/device/active");
         public static string api_DeviceDeActive = string.Format("{0}/{1}", api, "api/device/deactive");

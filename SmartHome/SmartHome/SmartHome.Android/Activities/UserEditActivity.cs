@@ -38,8 +38,7 @@ namespace SmartHome.Droid.Activities
         EditText userEdit_PassWord;
         EditText userEdit_Mobile;
         EditText userEdit_Email;
-        EditText userEdit_Address;
-       
+        EditText userEdit_Address;       
 
         Switch userEdit_switActive;
         AutoCompleteTextView userEdit_cboHouse;

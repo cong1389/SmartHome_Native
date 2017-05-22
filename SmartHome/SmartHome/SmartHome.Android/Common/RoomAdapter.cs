@@ -6,6 +6,7 @@ using SmartHome.Model;
 using System.Threading.Tasks;
 using SmartHome.Service;
 using System.Linq;
+using SmartHome.Droid.Fragments;
 
 namespace SmartHome.Droid.Common
 {
@@ -51,6 +52,7 @@ namespace SmartHome.Droid.Common
 
             TextView txtName = convertView.FindViewById<TextView>(Resource.Id.txtName);
             txtName.Text = item.name;
+            txtName.Tag = item.roomId;
             txtName.Click += TxtName_Click;
 
             TextView RoomGridItem_txtDeviceCount = convertView.FindViewById<TextView>(Resource.Id.RoomGridItem_txtDeviceCount);
@@ -75,8 +77,22 @@ namespace SmartHome.Droid.Common
 
         private void TxtName_Click(object sender, System.EventArgs e)
         {
-            Toast.MakeText(currentContext, "", ToastLength.Long).Show();
+            TextView txtName = (TextView)sender;
+            string roomId = txtName.Tag.ToString();
+
+            FragmentTransaction fragmentTransaction = currentContext.FragmentManager.BeginTransaction();
+
+            Fragment fragmentPrev = currentContext.FragmentManager.FindFragmentByTag("dialog");
+            if (fragmentPrev != null)
+                fragmentTransaction.Remove(fragmentPrev);
+
+            fragmentTransaction.AddToBackStack(null);
+            //create and show the dialog
+            RoomEditFragment dialogFragment =new RoomEditFragment(houseId, roomId);
+            dialogFragment.Show(fragmentTransaction, "dialog");
         }
+
+
 
         //Fill in cound here, currently 0
         public override int Count
