@@ -170,6 +170,7 @@
     <Compile Include="Activities\LoginActivity.cs" />
     <Compile Include="Activities\DeviceFragment.cs" />
     <Compile Include="Activities\ResetPasswordActivity.cs" />
+    <Compile Include="Activities\DeviceCreateActivity.cs" />
     <Compile Include="Activities\RoomCreateActivity.cs" />
     <Compile Include="Activities\RoomActivity.cs" />
     <Compile Include="Activities\RoomFragment.cs" />
@@ -264,6 +265,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\RoomCreateLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\DeviceCreateLayout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -419,6 +423,8 @@
     <AndroidResource Include="Resources\menu\RoomBar.xml" />
     <AndroidResource Include="Resources\mipmap\plus.png" />
     <AndroidResource Include="Resources\mipmap\save_red.png" />
+    <AndroidResource Include="Resources\mipmap\change.png" />
+    <AndroidResource Include="Resources\mipmap\remove.png" />
     <Content Include="THIRD-PARTY-NOTICES.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

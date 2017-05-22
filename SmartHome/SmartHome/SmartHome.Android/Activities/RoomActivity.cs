@@ -89,7 +89,6 @@ namespace SmartHome.Droid.Activities
             if (menu != null)
             {
                 menu.FindItem(Resource.Id.RoomBar_mnuSave).SetVisible(false);
-                menu.FindItem(Resource.Id.RoomBar_mnuDelete).SetVisible(false);
             }
 
             return base.OnCreateOptionsMenu(menu);
@@ -99,12 +98,17 @@ namespace SmartHome.Droid.Activities
         {
             switch (item.ItemId)
             {
-                case Resource.Id.RoomBar_mnuCreate:
+                case Resource.Id.RoomBar_mnuCreateRoom:
                     var roomCreateActivity = new Intent(this, typeof(RoomCreateActivity));
                     roomCreateActivity.PutExtra("houseId", houseId);
                     StartActivity(roomCreateActivity);
                     break;
-                
+                case Resource.Id.RoomBar_mnuCreateDevice:
+                    var deviceCreateActivity = new Intent(this, typeof(DeviceCreateActivity));
+                    deviceCreateActivity.PutExtra("houseId", houseId);
+                    StartActivity(deviceCreateActivity);
+                    break;
+
             }
 
             return base.OnOptionsItemSelected(item);

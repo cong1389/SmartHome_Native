@@ -2,15 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:myapp="http://schemas.android.com/apk/res-auto">
   <item android:id="@+id/RoomBar_mnuSave" 
         android:icon="@mipmap/save_red"
-        android:title="Refresh"
+        android:title="Save"
         myapp:showAsAction="always" />
-  <item android:id="@+id/RoomBar_mnuCreate"
-        android:icon="@mipmap/plus"
-        android:title="Add new"
-        myapp:showAsAction="always" />
-  <item android:id="@+id/RoomBar_mnuDelete"
-        android:icon="@mipmap/delete"
-        android:title="Delete"
-        myapp:showAsAction="always" />
- 
+  <item android:id="@+id/RoomBar_mnuCreateRoom"
+        android:title="Add Room"
+        myapp:showAsAction="never" />
+  <item android:id="@+id/RoomBar_mnuCreateDevice"
+        android:title="Add Device"
+        myapp:showAsAction="never" />
+  
 </menu>

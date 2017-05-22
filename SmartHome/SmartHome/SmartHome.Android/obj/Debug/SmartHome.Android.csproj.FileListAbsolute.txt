@@ -385,5 +385,8 @@ D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\layout\roomcreatelayout.xml
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\mipmap\plus.png
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\mipmap\save_red.png
+D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\layout\devicecreatelayout.xml
+D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\mipmap\change.png
+D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\mipmap\remove.png
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\SmartHome.Android.dll.mdb
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Debug\SmartHome.Android.dll.mdb

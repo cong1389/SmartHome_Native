@@ -17,7 +17,7 @@ using Android.Views;
 
 namespace SmartHome.Droid.Activities
 {
-    [Activity(Label = "Smart Home - Room", ParentActivity = typeof(HomeActivity))]
+    [Activity(Label = "Smart Home - Create Room", ParentActivity = typeof(HomeActivity))]
     public class RoomCreateActivity : AppCompatActivity
     {
         #region Parameter
@@ -67,8 +67,8 @@ namespace SmartHome.Droid.Activities
             MenuInflater.Inflate(Resource.Menu.RoomBar, menu);
             if (menu != null)
             {
-                menu.FindItem(Resource.Id.RoomBar_mnuDelete).SetVisible(false);
-                menu.FindItem(Resource.Id.RoomBar_mnuCreate).SetVisible(false);
+                menu.FindItem(Resource.Id.RoomBar_mnuCreateRoom).SetVisible(false);
+                menu.FindItem(Resource.Id.RoomBar_mnuCreateDevice).SetVisible(false);
             }
 
             return base.OnCreateOptionsMenu(menu);

@@ -5,11 +5,11 @@
         android:title="Refresh"
         myapp:showAsAction="always" />
   <item android:id="@+id/userEdit_mnuDelete"
-        android:icon="@mipmap/delete"
+        android:icon="@mipmap/remove"
         android:title="Delete"
         myapp:showAsAction="always" />
   <item android:id="@+id/userEdit_mnuResetPw"
-        android:icon="@mipmap/delete"
+        android:icon="@mipmap/change"
         android:title="Change Password"
         myapp:showAsAction="always" />
 </menu>
