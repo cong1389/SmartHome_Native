@@ -615,7 +615,7 @@ namespace SmartHome.Service
             //return houseResponseCollection;
             return statusResponse;
         }
-
+        
         #endregion
 
         #region Hello
@@ -721,6 +721,38 @@ namespace SmartHome.Service
             return lstProductType;
         }
 
+
+        #endregion
+
+        #region Manager
+
+        public static async Task<Room> SetUpDeviceBehavior(string userId, string houseId, string roomId, string companyId, string productId,string deviceName)
+        {
+            try
+            {
+                var client = new HttpClient();
+                client.BaseAddress = new Uri(AppInstance.api);
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Add("x-access-token", AppInstance.user.accessToken);
+
+                var str = new StringContent(string.Format("userId={0}&houseId={1}&roomId={2}&companyId={3}&productId={4}&name={5}"
+                    , userId, houseId, roomId, companyId, productId, deviceName), Encoding.UTF8, "application/x-www-form-urlencoded");
+
+                var response = await client.PostAsync(new Uri(AppInstance.api_SetUpDeviceBehavior), str);
+                var statusCode = response.StatusCode; //get status return from api 
+                if (statusCode == HttpStatusCode.OK && response.IsSuccessStatusCode)
+                {
+                    var result = response.Content.ReadAsStringAsync().Result;
+                    statusResponse = JsonConvert.DeserializeObject<StatusResponse>(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                string msg = ex.Message;
+            }
+
+            return room;
+        }
 
         #endregion
 

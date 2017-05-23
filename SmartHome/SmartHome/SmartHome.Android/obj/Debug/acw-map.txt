@@ -10,6 +10,10 @@ SmartHome.Droid.Fragments.ScanIPFragment, SmartHome.Android;md5c48d5fd2ef7e15546
 SmartHome.Droid.Fragments.ScanIPFragment, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5c48d5fd2ef7e15546de38dddf4285994.ScanIPFragment
 SmartHome.Droid.Fragments.ScanIPFragment;md5c48d5fd2ef7e15546de38dddf4285994.ScanIPFragment
 smarthome.droid.fragments.ScanIPFragment;md5c48d5fd2ef7e15546de38dddf4285994.ScanIPFragment
+SmartHome.Droid.Common.RoomSpinAdapter, SmartHome.Android;md593c15f89dd0535b40c3a6874b15ca363.RoomSpinAdapter
+SmartHome.Droid.Common.RoomSpinAdapter, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md593c15f89dd0535b40c3a6874b15ca363.RoomSpinAdapter
+SmartHome.Droid.Common.RoomSpinAdapter;md593c15f89dd0535b40c3a6874b15ca363.RoomSpinAdapter
+smarthome.droid.common.RoomSpinAdapter;md593c15f89dd0535b40c3a6874b15ca363.RoomSpinAdapter
 SmartHome.Droid.Common.ProductTypeAdapter, SmartHome.Android;md593c15f89dd0535b40c3a6874b15ca363.ProductTypeAdapter
 SmartHome.Droid.Common.ProductTypeAdapter, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md593c15f89dd0535b40c3a6874b15ca363.ProductTypeAdapter
 SmartHome.Droid.Common.ProductTypeAdapter;md593c15f89dd0535b40c3a6874b15ca363.ProductTypeAdapter

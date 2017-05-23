@@ -67,6 +67,8 @@ namespace SmartHome.Util
 
         public static string api_GetProductType = string.Format("{0}/{1}", api, "api/productType/get");
 
+        public static string api_SetUpDeviceBehavior = string.Format("{0}/{1}", api, "api/manager/setUpDeviceBehavior");
+
         #endregion
     }
 }

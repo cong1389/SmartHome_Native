@@ -176,6 +176,7 @@
     <Compile Include="Activities\RoomFragment.cs" />
     <Compile Include="Activities\UserEditActivity.cs" />
     <Compile Include="Activities\UserListActivity.cs" />
+    <Compile Include="Adapters\RoomSpinAdapter.cs" />
     <Compile Include="Adapters\ProductTypeAdapter.cs" />
     <Compile Include="Adapters\CompanyAdapter.cs" />
     <Compile Include="Common\User_HouseItemAdapter.cs" />

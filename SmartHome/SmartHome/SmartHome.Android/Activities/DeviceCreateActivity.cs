@@ -23,10 +23,15 @@ namespace SmartHome.Droid.Activities
     {
         #region Parameter
 
-        string houseId = string.Empty,companyId=string.Empty;
+        string userId = string.Empty, houseId = string.Empty, roomId = string.Empty, companyId = string.Empty, productId = string.Empty;
 
         Spinner deviceCreate_spinCompany = null;
         List<Company> lstCompany = null;
+        List<Room> lstRoom = null;
+        List<ProductType> lstProductType = null;
+
+        EditText deviceCreate_txtProductName;
+
         #endregion
 
         #region Common
@@ -39,7 +44,11 @@ namespace SmartHome.Droid.Activities
         {
             base.OnResume();
 
+            userId = AppInstance.user.userId;
+
             houseId = Intent.GetStringExtra("houseId");
+
+            deviceCreate_txtProductName = FindViewById<EditText>(Resource.Id.deviceCreate_txtProductName);
 
             //Company spinter
             deviceCreate_spinCompany = FindViewById<Spinner>(Resource.Id.deviceCreate_spinCompany);
@@ -48,24 +57,37 @@ namespace SmartHome.Droid.Activities
             deviceCreate_spinCompany.Adapter = companyAdapter;
             deviceCreate_spinCompany.ItemSelected += DeviceCreate_spinCompany_ItemSelected;
 
-
             //ProductType spinter
             Spinner deviceCreate_spinProductType = FindViewById<Spinner>(Resource.Id.deviceCreate_spinProductType);
-            List<ProductType> lstProductType = await APIManager.GetProductTypeAll();
+            lstProductType = await APIManager.GetProductTypeAll();
             var producTypeAdap = new ProductTypeAdapter(this, lstProductType);
             deviceCreate_spinProductType.Adapter = producTypeAdap;
-            deviceCreate_spinProductType.ItemSelected += DeviceCreate_spinProductType_ItemSelectedAsync; ;
+            deviceCreate_spinProductType.ItemSelected += DeviceCreate_spinProductType_ItemSelectedAsync;
 
+            //room spinter
+            Spinner deviceCreate_spinRoom = FindViewById<Spinner>(Resource.Id.deviceCreate_spinRoom);
+            List<House> lstHouse = await APIManager.GetHouseByHouseId(houseId);
+            if (lstHouse !=null)
+            {
+                lstRoom= lstHouse[0].rooms;
+                var roomAdap = new RoomSpinAdapter(this, lstRoom);
+                deviceCreate_spinRoom.Adapter = roomAdap;
+                deviceCreate_spinRoom.ItemSelected += DeviceCreate_spinRoom_ItemSelected;
+            }
+        }
 
-
+        private void DeviceCreate_spinRoom_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            Spinner spin = (Spinner)sender;
+            roomId = this.lstRoom[e.Position].roomId;
         }
 
         private async void DeviceCreate_spinCompany_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
             Spinner spin = (Spinner)sender;
-            companyId=   this.lstCompany[e.Position].name;                
+            companyId = this.lstCompany[e.Position].companyId;
 
-            Spinner deviceCreate_spinProductHind = FindViewById<Spinner>(Resource.Id.deviceCreate_spinProductHind);            
+            Spinner deviceCreate_spinProductHind = FindViewById<Spinner>(Resource.Id.deviceCreate_spinProductHind);
             List<ProductType> lstProductType = await APIManager.GetCompanyFilter(companyId);
             var producTypeAdap = new ProductTypeAdapter(this, lstProductType);
             deviceCreate_spinProductHind.Adapter = producTypeAdap;
@@ -73,9 +95,10 @@ namespace SmartHome.Droid.Activities
 
         private async void DeviceCreate_spinProductType_ItemSelectedAsync(object sender, AdapterView.ItemSelectedEventArgs e)
         {
-            
+            Spinner spin = (Spinner)sender;
+            productId = this.lstProductType[e.Position].productTypeId;
         }
-        
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -108,7 +131,7 @@ namespace SmartHome.Droid.Activities
             switch (item.ItemId)
             {
                 case Resource.Id.RoomBar_mnuSave:
-                    //  RoomCreate();
+                    DeviceCreate();
                     break;
 
             }
@@ -116,7 +139,35 @@ namespace SmartHome.Droid.Activities
             return base.OnOptionsItemSelected(item);
         }
 
+        private async void DeviceCreate()
+        {
+            var alert = new Android.App.AlertDialog.Builder(this);
 
+            if (string.IsNullOrWhiteSpace(deviceCreate_txtProductName.Text) || string.IsNullOrWhiteSpace(deviceCreate_txtProductName.Text))
+            {
+                alert.SetTitle("Invalid product name!");
+
+                alert.SetMessage("An acquaintance must have both a first and last name.");
+
+                alert.SetNegativeButton("OK", (senderAlert, args) =>
+                {
+                    // an empty delegate body, because we just want to close the dialog and not take any other action
+                });
+
+                //run the alert in UI thread to display in the screen
+                RunOnUiThread(() =>
+                {
+                    alert.Show();
+                });
+
+                return;
+            }
+            string productName = deviceCreate_txtProductName.Text;
+
+            await APIManager.SetUpDeviceBehavior(userId, houseId, roomId, companyId,productId, productName);
+
+            //OnBackPressed();
+        }
 
 
         #endregion
