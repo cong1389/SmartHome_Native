@@ -71,7 +71,7 @@ namespace SmartHome.Droid.Activities
 
                 if (savedInstanceState == null)
                 {
-                    ListItemClicked(0);
+                    ListItemClicked(1);
                     navigationView.SetCheckedItem(Resource.Id.nav_home);
                 }
             }
@@ -92,14 +92,13 @@ namespace SmartHome.Droid.Activities
             Fragment fragment = null;
             switch (position)
             {
-                case 0:
+                case 1:
                     fragment = new HouseFragment();
                     toolbar_bottom.Visibility = ViewStates.Visible;
                     break;
-                case 1:
-                    fragment = new RoomFragment();
-                   
-                    break;
+                //case 1:
+                //    fragment = new RoomFragment();                   
+                //    break;
                 case 2:
                     fragment = new DeviceFragment();
                     break;              
@@ -117,14 +116,13 @@ namespace SmartHome.Droid.Activities
             switch (e.MenuItem.ItemId)
             {                
                 case (Resource.Id.nav_home):
-                    ListItemClicked(0);
-                    break;
-                case (Resource.Id.nav_room):
                     ListItemClicked(1);
-                    // Toast.MakeText(this, "Message selected!", ToastLength.Short).Show();
-                    break;
+                    break;                
                 case (Resource.Id.nav_userlist):
                     StartActivity(new Intent(Application.Context, typeof(UserListActivity)));
+                    break;
+                case (Resource.Id.nav_device):
+                    StartActivity(new Intent(Application.Context, typeof(RoomActivity)));
                     break;
                 case (Resource.Id.nav_logout):
                     StartActivity(new Intent(Application.Context, typeof(LoginActivity)));

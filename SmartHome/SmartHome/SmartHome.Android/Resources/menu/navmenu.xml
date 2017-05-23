@@ -2,36 +2,30 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
   <group android:checkableBehavior="single">
     <item
+     android:id="@+id/nav_userlist"
+     android:icon="@drawable/ic_devices_black_24dp"
+     android:title="User Management" />
+    <item
       android:id="@+id/nav_home"
       android:icon="@drawable/ic_home_black_24dp"
-      android:title="Account Setting" />
-    <item
+      android:title="House Management" />
+    <!--<item
       android:id="@+id/nav_room"
       android:icon="@drawable/ic_question_answer_black_24dp"
-      android:title="Room Setting" />
+      android:title="Room Setting" />-->
     <item
       android:id="@+id/nav_device"
       android:icon="@drawable/ic_supervisor_account_black_24dp"
-      android:title="Device Setting" />
+      android:title="Device Management" />
     <item
       android:id="@+id/nav_SearchApartment"
       android:icon="@drawable/ic_devices_black_24dp"
-      android:title="Scene Setting" />
-    <item
-     android:id="@+id/nav_userlist"
-     android:icon="@drawable/ic_devices_black_24dp"
-     android:title="User List" />
+      android:title="Scene Management" />
+    
     <item
      android:id="@+id/nav_logout"
      android:icon="@drawable/ic_devices_black_24dp"
      android:title="Logout" />
   </group>
-  <!--<item android:title="Review">
-    <menu>
-      <item
-        android:title="Post" />
-      <item
-        android:title="Ratings" />
-    </menu>
-  </item>-->
+  
 </menu>

@@ -14,22 +14,19 @@ using SmartHome.Droid.Common;
 using System;
 using Android.Content;
 using Android.Views;
+using Java.Util;
 
 namespace SmartHome.Droid.Activities
 {
-    [Activity(Label = "Smart Home - Create Device", ParentActivity = typeof(HomeActivity))]
+    [Activity(Label = "Smart Home - Create Device", ParentActivity = typeof(RoomActivity))]
     public class DeviceCreateActivity : AppCompatActivity
     {
         #region Parameter
 
-        string houseId = string.Empty;
+        string houseId = string.Empty,companyId=string.Empty;
 
-        List<Room> lstRoom = null;
-
-        GridView grdHouse;
-
-        EditText RoomCreate_txtRoomName;
-
+        Spinner deviceCreate_spinCompany = null;
+        List<Company> lstCompany = null;
         #endregion
 
         #region Common
@@ -44,22 +41,54 @@ namespace SmartHome.Droid.Activities
 
             houseId = Intent.GetStringExtra("houseId");
 
-            RoomCreate_txtRoomName = FindViewById<EditText>(Resource.Id.RoomCreate_txtRoomName);
+            //Company spinter
+            deviceCreate_spinCompany = FindViewById<Spinner>(Resource.Id.deviceCreate_spinCompany);
+            lstCompany = await APIManager.GetCompanyAll();
+            var companyAdapter = new CompanyAdapter(this, lstCompany);
+            deviceCreate_spinCompany.Adapter = companyAdapter;
+            deviceCreate_spinCompany.ItemSelected += DeviceCreate_spinCompany_ItemSelected;
+
+
+            //ProductType spinter
+            Spinner deviceCreate_spinProductType = FindViewById<Spinner>(Resource.Id.deviceCreate_spinProductType);
+            List<ProductType> lstProductType = await APIManager.GetProductTypeAll();
+            var producTypeAdap = new ProductTypeAdapter(this, lstProductType);
+            deviceCreate_spinProductType.Adapter = producTypeAdap;
+            deviceCreate_spinProductType.ItemSelected += DeviceCreate_spinProductType_ItemSelectedAsync; ;
+
+
+
         }
 
+        private async void DeviceCreate_spinCompany_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            Spinner spin = (Spinner)sender;
+            companyId=   this.lstCompany[e.Position].name;                
+
+            Spinner deviceCreate_spinProductHind = FindViewById<Spinner>(Resource.Id.deviceCreate_spinProductHind);            
+            List<ProductType> lstProductType = await APIManager.GetCompanyFilter(companyId);
+            var producTypeAdap = new ProductTypeAdapter(this, lstProductType);
+            deviceCreate_spinProductHind.Adapter = producTypeAdap;
+        }
+
+        private async void DeviceCreate_spinProductType_ItemSelectedAsync(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            
+        }
+        
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             // Create your application here
-            SetContentView(Resource.Layout.RoomCreateLayout);
+            SetContentView(Resource.Layout.DeviceCreateLayout);
 
             var toolbar = FindViewById<Toolbar>(Resource.Id.app_bar);
             SetSupportActionBar(toolbar);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             SupportActionBar.SetDisplayShowHomeEnabled(true);
 
-            Title = "CREATE ROOM";
+            Title = "CREATE DEVICE";
         }
 
         public override bool OnCreateOptionsMenu(Android.Views.IMenu menu)
@@ -79,7 +108,7 @@ namespace SmartHome.Droid.Activities
             switch (item.ItemId)
             {
                 case Resource.Id.RoomBar_mnuSave:
-                    RoomCreate();
+                    //  RoomCreate();
                     break;
 
             }
@@ -87,35 +116,7 @@ namespace SmartHome.Droid.Activities
             return base.OnOptionsItemSelected(item);
         }
 
-        private void RoomCreate()
-        {
-            var alert = new Android.App.AlertDialog.Builder(this);
 
-            if (string.IsNullOrWhiteSpace(RoomCreate_txtRoomName.Text) || string.IsNullOrWhiteSpace(RoomCreate_txtRoomName.Text))
-            {
-                alert.SetTitle("Invalid room name!");
-
-                alert.SetMessage("An acquaintance must have both a first and last name.");
-
-                alert.SetNegativeButton("OK", (senderAlert, args) =>
-                {
-                    // an empty delegate body, because we just want to close the dialog and not take any other action
-                });
-
-                //run the alert in UI thread to display in the screen
-                RunOnUiThread(() =>
-                {
-                    alert.Show();
-                });
-
-                return;
-            }
-            string roomName = RoomCreate_txtRoomName.Text;
-
-            APIManager.RoomCreate(houseId,roomName);
-
-            OnBackPressed();
-        }
 
 
         #endregion

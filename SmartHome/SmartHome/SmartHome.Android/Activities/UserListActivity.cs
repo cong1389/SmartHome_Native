@@ -18,7 +18,7 @@ using Android.Support.Design.Widget;
 
 namespace SmartHome.Droid.Activities
 {
-    [Activity(Label = "UserListActivity")]
+    [Activity(Label = "UserListActivity", ParentActivity = typeof(HomeActivity))]
     public class UserListActivity : AppCompatActivity
     {
         List<User> lstUser = null;

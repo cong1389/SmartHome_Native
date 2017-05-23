@@ -47,8 +47,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="18dp"
                         android:inputType="text"
-                        android:layout_gravity="center_vertical"
-                        android:enabled="false" />
+                        android:layout_gravity="center_vertical" />
                 </LinearLayout>
             <!--Full Name-->
                 <LinearLayout
@@ -126,11 +125,76 @@
                         android:inputType="text"
                         android:layout_gravity="center_vertical" />
                 </LinearLayout>
+            <!--Password-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:id="@+id/userEdit_linepassword">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="password"
+                        android:id="@+id/textView1" />
+                    <EditText
+                        android:id="@+id/userEdit_PassWord"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:inputType="text"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
+            <!--tenantId-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:id="@+id/userEdit_linetenantId">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="tenantId" />
+                    <EditText
+                        android:id="@+id/userEdit_TenantId"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:inputType="text"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
+            <!--Device Id-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:id="@+id/userEdit_lineDeviceId">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="deviceId" />
+                    <EditText
+                        android:id="@+id/userEdit_DeviceId"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:inputType="text"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
             <!--Role-->
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="30dp">
+                    android:layout_height="wrap_content"
+                    android:id="@+id/userEdit_linearRole">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -146,7 +210,8 @@
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="30dp">
+                    android:layout_height="wrap_content"
+                    android:id="@+id/userEdit_linearActive">
                     <Switch
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -156,7 +221,7 @@
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="18dp"
+                    android:layout_height="wrap_content"
                     android:id="@+id/userEdit_linearResetPassword">
                     <TextView
                         android:id="@+id/userEdit_txtResetPassword"
@@ -173,7 +238,7 @@
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="18dp"
+                    android:layout_height="wrap_content"
                     android:id="@+id/userEdit_linearChangePassword">
                     <TextView
                         android:id="@+id/userEdit_txtChangePassword"
@@ -217,64 +282,6 @@
                         android:paddingLeft="8dp"
                         android:paddingEnd="8dp"
                         android:paddingStart="8dp" />
-                </LinearLayout>
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:visibility="invisible">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="14dp"
-                        android:layout_gravity="center_vertical"
-                        android:text="deviceId" />
-                    <EditText
-                        android:id="@+id/userEdit_DeviceId"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="18dp"
-                        android:inputType="text"
-                        android:layout_gravity="center_vertical" />
-                </LinearLayout>
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:visibility="invisible">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="14dp"
-                        android:layout_gravity="center_vertical"
-                        android:text="tenantId" />
-                    <EditText
-                        android:id="@+id/userEdit_TenantId"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="18dp"
-                        android:inputType="text"
-                        android:layout_gravity="center_vertical" />
-                </LinearLayout>
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:visibility="invisible">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="14dp"
-                        android:layout_gravity="center_vertical"
-                        android:text="password"
-                        android:id="@+id/textView1" />
-                    <EditText
-                        android:id="@+id/userEdit_PassWord"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="18dp"
-                        android:inputType="text"
-                        android:layout_gravity="center_vertical" />
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>

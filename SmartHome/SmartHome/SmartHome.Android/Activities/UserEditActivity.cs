@@ -20,7 +20,7 @@ using System.Collections;
 
 namespace SmartHome.Droid.Activities
 {
-    [Activity(Label = "UserEditActivity")]
+    [Activity(Label = "UserEditActivity", ParentActivity = typeof(UserListActivity))]
     public class UserEditActivity : AppCompatActivity
     {
         #region Parameter
@@ -43,10 +43,16 @@ namespace SmartHome.Droid.Activities
         Switch userEdit_switActive;
         AutoCompleteTextView userEdit_cboHouse;
 
+        LinearLayout userEdit_linearActive;
+        LinearLayout userEdit_linearRole;
+        LinearLayout userEdit_linetenantId;
+        LinearLayout userEdit_lineDeviceId;
+        LinearLayout userEdit_linepassword;
         LinearLayout userEdit_linearResetPassword;
         LinearLayout userEdit_linearChangePassword;
         TextView userEdit_txtResetPassword;
         TextView userEdit_txtChangePassword;
+        TextView nameSectionTitleTextView;
 
         #endregion
 
@@ -55,32 +61,25 @@ namespace SmartHome.Droid.Activities
         private async void GetData()
         {
             objUserCurrent = await APIManager.GetUserByUserId(userIdCurrent);
+            if (userIdCurrent != null)
+            {
+                Title = "User edit";
 
-            if (objUserCurrent != null)
-            {                
                 userEdit_Name.Text = objUserCurrent.name;
-                userEdit_Name.Enabled = false;
 
                 userEdit_DeviceId.Text = objUserCurrent.deviceId;
-                userEdit_DeviceId.Enabled = false;
 
                 userEdit_TenantId.Text = objUserCurrent.tenantId;
-                userEdit_TenantId.Enabled = false;
 
                 userEdit_UserName.Text = objUserCurrent.username;
-                userEdit_UserName.Enabled = false;
 
                 userEdit_PassWord.Text = objUserCurrent.password;
-                userEdit_PassWord.Enabled = false;
 
                 userEdit_Mobile.Text = objUserCurrent.mobile;
-                userEdit_Mobile.Enabled = false;
 
                 userEdit_Email.Text = objUserCurrent.email;
-                userEdit_Email.Enabled = false;
 
                 userEdit_Address.Text = objUserCurrent.address;
-                userEdit_Address.Enabled = false;
 
                 //switch active/deactive user
                 userEdit_switActive.Checked = objUserCurrent.active;
@@ -124,9 +123,20 @@ namespace SmartHome.Droid.Activities
                         userEdit_linearResetPassword.Visibility = ViewStates.Invisible;
                         break;
                 }
-                //ArrayAdapter dynamicAdapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleSpinnerItem, arrHouse);
-                //dynamicAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleListItemChecked);
-                //userEdit_spinHouse.Adapter = dynamicAdapter;
+
+                
+            }
+            else
+            {
+                Title = "Add new user";
+                userEdit_linepassword.Visibility = ViewStates.Visible;
+                userEdit_lineDeviceId.Visibility = ViewStates.Visible;
+                userEdit_linetenantId.Visibility = ViewStates.Visible;
+                userEdit_linearRole.Visibility = ViewStates.Gone;
+                userEdit_linearActive.Visibility = ViewStates.Gone;
+                userEdit_linearResetPassword.Visibility = ViewStates.Gone;
+                userEdit_linearChangePassword.Visibility = ViewStates.Gone;
+                nameSectionTitleTextView.Visibility = ViewStates.Gone;
             }
         }
 
@@ -263,6 +273,12 @@ namespace SmartHome.Droid.Activities
 
             GetData();
 
+            userEdit_linearActive = FindViewById<LinearLayout>(Resource.Id.userEdit_linearActive);
+            userEdit_linearRole = FindViewById<LinearLayout>(Resource.Id.userEdit_linearRole);
+            userEdit_linetenantId = FindViewById<LinearLayout>(Resource.Id.userEdit_linetenantId);
+            userEdit_lineDeviceId = FindViewById<LinearLayout>(Resource.Id.userEdit_lineDeviceId);
+            userEdit_linepassword = FindViewById<LinearLayout>(Resource.Id.userEdit_linepassword);
+            nameSectionTitleTextView = FindViewById<TextView>(Resource.Id.nameSectionTitleTextView);
             //Reset password
             userEdit_linearResetPassword = FindViewById<LinearLayout>(Resource.Id.userEdit_linearResetPassword);
             userEdit_txtResetPassword = FindViewById<TextView>(Resource.Id.userEdit_txtResetPassword);

@@ -102,6 +102,8 @@ namespace SmartHome.Droid.Activities
                     var roomCreateActivity = new Intent(this, typeof(RoomCreateActivity));
                     roomCreateActivity.PutExtra("houseId", houseId);
                     StartActivity(roomCreateActivity);
+                    SetResult(Result.Ok, roomCreateActivity);
+                    Finish();
                     break;
                 case Resource.Id.RoomBar_mnuCreateDevice:
                     var deviceCreateActivity = new Intent(this, typeof(DeviceCreateActivity));
@@ -112,6 +114,11 @@ namespace SmartHome.Droid.Activities
             }
 
             return base.OnOptionsItemSelected(item);
+        }
+
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
         }
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -131,7 +138,12 @@ namespace SmartHome.Droid.Activities
             //StartActivity(deviceActivity);
         }
 
-        #endregion
+        protected override void OnRestart()
+        {
+            base.OnRestart();
+        }
 
-    }
+            #endregion
+
+        }
 }

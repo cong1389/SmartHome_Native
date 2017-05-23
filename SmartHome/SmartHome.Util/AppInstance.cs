@@ -13,6 +13,8 @@ namespace SmartHome.Util
         public static House houseData { get; set; }
         public static Room roomData { get; set; }
 
+        public static Company companyData { get; set; }
+
         #endregion
 
         #region Lưu data để sử dụng page khác
@@ -59,6 +61,11 @@ namespace SmartHome.Util
         public static string api_DeviceTestOff = string.Format("{0}/{1}", api, "api/Manager/testOff");
 
         public static string api_hello = string.Format("{0}/{1}", api, "api/hello");
+
+        public static string api_GetCompanyFilter = string.Format("{0}/{1}", api, "api/company/filter");
+        public static string api_GetCompany = string.Format("{0}/{1}", api, "api/company/get");
+
+        public static string api_GetProductType = string.Format("{0}/{1}", api, "api/productType/get");
 
         #endregion
     }

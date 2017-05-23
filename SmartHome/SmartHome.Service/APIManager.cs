@@ -649,5 +649,80 @@ namespace SmartHome.Service
 
         #endregion
 
+        #region Company
+
+        public static async Task<List<ProductType>> GetCompanyFilter(string companyId)
+        {
+            List<ProductType> lstProductType = null;
+            try
+            {
+                var client = new HttpClient();
+                client.BaseAddress = new Uri(AppInstance.api);
+                client.DefaultRequestHeaders.Add("x-access-token", AppInstance.user.accessToken);
+
+                var response = await client.GetAsync(string.Format("{0}?companyId={1}", AppInstance.api_GetCompanyFilter, companyId));
+                string result = response.Content.ReadAsStringAsync().Result;
+
+                lstProductType = !string.IsNullOrWhiteSpace(result) ? JsonConvert.DeserializeObject<List<ProductType>>(result) : null;
+            }
+            catch (Exception ex)
+            {
+                string msg = ex.Message;
+            }
+
+            return lstProductType;
+        }
+
+        public static async Task<List<Company>> GetCompanyAll()
+        {
+            List<Company> lstCompany = null;
+            try
+            {
+                var client = new HttpClient();
+                client.BaseAddress = new Uri(AppInstance.api);
+                client.DefaultRequestHeaders.Add("x-access-token", AppInstance.user.accessToken);
+
+                var response = await client.GetAsync(AppInstance.api_GetCompany);
+                string result = response.Content.ReadAsStringAsync().Result;
+
+                lstCompany = !string.IsNullOrWhiteSpace(result) ? JsonConvert.DeserializeObject<List<Company>>(result) : null;
+            }
+            catch (Exception ex)
+            {
+                string msg = ex.Message;
+            }
+
+            return lstCompany;
+        }
+
+        #endregion
+
+        #region ProductType
+
+        public static async Task<List<ProductType>> GetProductTypeAll()
+        {
+            List<ProductType> lstProductType = null;
+            try
+            {
+                var client = new HttpClient();
+                client.BaseAddress = new Uri(AppInstance.api);
+                client.DefaultRequestHeaders.Add("x-access-token", AppInstance.user.accessToken);
+
+                var response = await client.GetAsync(AppInstance.api_GetProductType);
+                string result = response.Content.ReadAsStringAsync().Result;
+
+                lstProductType = !string.IsNullOrWhiteSpace(result) ? JsonConvert.DeserializeObject<List<ProductType>>(result) : null;
+            }
+            catch (Exception ex)
+            {
+                string msg = ex.Message;
+            }
+
+            return lstProductType;
+        }
+
+
+        #endregion
+
     }
 }
