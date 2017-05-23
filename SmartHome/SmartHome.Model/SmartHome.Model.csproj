@@ -34,6 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Product.cs" />
     <Compile Include="ProductType.cs" />
     <Compile Include="Company.cs" />
     <Compile Include="Hello.cs" />
