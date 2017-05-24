@@ -332,8 +332,7 @@ namespace SmartHome.Service
 
         #endregion
 
-        #region House        
-
+        #region House 
 
         public static async Task<HouseResponseCollection> GetHouseByUser(string userId)
         {
@@ -651,9 +650,14 @@ namespace SmartHome.Service
 
         #region Company
 
-        public static async Task<List<ProductType>> GetCompanyFilter(string companyId)
+        /// <summary>
+        /// Product hind
+        /// </summary>
+        /// <param name="companyId"></param>
+        /// <returns></returns>
+        public static async Task<List<Product>> GetCompanyFilter(string companyId)
         {
-            List<ProductType> lstProductType = null;
+            List<Product> lstProduct = null;
             try
             {
                 var client = new HttpClient();
@@ -663,14 +667,14 @@ namespace SmartHome.Service
                 var response = await client.GetAsync(string.Format("{0}?companyId={1}", AppInstance.api_GetCompanyFilter, companyId));
                 string result = response.Content.ReadAsStringAsync().Result;
 
-                lstProductType = !string.IsNullOrWhiteSpace(result) ? JsonConvert.DeserializeObject<List<ProductType>>(result) : null;
+                lstProduct = !string.IsNullOrWhiteSpace(result) ? JsonConvert.DeserializeObject<List<Product>>(result) : null;
             }
             catch (Exception ex)
             {
                 string msg = ex.Message;
             }
 
-            return lstProductType;
+            return lstProduct;
         }
 
         public static async Task<List<Company>> GetCompanyAll()
@@ -721,6 +725,53 @@ namespace SmartHome.Service
             return lstProductType;
         }
 
+        public static async Task<List<ProductType>> GetProductTypeByProducTypeId(string productTypeId)
+        {
+            List<ProductType> lstProductType = null;
+            try
+            {
+                var client = new HttpClient();
+                client.BaseAddress = new Uri(AppInstance.api);
+                client.DefaultRequestHeaders.Add("x-access-token", AppInstance.user.accessToken);
+
+                var response = await client.GetAsync(string.Format("{0}/{1}", AppInstance.api_GetProductTypeByProducTypeId, productTypeId));                
+                string result = response.Content.ReadAsStringAsync().Result;
+
+                lstProductType = !string.IsNullOrWhiteSpace(result) ? JsonConvert.DeserializeObject<List<ProductType>>(result) : null;
+            }
+            catch (Exception ex)
+            {
+                string msg = ex.Message;
+            }
+
+            return lstProductType;
+        }
+
+
+        #endregion
+
+        #region Product
+        public static async Task<List<Product>> GetProducByCompanyId(string companyId)
+        {
+            List<Product> lstProduct = null;
+            try
+            {
+                var client = new HttpClient();
+                client.BaseAddress = new Uri(AppInstance.api);
+                client.DefaultRequestHeaders.Add("x-access-token", AppInstance.user.accessToken);
+
+                var response = await client.GetAsync(string.Format("{0}?companyId={1}", AppInstance.api_GetProductByCompanyId, companyId));
+                string result = response.Content.ReadAsStringAsync().Result;
+
+                lstProduct = !string.IsNullOrWhiteSpace(result) ? JsonConvert.DeserializeObject<List<Product>>(result) : null;
+            }
+            catch (Exception ex)
+            {
+                string msg = ex.Message;
+            }
+
+            return lstProduct;
+        }
 
         #endregion
 

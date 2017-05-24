@@ -64,8 +64,12 @@ namespace SmartHome.Util
 
         public static string api_GetCompanyFilter = string.Format("{0}/{1}", api, "api/company/filter");
         public static string api_GetCompany = string.Format("{0}/{1}", api, "api/company/get");
+        public static string api_GetProductByCompanyId = string.Format("{0}/{1}", api, "api/company/get");
 
         public static string api_GetProductType = string.Format("{0}/{1}", api, "api/productType/get");
+        public static string api_GetProductTypeByProducTypeId = string.Format("{0}/{1}", api, "api/productType/get");
+
+       
 
         public static string api_SetUpDeviceBehavior = string.Format("{0}/{1}", api, "api/manager/setUpDeviceBehavior");
 

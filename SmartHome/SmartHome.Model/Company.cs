@@ -12,7 +12,7 @@ namespace SmartHome.Model
         public string name { get; set; }
 
         [JsonProperty("products")]
-        public List<ProductType> products { get; set; }
+        public List<Product> products { get; set; }
        
     }
 }
