@@ -74,7 +74,7 @@ namespace SmartHome.Droid.Common
 
         private async Task Switche(string houseId, string roomId, string deviceId, bool status)
         {
-            await APIManager.TestOn(houseId, roomId, deviceId, status);
+            await APIManager.IsDeviceSetStatus(houseId, roomId, deviceId, status);
         }
 
         //Fill in cound here, currently 0
