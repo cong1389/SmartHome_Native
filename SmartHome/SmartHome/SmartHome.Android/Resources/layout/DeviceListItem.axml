@@ -30,7 +30,7 @@
             <Switch
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/switch1"
+                android:id="@+id/DeviceListItem_switchPaired"
                 android:layout_gravity="right" />
         </LinearLayout>
     </LinearLayout>

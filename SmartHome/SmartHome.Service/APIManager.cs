@@ -585,6 +585,33 @@ namespace SmartHome.Service
             return statusResponse;
         }
 
+        public static async Task<StatusResponse> IsDeviceSetPaired(string houseId, string roomId, string deviceId, bool statusCurrent)
+        {
+            Status status = null;
+            try
+            {
+                var client = new HttpClient();
+                client.BaseAddress = new Uri(AppInstance.api);
+                client.DefaultRequestHeaders.Add("x-access-token", AppInstance.user.accessToken);
+
+                HttpContent str = new StringContent(string.Format("houseId={0}&roomId={1}&deviceId={2}", houseId, roomId, deviceId), System.Text.Encoding.UTF8, "application/x-www-form-urlencoded");
+                var response = statusCurrent == true ? await client.PutAsync(AppInstance.api_DevicePaired, str) : await client.PutAsync(AppInstance.api_DeviceUnsetPaired, str);
+                var statusCode = response.StatusCode;
+                if (statusCode == HttpStatusCode.OK && response.IsSuccessStatusCode)
+                {
+                    var result = response.Content.ReadAsStringAsync().Result;
+                    statusResponse = JsonConvert.DeserializeObject<StatusResponse>(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                //houseResponseCollection.Error = ex.Message;
+            }
+
+            //return houseResponseCollection;
+            return statusResponse;
+        }
+
         public static async Task<StatusResponse> TestOn(string houseId, string roomId, string deviceId, bool statusCurrent)
         {
             Status status = null;

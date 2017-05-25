@@ -3338,9 +3338,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int room=0x7f02011d;
     }
     public static final class id {
-        public static final int DeviceGirdViewItem_switch1=0x7f09008a;
         public static final int DeviceGirdViewItem_switchPaired=0x7f09008b;
+        public static final int DeviceGirdViewItem_switchStatus=0x7f09008a;
         public static final int DeviceGirdViewItem_txtUserName=0x7f090089;
+        public static final int DeviceListItem_switchPaired=0x7f09008f;
         public static final int HomeFrameLayout=0x7f0900a1;
         public static final int RoomBar_mnuCreateDevice=0x7f090111;
         public static final int RoomBar_mnuCreateRoom=0x7f090110;
@@ -3549,7 +3550,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int status_bar_latest_event_content=0x7f0900c4;
         public static final int submenuarrow=0x7f09005e;
         public static final int submit_area=0x7f09006f;
-        public static final int switch1=0x7f09008f;
         public static final int switchWidget=0x7f0900db;
         public static final int tabMode=0x7f090011;
         public static final int text=0x7f0900d4;

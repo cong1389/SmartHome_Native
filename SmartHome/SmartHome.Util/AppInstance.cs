@@ -57,6 +57,9 @@ namespace SmartHome.Util
         public static string api_DeviceActive = string.Format("{0}/{1}", api, "api/device/active");
         public static string api_DeviceDeActive = string.Format("{0}/{1}", api, "api/device/deactive");
 
+        public static string api_DevicePaired = string.Format("{0}/{1}", api, "api/device/setPairedToDevice");
+        public static string api_DeviceUnsetPaired = string.Format("{0}/{1}", api, "api/device/unsetPairedToDevice");
+
         public static string api_DeviceTestOn = string.Format("{0}/{1}", api, "api/Manager/testOn");
         public static string api_DeviceTestOff = string.Format("{0}/{1}", api, "api/Manager/testOff");
 

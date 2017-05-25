@@ -19,7 +19,7 @@
     <Switch
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/DeviceGirdViewItem_switch1"
+        android:id="@+id/DeviceGirdViewItem_switchStatus"
         android:height="15dp"
         android:text="Status" />
   </LinearLayout>

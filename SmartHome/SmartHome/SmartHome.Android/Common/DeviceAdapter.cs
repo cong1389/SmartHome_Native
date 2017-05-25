@@ -41,26 +41,38 @@ namespace SmartHome.Droid.Common
 
             convertView.FindViewById<TextView>(Resource.Id.DeviceGirdViewItem_txtUserName).Text = item.name;
 
-            Switch DeviceGirdViewItem_switch1 = convertView.FindViewById<Switch>(Resource.Id.DeviceGirdViewItem_switch1);
-            DeviceGirdViewItem_switch1.Checked = item.status;         
-            DeviceGirdViewItem_switch1.Tag = item.deviceId;
-            DeviceGirdViewItem_switch1.CheckedChange += switcher_Toggled;
-            
+            //switch status
+            Switch DeviceGirdViewItem_switchStatus = convertView.FindViewById<Switch>(Resource.Id.DeviceGirdViewItem_switchStatus);
+            DeviceGirdViewItem_switchStatus.Checked = item.status;         
+            DeviceGirdViewItem_switchStatus.Tag = item.deviceId;
+            DeviceGirdViewItem_switchStatus.CheckedChange += DeviceGirdViewItem_switchStatus_CheckedChange;
+
+            //switch pair
+            Switch DeviceGirdViewItem_switchPaired = convertView.FindViewById<Switch>(Resource.Id.DeviceGirdViewItem_switchPaired);
+            DeviceGirdViewItem_switchPaired.Checked = item.paired;
+            DeviceGirdViewItem_switchPaired.Tag = item.deviceId;
+            DeviceGirdViewItem_switchPaired.CheckedChange += DeviceGirdViewItem_switchPaired_CheckedChange; ;
+
             return convertView;
         }
 
-        private void switcher_Toggled(object sender, CompoundButton.CheckedChangeEventArgs e)
+        private async void DeviceGirdViewItem_switchPaired_CheckedChange(object sender, CompoundButton.CheckedChangeEventArgs e)
         {
             Switch switch1 = (Switch)sender;
             string deviceId = (string)switch1.Tag;
 
-            Switche(houseId, roomId, deviceId, e.IsChecked);
+            await APIManager.IsDeviceSetPaired(houseId, roomId, deviceId, e.IsChecked);
         }
 
-        private async Task Switche(string houseId, string roomId, string deviceId, bool status)
+        private async void DeviceGirdViewItem_switchStatus_CheckedChange(object sender, CompoundButton.CheckedChangeEventArgs e)
         {
-            await APIManager.IsDeviceSetStatus(houseId, roomId, deviceId, status);
+            Switch switch1 = (Switch)sender;
+            string deviceId = (string)switch1.Tag;
+
+            //Switche(houseId, roomId, deviceId, e.IsChecked);
+            await APIManager.IsDeviceSetStatus(houseId, roomId, deviceId, e.IsChecked);
         }
+        
 
         //Fill in cound here, currently 0
         public override int Count

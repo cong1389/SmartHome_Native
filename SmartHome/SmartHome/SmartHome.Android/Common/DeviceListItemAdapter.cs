@@ -46,7 +46,14 @@ namespace SmartHome.Droid.Common
             txtName.Text = item.name;
             txtName.Tag = item.deviceId;
             txtName.Click += TxtName_Click;
-            
+
+            //Set pair
+            Switch DeviceListItem_switchPaired = convertView.FindViewById<Switch>(Resource.Id.DeviceListItem_switchPaired);
+            DeviceListItem_switchPaired.Checked = item.paired;
+            DeviceListItem_switchPaired.Text = "Pair";
+            DeviceListItem_switchPaired.Tag = item.deviceId;
+            DeviceListItem_switchPaired.CheckedChange += DeviceListItem_switchPaired_CheckedChange; ;
+
             return convertView;
         }
 
@@ -64,12 +71,12 @@ namespace SmartHome.Droid.Common
             //Toast.MakeText(currentContext, "adfas", ToastLength.Long).Show();
         }
 
-        private void switcher_Toggled(object sender, CompoundButton.CheckedChangeEventArgs e)
+        private async void DeviceListItem_switchPaired_CheckedChange(object sender, CompoundButton.CheckedChangeEventArgs e)
         {
             Switch switch1 = (Switch)sender;
             string deviceId = (string)switch1.Tag;
 
-            Switche(houseId, roomId, deviceId, e.IsChecked);
+            await APIManager.IsDeviceSetPaired(houseId, roomId, deviceId, e.IsChecked);
         }
 
         private async Task Switche(string houseId, string roomId, string deviceId, bool status)

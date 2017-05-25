@@ -2982,14 +2982,17 @@ namespace SmartHome.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f09008a
-			public const int DeviceGirdViewItem_switch1 = 2131296394;
-			
 			// aapt resource value: 0x7f09008b
 			public const int DeviceGirdViewItem_switchPaired = 2131296395;
 			
+			// aapt resource value: 0x7f09008a
+			public const int DeviceGirdViewItem_switchStatus = 2131296394;
+			
 			// aapt resource value: 0x7f090089
 			public const int DeviceGirdViewItem_txtUserName = 2131296393;
+			
+			// aapt resource value: 0x7f09008f
+			public const int DeviceListItem_switchPaired = 2131296399;
 			
 			// aapt resource value: 0x7f0900a1
 			public const int HomeFrameLayout = 2131296417;
@@ -3614,9 +3617,6 @@ namespace SmartHome.Droid
 			
 			// aapt resource value: 0x7f09006f
 			public const int submit_area = 2131296367;
-			
-			// aapt resource value: 0x7f09008f
-			public const int switch1 = 2131296399;
 			
 			// aapt resource value: 0x7f0900db
 			public const int switchWidget = 2131296475;

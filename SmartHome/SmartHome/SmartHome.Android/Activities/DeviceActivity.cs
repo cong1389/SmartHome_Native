@@ -34,7 +34,6 @@ namespace SmartHome.Droid.Activities
                 List<Devices> lstDevice = objRoom.devices;
                 var grdHouse = FindViewById<GridView>(Resource.Id.grdHouse);
                 grdHouse.Adapter = new DeviceAdapter(this, lstDevice, houseId, roomId);
-
             }
         }
 
