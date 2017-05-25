@@ -204,6 +204,7 @@
                     <Spinner
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
                         android:id="@+id/userEdit_spinHouse" />
                 </LinearLayout>
             <!--Active-->
@@ -215,6 +216,7 @@
                     <Switch
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
                         android:id="@+id/userEdit_switActive" />
                 </LinearLayout>
             <!--Retset password-->

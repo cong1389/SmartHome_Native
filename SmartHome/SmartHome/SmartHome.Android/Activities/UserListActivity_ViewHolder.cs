@@ -73,7 +73,7 @@ namespace SmartHome.Droid.Activities
 
             // Create an adapter for the RecyclerView, and pass it the
             // data set (the photo album) to manage:
-            mAdapter = new PhotoAlbumAdapter(lstUser,this);
+            mAdapter = new PhotoAlbumAdapter(lstUser, this);
 
             // Register the item click handler (below) with the adapter:
             mAdapter.ItemClick += OnItemClick;
@@ -89,9 +89,16 @@ namespace SmartHome.Droid.Activities
         }
         void OnItemClick(object sender, int position)
         {
-            // Display a toast that briefly shows the enumeration of the selected photo:
-            int photoNum = position + 1;
-            Toast.MakeText(this, "This is photo number " + photoNum, ToastLength.Short).Show();
+            PhotoAlbumAdapter dapter = (PhotoAlbumAdapter)sender;
+            string userId = dapter != null ? dapter.lstUser[position].userId : string.Empty;
+
+            var userEditActivity = new Intent(this, typeof(UserEditActivity));
+            userEditActivity.PutExtra("userId", userId);
+            StartActivity(userEditActivity);
+
+            //// Display a toast that briefly shows the enumeration of the selected photo:
+            //int photoNum = position + 1;
+            //Toast.MakeText(this, "This is photo number " + photoNum, ToastLength.Short).Show();
         }
 
         private async Task GetData()
@@ -114,7 +121,7 @@ namespace SmartHome.Droid.Activities
         Activity activity;
 
         // Load the adapter with the data set (photo album) at construction time:
-        public PhotoAlbumAdapter(List<User> lstUser,Activity activity)
+        public PhotoAlbumAdapter(List<User> lstUser, Activity activity)
         {
             this.lstUser = lstUser;
             this.activity = activity;
@@ -124,7 +131,7 @@ namespace SmartHome.Droid.Activities
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
             // Inflate the CardView for the photo:
-            View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.UserListLayoutItem_Holder, parent, false);          
+            View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.UserListLayoutItem_Holder, parent, false);
 
             // Create a ViewHolder to find and hold these view references, and 
             // register OnClick with the view holder:
@@ -147,7 +154,7 @@ namespace SmartHome.Droid.Activities
             List<House> lstHouse = lstUser[position].houses;
             if (lstHouse != null && lstHouse.Count > 0)
             {
-                string roleName = lstUser[position].roles[0].ToString();                
+                string roleName = lstUser[position].roles[0].ToString();
                 vh.UserListItem_House.Adapter = new User_HouseItemAdapter(activity, lstHouse, roleName);
             }
         }

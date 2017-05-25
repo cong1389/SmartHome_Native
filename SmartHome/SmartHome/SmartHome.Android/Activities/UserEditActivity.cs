@@ -20,7 +20,7 @@ using System.Collections;
 
 namespace SmartHome.Droid.Activities
 {
-    [Activity(Label = "UserEditActivity", ParentActivity = typeof(UserListActivity))]
+    [Activity(Label = "UserEditActivity", ParentActivity = typeof(UserListActivity_ViewHolder))]
     public class UserEditActivity : AppCompatActivity
     {
         #region Parameter
@@ -122,9 +122,7 @@ namespace SmartHome.Droid.Activities
                     case "user":
                         userEdit_linearResetPassword.Visibility = ViewStates.Invisible;
                         break;
-                }
-
-                
+                }                
             }
             else
             {
