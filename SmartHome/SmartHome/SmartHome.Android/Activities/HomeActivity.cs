@@ -119,7 +119,7 @@ namespace SmartHome.Droid.Activities
                     ListItemClicked(1);
                     break;                
                 case (Resource.Id.nav_userlist):
-                    StartActivity(new Intent(Application.Context, typeof(UserListActivity)));
+                    StartActivity(new Intent(Application.Context, typeof(UserListActivity_ViewHolder)));
                     break;
                 case (Resource.Id.nav_device):
                     StartActivity(new Intent(Application.Context, typeof(RoomActivity)));

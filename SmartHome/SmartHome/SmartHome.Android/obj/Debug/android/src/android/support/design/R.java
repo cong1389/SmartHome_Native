@@ -3343,16 +3343,16 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int DeviceGirdViewItem_txtUserName=0x7f090089;
         public static final int DeviceListItem_switchPaired=0x7f09008f;
         public static final int HomeFrameLayout=0x7f0900a1;
-        public static final int RoomBar_mnuCreateDevice=0x7f090111;
-        public static final int RoomBar_mnuCreateRoom=0x7f090110;
-        public static final int RoomBar_mnuSave=0x7f09010f;
+        public static final int RoomBar_mnuCreateDevice=0x7f090113;
+        public static final int RoomBar_mnuCreateRoom=0x7f090112;
+        public static final int RoomBar_mnuSave=0x7f090111;
         public static final int RoomCreate_txtRoomName=0x7f0900e0;
         public static final int RoomEdit_btnScanIP=0x7f0900e4;
         public static final int RoomEdit_txtRoomName=0x7f0900e1;
         public static final int RoomGridItem_txtDeviceCount=0x7f0900e6;
         public static final int UserListItem_House=0x7f090101;
         public static final int action0=0x7f0900c2;
-        public static final int action_attach=0x7f090107;
+        public static final int action_attach=0x7f090109;
         public static final int action_bar=0x7f090064;
         public static final int action_bar_activity_content=0x7f090001;
         public static final int action_bar_container=0x7f090063;
@@ -3369,7 +3369,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int action_mode_bar=0x7f090061;
         public static final int action_mode_bar_stub=0x7f090060;
         public static final int action_mode_close_button=0x7f090043;
-        public static final int action_refresh=0x7f090106;
+        public static final int action_refresh=0x7f090108;
         public static final int action_text=0x7f0900c1;
         public static final int actions=0x7f0900cf;
         public static final int activity_chooser_view_content=0x7f090044;
@@ -3455,10 +3455,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int listViewRoom=0x7f0900df;
         public static final int list_item=0x7f090048;
         public static final int main_content=0x7f090080;
-        public static final int masked=0x7f090105;
+        public static final int masked=0x7f090107;
         public static final int media_actions=0x7f0900c5;
-        public static final int menu_settings=0x7f090109;
-        public static final int menu_share=0x7f090108;
+        public static final int menu_settings=0x7f09010b;
+        public static final int menu_share=0x7f09010a;
         public static final int middle=0x7f090022;
         public static final int mini=0x7f09003e;
         public static final int mr_art=0x7f0900b1;
@@ -3488,11 +3488,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int mr_volume_slider=0x7f0900b9;
         public static final int multiply=0x7f09001a;
         public static final int nameSectionTitleTextView=0x7f0900ec;
-        public static final int nav_SearchApartment=0x7f09010d;
-        public static final int nav_device=0x7f09010c;
-        public static final int nav_home=0x7f09010b;
-        public static final int nav_logout=0x7f09010e;
-        public static final int nav_userlist=0x7f09010a;
+        public static final int nav_SearchApartment=0x7f09010f;
+        public static final int nav_device=0x7f09010e;
+        public static final int nav_home=0x7f09010d;
+        public static final int nav_logout=0x7f090110;
+        public static final int nav_userlist=0x7f09010c;
         public static final int nav_usr=0x7f090090;
         public static final int nav_view=0x7f0900a4;
         public static final int navigation_header_container=0x7f09007a;
@@ -3508,6 +3508,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int progress_circular=0x7f090006;
         public static final int progress_horizontal=0x7f090007;
         public static final int radio=0x7f09005d;
+        public static final int recyclerView=0x7f090104;
         public static final int relativeLayout1=0x7f09009d;
         public static final int right=0x7f090035;
         public static final int right_icon=0x7f0900cd;
@@ -3556,6 +3557,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int text2=0x7f0900d2;
         public static final int textSpacerNoButtons=0x7f090052;
         public static final int textSpacerNoTitle=0x7f090051;
+        public static final int textView=0x7f090105;
         public static final int textView1=0x7f090099;
         public static final int textView2=0x7f09009e;
         public static final int text_input_password_toggle=0x7f09007f;
@@ -3583,7 +3585,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int txtUsr=0x7f090096;
         public static final int up=0x7f090009;
         public static final int useLogo=0x7f090018;
-        public static final int userEditMenuSaveButton=0x7f090112;
+        public static final int userEditMenuSaveButton=0x7f090114;
         public static final int userEdit_Address=0x7f0900f0;
         public static final int userEdit_DeviceId=0x7f0900f7;
         public static final int userEdit_Email=0x7f0900f1;
@@ -3602,8 +3604,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int userEdit_linearRole=0x7f090082;
         public static final int userEdit_linepassword=0x7f0900f2;
         public static final int userEdit_linetenantId=0x7f0900f4;
-        public static final int userEdit_mnuDelete=0x7f090113;
-        public static final int userEdit_mnuResetPw=0x7f090114;
+        public static final int userEdit_mnuDelete=0x7f090115;
+        public static final int userEdit_mnuResetPw=0x7f090116;
         public static final int userEdit_spinHouse=0x7f0900f8;
         public static final int userEdit_switActive=0x7f0900fa;
         public static final int userEdit_txtChangePassword=0x7f0900fe;
@@ -3611,7 +3613,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int userList_list=0x7f090102;
         public static final int userList_txtName=0x7f090100;
         public static final int view_offset_helper=0x7f09000e;
-        public static final int visible=0x7f090104;
+        public static final int visible=0x7f090106;
         public static final int volume_item_container=0x7f0900b7;
         public static final int withText=0x7f090027;
         public static final int wrap_content=0x7f09001f;
@@ -3734,6 +3736,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int userlistitem=0x7f040060;
         public static final int userlistitem_house=0x7f040061;
         public static final int userlistlayout=0x7f040062;
+        public static final int userlistlayout_holder=0x7f040063;
+        public static final int userlistlayoutitem_holder=0x7f040064;
     }
     public static final class menu {
         public static final int action_menu=0x7f0f0000;

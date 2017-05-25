@@ -175,6 +175,7 @@
     <Compile Include="Activities\RoomActivity.cs" />
     <Compile Include="Activities\RoomFragment.cs" />
     <Compile Include="Activities\UserEditActivity.cs" />
+    <Compile Include="Activities\UserListActivity_ViewHolder.cs" />
     <Compile Include="Activities\UserListActivity.cs" />
     <Compile Include="Adapters\ProductAdapter.cs" />
     <Compile Include="Adapters\RoomSpinAdapter.cs" />
@@ -272,6 +273,12 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\DeviceCreateLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\UserListLayout_Holder.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\UserListLayoutItem_Holder.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

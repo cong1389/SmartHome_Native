@@ -49,6 +49,7 @@ namespace SmartHome.Droid.Activities
         {
             base.OnCreate(savedInstanceState);  
         }
+
         private async Task GetData()
         {
             lstUser = await APIManager.GetUserAll();
@@ -56,6 +57,7 @@ namespace SmartHome.Droid.Activities
             userList_list.Adapter = new UserAdapter(this, lstUser);
             userList_list.ItemClick += UserList_grd_ItemClick;
         }
+
         private void UserList_grd_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             string userId = lstUser[e.Position].userId;
