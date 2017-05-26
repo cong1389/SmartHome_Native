@@ -3558,7 +3558,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int text2=0x7f0900d2;
         public static final int textSpacerNoButtons=0x7f090052;
         public static final int textSpacerNoTitle=0x7f090051;
-        public static final int textView=0x7f090106;
         public static final int textView1=0x7f090099;
         public static final int textView2=0x7f09009e;
         public static final int text_input_password_toggle=0x7f09007f;
@@ -3583,6 +3582,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int txtPw=0x7f090097;
         public static final int txtScanIP=0x7f0900e3;
         public static final int txtUerName=0x7f0900dc;
+        public static final int txtUserName=0x7f090106;
         public static final int txtUsr=0x7f090096;
         public static final int up=0x7f090009;
         public static final int useLogo=0x7f090018;

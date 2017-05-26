@@ -47,3 +47,5 @@ D:\Working\SmartHome_Native\SmartHome\SmartHome.Util\obj\Debug\SmartHome.Util.dl
 D:\Working\SmartHome_Native\SmartHome\SmartHome.Util\bin\Debug\SmartHome.Util.dll.mdb
 D:\Working\SmartHome_Native\SmartHome\SmartHome.Util\obj\Debug\SmartHome.Util.dll.mdb
 D:\Working\SmartHome_Native\SmartHome\SmartHome.Util\bin\Debug\SmartHome.Util.dll.mdb
+D:\Working\SmartHome_Native\SmartHome\SmartHome.Util\obj\Debug\SmartHome.Util.dll.mdb
+D:\Working\SmartHome_Native\SmartHome\SmartHome.Util\bin\Debug\SmartHome.Util.dll.mdb

@@ -3642,9 +3642,6 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f090051
 			public const int textSpacerNoTitle = 2131296337;
 			
-			// aapt resource value: 0x7f090106
-			public const int textView = 2131296518;
-			
 			// aapt resource value: 0x7f090099
 			public const int textView1 = 2131296409;
 			
@@ -3716,6 +3713,9 @@ namespace SmartHome.Droid
 			
 			// aapt resource value: 0x7f0900dc
 			public const int txtUerName = 2131296476;
+			
+			// aapt resource value: 0x7f090106
+			public const int txtUserName = 2131296518;
 			
 			// aapt resource value: 0x7f090096
 			public const int txtUsr = 2131296406;

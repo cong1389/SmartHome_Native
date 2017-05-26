@@ -26,15 +26,15 @@ namespace SmartHome.Droid.Activities
         List<User> lstUser = null;
 
         // RecyclerView instance that displays the photo album:
-        RecyclerView mRecyclerView;
+        RecyclerView recyclerView;
 
         // Layout manager that lays out each card in the RecyclerView:
-        RecyclerView.LayoutManager mLayoutManager;
+        RecyclerView.LayoutManager layoutManager;
 
         // Adapter that accesses the data set (a photo album):
-        PhotoAlbumAdapter mAdapter;
+        UserListAdapter userListAdapter;
 
-        SwipeRefreshLayout _SwipeRefreshLayout;
+        SwipeRefreshLayout swipeRefreshLayout;
 
         protected override async void OnResume()
         {
@@ -60,33 +60,33 @@ namespace SmartHome.Droid.Activities
             // ensure that the system bar color gets drawn
             Window.AddFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
 
-            _SwipeRefreshLayout = (SwipeRefreshLayout)FindViewById(Resource.Id.acquaintanceListSwipeRefreshContainer);
+            swipeRefreshLayout = (SwipeRefreshLayout)FindViewById(Resource.Id.acquaintanceListSwipeRefreshContainer);
 
-            _SwipeRefreshLayout.Refresh += async (sender, e) => {
+            swipeRefreshLayout.Refresh += async (sender, e) => {
                 await GetData();
             };
 
-            _SwipeRefreshLayout.Post(() => _SwipeRefreshLayout.Refreshing = true);
+            swipeRefreshLayout.Post(() => swipeRefreshLayout.Refreshing = true);
 
-            mRecyclerView = FindViewById<RecyclerView>(Resource.Id.recyclerView);
+            recyclerView = FindViewById<RecyclerView>(Resource.Id.recyclerView);
 
-            mLayoutManager = new LinearLayoutManager(this);
+            layoutManager = new LinearLayoutManager(this);
 
             // Plug the layout manager into the RecyclerView:
-            mRecyclerView.SetLayoutManager(mLayoutManager);
+            recyclerView.SetLayoutManager(layoutManager);
 
             //............................................................
             // Adapter Setup:
 
             // Create an adapter for the RecyclerView, and pass it the
             // data set (the photo album) to manage:
-            mAdapter = new PhotoAlbumAdapter(lstUser, this);
+            userListAdapter = new UserListAdapter(lstUser, this);
 
             // Register the item click handler (below) with the adapter:
-            mAdapter.ItemClick += OnItemClick;
+            userListAdapter.ItemClick += OnItemClick;
 
             // Plug the adapter into the RecyclerView:
-            mRecyclerView.SetAdapter(mAdapter);
+            recyclerView.SetAdapter(userListAdapter);
 
             var btnAddUser = (FloatingActionButton)FindViewById(Resource.Id.btnAddUser);
             btnAddUser.Click += (sender, e) =>
@@ -96,7 +96,7 @@ namespace SmartHome.Droid.Activities
         }
         void OnItemClick(object sender, int position)
         {
-            PhotoAlbumAdapter dapter = (PhotoAlbumAdapter)sender;
+            UserListAdapter dapter = (UserListAdapter)sender;
             string userId = dapter != null ? dapter.lstUser[position].userId : string.Empty;
 
             var userEditActivity = new Intent(this, typeof(UserEditActivity));
@@ -110,20 +110,20 @@ namespace SmartHome.Droid.Activities
 
         private async Task GetData()
         {
-            _SwipeRefreshLayout.Refreshing = true;
+            swipeRefreshLayout.Refreshing = true;
 
             try
             {
-                await mAdapter.GetData();
+                await userListAdapter.GetData();
             }
             finally
             {
-                _SwipeRefreshLayout.Refreshing = false;                
+                swipeRefreshLayout.Refreshing = false;                
             }          
         }
     }
 
-    public class PhotoAlbumAdapter : RecyclerView.Adapter
+    public class UserListAdapter : RecyclerView.Adapter
     {
         // Event handler for item clicks:
         public event EventHandler<int> ItemClick;
@@ -133,8 +133,8 @@ namespace SmartHome.Droid.Activities
 
         Activity activity;
 
-        // Load the adapter with the data set (photo album) at construction time:
-        public PhotoAlbumAdapter(List<User> lstUser, Activity activity)
+        // Load the adapter with the data set (photo album) at construction time:        
+        public UserListAdapter(List<User> lstUser, Activity activity)
         {
             this.lstUser = lstUser;
             this.activity = activity;
@@ -163,12 +163,8 @@ namespace SmartHome.Droid.Activities
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
             PhotoViewHolder vh = holder as PhotoViewHolder;
-
-            // Set the ImageView and TextView in this ViewHolder's CardView 
-            // from this position in the photo album:
-
-            vh.Caption.Text = lstUser[position].name;
-
+            
+            vh.txtUserName.Text = lstUser[position].name;
 
             //Bind list view house
             List<House> lstHouse = lstUser[position].houses;
@@ -201,15 +197,14 @@ namespace SmartHome.Droid.Activities
     // that is displayed in a row of the RecyclerView:
     public class PhotoViewHolder : RecyclerView.ViewHolder
     {
-        public TextView Caption { get; private set; }
+        public TextView txtUserName { get; private set; }
         public ListView UserListItem_House { get; private set; }
 
         // Get references to the views defined in the CardView layout.
         public PhotoViewHolder(View itemView, Action<int> listener) : base(itemView)
         {
-            // Locate and cache view references:
-            //Image = itemView.FindViewById<ImageView>(Resource.Id.imageView);
-            Caption = itemView.FindViewById<TextView>(Resource.Id.textView);
+            // Locate and cache view references:           
+            txtUserName = itemView.FindViewById<TextView>(Resource.Id.txtUserName);
             UserListItem_House = itemView.FindViewById<ListView>(Resource.Id.UserListItem_House);
 
             // Detect user clicks on the item view and report which item

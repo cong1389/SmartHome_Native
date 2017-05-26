@@ -20,7 +20,7 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#333333"
                 android:text="Caption"
-                android:id="@+id/textView"
+                android:id="@+id/txtUserName"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="4dp" />
             <ListView
