@@ -2997,14 +2997,14 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f0900a1
 			public const int HomeFrameLayout = 2131296417;
 			
-			// aapt resource value: 0x7f090114
-			public const int RoomBar_mnuCreateDevice = 2131296532;
+			// aapt resource value: 0x7f090119
+			public const int RoomBar_mnuCreateDevice = 2131296537;
 			
-			// aapt resource value: 0x7f090113
-			public const int RoomBar_mnuCreateRoom = 2131296531;
+			// aapt resource value: 0x7f090118
+			public const int RoomBar_mnuCreateRoom = 2131296536;
 			
-			// aapt resource value: 0x7f090112
-			public const int RoomBar_mnuSave = 2131296530;
+			// aapt resource value: 0x7f090117
+			public const int RoomBar_mnuSave = 2131296535;
 			
 			// aapt resource value: 0x7f0900e0
 			public const int RoomCreate_txtRoomName = 2131296480;
@@ -3018,17 +3018,14 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f0900e6
 			public const int RoomGridItem_txtDeviceCount = 2131296486;
 			
-			// aapt resource value: 0x7f090101
-			public const int UserListItem_House = 2131296513;
-			
-			// aapt resource value: 0x7f090104
-			public const int acquaintanceListSwipeRefreshContainer = 2131296516;
+			// aapt resource value: 0x7f090106
+			public const int UserListItem_House = 2131296518;
 			
 			// aapt resource value: 0x7f0900c2
 			public const int action0 = 2131296450;
 			
-			// aapt resource value: 0x7f09010a
-			public const int action_attach = 2131296522;
+			// aapt resource value: 0x7f09010f
+			public const int action_attach = 2131296527;
 			
 			// aapt resource value: 0x7f090064
 			public const int action_bar = 2131296356;
@@ -3078,8 +3075,8 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f090043
 			public const int action_mode_close_button = 2131296323;
 			
-			// aapt resource value: 0x7f090109
-			public const int action_refresh = 2131296521;
+			// aapt resource value: 0x7f09010e
+			public const int action_refresh = 2131296526;
 			
 			// aapt resource value: 0x7f0900c1
 			public const int action_text = 2131296449;
@@ -3114,8 +3111,8 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f090028
 			public const int bottom = 2131296296;
 			
-			// aapt resource value: 0x7f090103
-			public const int btnAddUser = 2131296515;
+			// aapt resource value: 0x7f090108
+			public const int btnAddUser = 2131296520;
 			
 			// aapt resource value: 0x7f09009b
 			public const int btnLogin = 2131296411;
@@ -3123,8 +3120,8 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f0900e5
 			public const int btnScanClose = 2131296485;
 			
-			// aapt resource value: 0x7f0900e8
-			public const int btnScanIP = 2131296488;
+			// aapt resource value: 0x7f0900ed
+			public const int btnScanIP = 2131296493;
 			
 			// aapt resource value: 0x7f09004b
 			public const int buttonPanel = 2131296331;
@@ -3336,17 +3333,17 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f090080
 			public const int main_content = 2131296384;
 			
-			// aapt resource value: 0x7f090108
-			public const int masked = 2131296520;
+			// aapt resource value: 0x7f09010d
+			public const int masked = 2131296525;
 			
 			// aapt resource value: 0x7f0900c5
 			public const int media_actions = 2131296453;
 			
-			// aapt resource value: 0x7f09010c
-			public const int menu_settings = 2131296524;
+			// aapt resource value: 0x7f090111
+			public const int menu_settings = 2131296529;
 			
-			// aapt resource value: 0x7f09010b
-			public const int menu_share = 2131296523;
+			// aapt resource value: 0x7f090110
+			public const int menu_share = 2131296528;
 			
 			// aapt resource value: 0x7f090022
 			public const int middle = 2131296290;
@@ -3432,23 +3429,23 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f09001a
 			public const int multiply = 2131296282;
 			
-			// aapt resource value: 0x7f0900ec
-			public const int nameSectionTitleTextView = 2131296492;
+			// aapt resource value: 0x7f0900f1
+			public const int nameSectionTitleTextView = 2131296497;
 			
-			// aapt resource value: 0x7f090110
-			public const int nav_SearchApartment = 2131296528;
+			// aapt resource value: 0x7f090115
+			public const int nav_SearchApartment = 2131296533;
 			
-			// aapt resource value: 0x7f09010f
-			public const int nav_device = 2131296527;
+			// aapt resource value: 0x7f090114
+			public const int nav_device = 2131296532;
 			
-			// aapt resource value: 0x7f09010e
-			public const int nav_home = 2131296526;
+			// aapt resource value: 0x7f090113
+			public const int nav_home = 2131296531;
 			
-			// aapt resource value: 0x7f090111
-			public const int nav_logout = 2131296529;
+			// aapt resource value: 0x7f090116
+			public const int nav_logout = 2131296534;
 			
-			// aapt resource value: 0x7f09010d
-			public const int nav_userlist = 2131296525;
+			// aapt resource value: 0x7f090112
+			public const int nav_userlist = 2131296530;
 			
 			// aapt resource value: 0x7f090090
 			public const int nav_usr = 2131296400;
@@ -3495,9 +3492,6 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f09005d
 			public const int radio = 2131296349;
 			
-			// aapt resource value: 0x7f090105
-			public const int recyclerView = 2131296517;
-			
 			// aapt resource value: 0x7f09009d
 			public const int relativeLayout1 = 2131296413;
 			
@@ -3509,6 +3503,21 @@ namespace SmartHome.Droid
 			
 			// aapt resource value: 0x7f0900c9
 			public const int right_side = 2131296457;
+			
+			// aapt resource value: 0x7f0900ec
+			public const int roomLayoutItem_lstDevice = 2131296492;
+			
+			// aapt resource value: 0x7f0900eb
+			public const int roomLayoutItem_txtDeviceCount = 2131296491;
+			
+			// aapt resource value: 0x7f0900ea
+			public const int roomLayoutItem_txtRoomName = 2131296490;
+			
+			// aapt resource value: 0x7f0900e9
+			public const int room_recyclerView = 2131296489;
+			
+			// aapt resource value: 0x7f0900e8
+			public const int room_swipe = 2131296488;
 			
 			// aapt resource value: 0x7f090091
 			public const int room_txtUserName = 2131296401;
@@ -3669,8 +3678,8 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f090057
 			public const int title_template = 2131296343;
 			
-			// aapt resource value: 0x7f0900e9
-			public const int toolbar = 2131296489;
+			// aapt resource value: 0x7f0900ee
+			public const int toolbar = 2131296494;
 			
 			// aapt resource value: 0x7f0900a3
 			public const int toolbar_bottom = 2131296419;
@@ -3714,8 +3723,8 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f0900dc
 			public const int txtUerName = 2131296476;
 			
-			// aapt resource value: 0x7f090106
-			public const int txtUserName = 2131296518;
+			// aapt resource value: 0x7f09010b
+			public const int txtUserName = 2131296523;
 			
 			// aapt resource value: 0x7f090096
 			public const int txtUsr = 2131296406;
@@ -3726,92 +3735,98 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f090018
 			public const int useLogo = 2131296280;
 			
-			// aapt resource value: 0x7f090115
-			public const int userEditMenuSaveButton = 2131296533;
-			
-			// aapt resource value: 0x7f0900f0
-			public const int userEdit_Address = 2131296496;
-			
-			// aapt resource value: 0x7f0900f7
-			public const int userEdit_DeviceId = 2131296503;
-			
-			// aapt resource value: 0x7f0900f1
-			public const int userEdit_Email = 2131296497;
-			
-			// aapt resource value: 0x7f0900eb
-			public const int userEdit_HouseItem_switch = 2131296491;
-			
-			// aapt resource value: 0x7f0900ea
-			public const int userEdit_HouseItem_txtName = 2131296490;
-			
-			// aapt resource value: 0x7f0900ef
-			public const int userEdit_Mobile = 2131296495;
-			
-			// aapt resource value: 0x7f0900ee
-			public const int userEdit_Name = 2131296494;
-			
-			// aapt resource value: 0x7f0900f3
-			public const int userEdit_PassWord = 2131296499;
+			// aapt resource value: 0x7f09011a
+			public const int userEditMenuSaveButton = 2131296538;
 			
 			// aapt resource value: 0x7f0900f5
-			public const int userEdit_TenantId = 2131296501;
+			public const int userEdit_Address = 2131296501;
 			
-			// aapt resource value: 0x7f0900ed
-			public const int userEdit_UserName = 2131296493;
-			
-			// aapt resource value: 0x7f0900ff
-			public const int userEdit_grdHouse = 2131296511;
+			// aapt resource value: 0x7f0900fc
+			public const int userEdit_DeviceId = 2131296508;
 			
 			// aapt resource value: 0x7f0900f6
-			public const int userEdit_lineDeviceId = 2131296502;
+			public const int userEdit_Email = 2131296502;
 			
-			// aapt resource value: 0x7f0900f9
-			public const int userEdit_linearActive = 2131296505;
+			// aapt resource value: 0x7f0900f0
+			public const int userEdit_HouseItem_switch = 2131296496;
 			
-			// aapt resource value: 0x7f0900fd
-			public const int userEdit_linearChangePassword = 2131296509;
+			// aapt resource value: 0x7f0900ef
+			public const int userEdit_HouseItem_txtName = 2131296495;
+			
+			// aapt resource value: 0x7f0900f4
+			public const int userEdit_Mobile = 2131296500;
+			
+			// aapt resource value: 0x7f0900f3
+			public const int userEdit_Name = 2131296499;
+			
+			// aapt resource value: 0x7f0900f8
+			public const int userEdit_PassWord = 2131296504;
+			
+			// aapt resource value: 0x7f0900fa
+			public const int userEdit_TenantId = 2131296506;
+			
+			// aapt resource value: 0x7f0900f2
+			public const int userEdit_UserName = 2131296498;
+			
+			// aapt resource value: 0x7f090104
+			public const int userEdit_grdHouse = 2131296516;
 			
 			// aapt resource value: 0x7f0900fb
-			public const int userEdit_linearResetPassword = 2131296507;
+			public const int userEdit_lineDeviceId = 2131296507;
+			
+			// aapt resource value: 0x7f0900fe
+			public const int userEdit_linearActive = 2131296510;
+			
+			// aapt resource value: 0x7f090102
+			public const int userEdit_linearChangePassword = 2131296514;
+			
+			// aapt resource value: 0x7f090100
+			public const int userEdit_linearResetPassword = 2131296512;
 			
 			// aapt resource value: 0x7f090082
 			public const int userEdit_linearRole = 2131296386;
 			
-			// aapt resource value: 0x7f0900f2
-			public const int userEdit_linepassword = 2131296498;
+			// aapt resource value: 0x7f0900f7
+			public const int userEdit_linepassword = 2131296503;
 			
-			// aapt resource value: 0x7f0900f4
-			public const int userEdit_linetenantId = 2131296500;
+			// aapt resource value: 0x7f0900f9
+			public const int userEdit_linetenantId = 2131296505;
 			
-			// aapt resource value: 0x7f090116
-			public const int userEdit_mnuDelete = 2131296534;
+			// aapt resource value: 0x7f09011b
+			public const int userEdit_mnuDelete = 2131296539;
 			
-			// aapt resource value: 0x7f090117
-			public const int userEdit_mnuResetPw = 2131296535;
+			// aapt resource value: 0x7f09011c
+			public const int userEdit_mnuResetPw = 2131296540;
 			
-			// aapt resource value: 0x7f0900f8
-			public const int userEdit_spinHouse = 2131296504;
+			// aapt resource value: 0x7f0900fd
+			public const int userEdit_spinHouse = 2131296509;
 			
-			// aapt resource value: 0x7f0900fa
-			public const int userEdit_switActive = 2131296506;
+			// aapt resource value: 0x7f0900ff
+			public const int userEdit_switActive = 2131296511;
 			
-			// aapt resource value: 0x7f0900fe
-			public const int userEdit_txtChangePassword = 2131296510;
+			// aapt resource value: 0x7f090103
+			public const int userEdit_txtChangePassword = 2131296515;
 			
-			// aapt resource value: 0x7f0900fc
-			public const int userEdit_txtResetPassword = 2131296508;
+			// aapt resource value: 0x7f090101
+			public const int userEdit_txtResetPassword = 2131296513;
 			
-			// aapt resource value: 0x7f090102
-			public const int userList_list = 2131296514;
+			// aapt resource value: 0x7f09010a
+			public const int userListLayout_recyclerView = 2131296522;
 			
-			// aapt resource value: 0x7f090100
-			public const int userList_txtName = 2131296512;
+			// aapt resource value: 0x7f090109
+			public const int userListLayout_swipe = 2131296521;
+			
+			// aapt resource value: 0x7f090107
+			public const int userList_list = 2131296519;
+			
+			// aapt resource value: 0x7f090105
+			public const int userList_txtName = 2131296517;
 			
 			// aapt resource value: 0x7f09000e
 			public const int view_offset_helper = 2131296270;
 			
-			// aapt resource value: 0x7f090107
-			public const int visible = 2131296519;
+			// aapt resource value: 0x7f09010c
+			public const int visible = 2131296524;
 			
 			// aapt resource value: 0x7f0900b7
 			public const int volume_item_container = 2131296439;
@@ -4165,46 +4180,52 @@ namespace SmartHome.Droid
 			public const int RoomGridViewItem = 2130968662;
 			
 			// aapt resource value: 0x7f040057
-			public const int ScanIP = 2130968663;
+			public const int RoomLayout_Holer = 2130968663;
 			
 			// aapt resource value: 0x7f040058
-			public const int select_dialog_item_material = 2130968664;
+			public const int RoomLayoutItem_Holder = 2130968664;
 			
 			// aapt resource value: 0x7f040059
-			public const int select_dialog_multichoice_material = 2130968665;
+			public const int ScanIP = 2130968665;
 			
 			// aapt resource value: 0x7f04005a
-			public const int select_dialog_singlechoice_material = 2130968666;
+			public const int select_dialog_item_material = 2130968666;
 			
 			// aapt resource value: 0x7f04005b
-			public const int support_simple_spinner_dropdown_item = 2130968667;
+			public const int select_dialog_multichoice_material = 2130968667;
 			
 			// aapt resource value: 0x7f04005c
-			public const int toolbar = 2130968668;
+			public const int select_dialog_singlechoice_material = 2130968668;
 			
 			// aapt resource value: 0x7f04005d
-			public const int User_HouseItem = 2130968669;
+			public const int support_simple_spinner_dropdown_item = 2130968669;
 			
 			// aapt resource value: 0x7f04005e
-			public const int UserEdit_HouseItem = 2130968670;
+			public const int toolbar = 2130968670;
 			
 			// aapt resource value: 0x7f04005f
-			public const int UserEditLayout = 2130968671;
+			public const int User_HouseItem = 2130968671;
 			
 			// aapt resource value: 0x7f040060
-			public const int UserListItem = 2130968672;
+			public const int UserEdit_HouseItem = 2130968672;
 			
 			// aapt resource value: 0x7f040061
-			public const int UserListItem_House = 2130968673;
+			public const int UserEditLayout = 2130968673;
 			
 			// aapt resource value: 0x7f040062
-			public const int UserListLayout = 2130968674;
+			public const int UserListItem = 2130968674;
 			
 			// aapt resource value: 0x7f040063
-			public const int UserListLayout_Holder = 2130968675;
+			public const int UserListItem_House = 2130968675;
 			
 			// aapt resource value: 0x7f040064
-			public const int UserListLayoutItem_Holder = 2130968676;
+			public const int UserListLayout = 2130968676;
+			
+			// aapt resource value: 0x7f040065
+			public const int UserListLayout_Holder = 2130968677;
+			
+			// aapt resource value: 0x7f040066
+			public const int UserListLayoutItem_Holder = 2130968678;
 			
 			static Layout()
 			{

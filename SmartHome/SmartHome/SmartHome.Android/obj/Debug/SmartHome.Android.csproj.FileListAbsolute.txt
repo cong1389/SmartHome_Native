@@ -340,6 +340,8 @@ D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\mipmap\remove.png
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\R.cs.flag
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\uploadflags.txt
+D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\layout\roomlayout_holer.xml
+D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\obj\Debug\res\layout\roomlayoutitem_holder.xml
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Debug\SmartHome.Android.dll.mdb
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Debug\SmartHome.Service.dll.mdb
 D:\Working\SmartHome_Native\SmartHome\SmartHome\SmartHome.Android\bin\Debug\SmartHome.Util.dll.mdb

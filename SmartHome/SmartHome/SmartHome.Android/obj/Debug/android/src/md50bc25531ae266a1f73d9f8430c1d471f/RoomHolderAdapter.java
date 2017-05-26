@@ -1,7 +1,7 @@
 package md50bc25531ae266a1f73d9f8430c1d471f;
 
 
-public class PhotoAlbumAdapter
+public class RoomHolderAdapter
 	extends android.support.v7.widget.RecyclerView.Adapter
 	implements
 		mono.android.IGCUserPeer
@@ -14,15 +14,15 @@ public class PhotoAlbumAdapter
 			"n_onBindViewHolder:(Landroid/support/v7/widget/RecyclerView$ViewHolder;I)V:GetOnBindViewHolder_Landroid_support_v7_widget_RecyclerView_ViewHolder_IHandler\n" +
 			"n_getItemCount:()I:GetGetItemCountHandler\n" +
 			"";
-		mono.android.Runtime.register ("SmartHome.Droid.Activities.PhotoAlbumAdapter, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", PhotoAlbumAdapter.class, __md_methods);
+		mono.android.Runtime.register ("SmartHome.Droid.Activities.RoomHolderAdapter, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", RoomHolderAdapter.class, __md_methods);
 	}
 
 
-	public PhotoAlbumAdapter () throws java.lang.Throwable
+	public RoomHolderAdapter () throws java.lang.Throwable
 	{
 		super ();
-		if (getClass () == PhotoAlbumAdapter.class)
-			mono.android.TypeManager.Activate ("SmartHome.Droid.Activities.PhotoAlbumAdapter, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+		if (getClass () == RoomHolderAdapter.class)
+			mono.android.TypeManager.Activate ("SmartHome.Droid.Activities.RoomHolderAdapter, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

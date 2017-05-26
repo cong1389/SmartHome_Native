@@ -16,7 +16,8 @@
     </activity>
     <activity android:label="ResetPasswordActivity" android:name="md50bc25531ae266a1f73d9f8430c1d471f.ResetPasswordActivity" />
     <activity android:label="Smart Home - Create Device" android:parentActivityName="md50bc25531ae266a1f73d9f8430c1d471f.RoomActivity" android:name="md50bc25531ae266a1f73d9f8430c1d471f.DeviceCreateActivity" />
-    <activity android:label="Smart Home - Create Room" android:parentActivityName="md50bc25531ae266a1f73d9f8430c1d471f.RoomActivity" android:name="md50bc25531ae266a1f73d9f8430c1d471f.RoomCreateActivity" />
+    <activity android:label="Smart Home - Room" android:name="md50bc25531ae266a1f73d9f8430c1d471f.RoomActivity_Holder" />
+    <activity android:label="Smart Home - Create Room" android:name="md50bc25531ae266a1f73d9f8430c1d471f.RoomCreateActivity" />
     <activity android:label="Smart Home - Room" android:parentActivityName="md50bc25531ae266a1f73d9f8430c1d471f.HomeActivity" android:name="md50bc25531ae266a1f73d9f8430c1d471f.RoomActivity" />
     <activity android:label="UserEditActivity" android:parentActivityName="md50bc25531ae266a1f73d9f8430c1d471f.UserListActivity_ViewHolder" android:name="md50bc25531ae266a1f73d9f8430c1d471f.UserEditActivity" />
     <activity android:label="UserListActivity_ViewHolder" android:parentActivityName="md50bc25531ae266a1f73d9f8430c1d471f.HomeActivity" android:name="md50bc25531ae266a1f73d9f8430c1d471f.UserListActivity_ViewHolder" />

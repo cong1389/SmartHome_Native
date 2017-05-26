@@ -17,16 +17,12 @@ using Android.Views;
 
 namespace SmartHome.Droid.Activities
 {
-    [Activity(Label = "Smart Home - Create Room", ParentActivity = typeof(RoomActivity))]
+    [Activity(Label = "Smart Home - Create Room")]
     public class RoomCreateActivity : AppCompatActivity
     {
         #region Parameter
 
         string houseId = string.Empty;
-
-        List<Room> lstRoom = null;
-
-        GridView grdHouse;
 
         EditText RoomCreate_txtRoomName;
 
@@ -45,11 +41,6 @@ namespace SmartHome.Droid.Activities
             houseId = Intent.GetStringExtra("houseId");
 
             RoomCreate_txtRoomName = FindViewById<EditText>(Resource.Id.RoomCreate_txtRoomName);
-        }
-
-        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
-        {
-            base.OnActivityResult(requestCode, resultCode, data);
         }
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -85,13 +76,16 @@ namespace SmartHome.Droid.Activities
             {
                 case Resource.Id.RoomBar_mnuSave:
                     RoomCreate();
-                    break;              
+                    break;
+                case Android.Resource.Id.Home:
+                    OnBackPressed();
+                    break;
             }
 
             return base.OnOptionsItemSelected(item);
         }
 
-        private void RoomCreate()
+        private async void RoomCreate()
         {
             var alert = new Android.App.AlertDialog.Builder(this);
 
@@ -116,22 +110,12 @@ namespace SmartHome.Droid.Activities
             }
             string roomName = RoomCreate_txtRoomName.Text;
 
-            APIManager.RoomCreate(houseId, roomName);
+            await APIManager.RoomCreate(houseId, roomName);
 
-            //OnBackPressed();
+            OnBackPressed();
         }
 
-        public override void OnBackPressed()
-        {
-            if (FragmentManager.BackStackEntryCount != 0)
-            {
-                FragmentManager.PopBackStack();// fragmentManager.popBackStack();
-            }
-            else
-            {
-                base.OnBackPressed();
-            }
-        }
+
 
         #endregion
 

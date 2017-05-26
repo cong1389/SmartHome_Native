@@ -26,7 +26,7 @@ namespace SmartHome.Droid.Activities
         List<User> lstUser = null;
 
         // RecyclerView instance that displays the photo album:
-        RecyclerView recyclerView;
+        RecyclerView userListLayout_recyclerView;
 
         // Layout manager that lays out each card in the RecyclerView:
         RecyclerView.LayoutManager layoutManager;
@@ -34,7 +34,7 @@ namespace SmartHome.Droid.Activities
         // Adapter that accesses the data set (a photo album):
         UserListAdapter userListAdapter;
 
-        SwipeRefreshLayout swipeRefreshLayout;
+        SwipeRefreshLayout userListLayout_swipe;
 
         protected override async void OnResume()
         {
@@ -43,7 +43,7 @@ namespace SmartHome.Droid.Activities
             await GetData();
         }
 
-        protected async override void OnCreate(Bundle savedInstanceState)
+        protected  override async void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
@@ -60,20 +60,20 @@ namespace SmartHome.Droid.Activities
             // ensure that the system bar color gets drawn
             Window.AddFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
 
-            swipeRefreshLayout = (SwipeRefreshLayout)FindViewById(Resource.Id.acquaintanceListSwipeRefreshContainer);
+            userListLayout_swipe = (SwipeRefreshLayout)FindViewById(Resource.Id.userListLayout_swipe);
 
-            swipeRefreshLayout.Refresh += async (sender, e) => {
+            userListLayout_swipe.Refresh += async (sender, e) => {
                 await GetData();
             };
 
-            swipeRefreshLayout.Post(() => swipeRefreshLayout.Refreshing = true);
+            userListLayout_swipe.Post(() => userListLayout_swipe.Refreshing = true);
 
-            recyclerView = FindViewById<RecyclerView>(Resource.Id.recyclerView);
+            userListLayout_recyclerView = FindViewById<RecyclerView>(Resource.Id.userListLayout_recyclerView);
 
             layoutManager = new LinearLayoutManager(this);
 
             // Plug the layout manager into the RecyclerView:
-            recyclerView.SetLayoutManager(layoutManager);
+            userListLayout_recyclerView.SetLayoutManager(layoutManager);
 
             //............................................................
             // Adapter Setup:
@@ -86,7 +86,7 @@ namespace SmartHome.Droid.Activities
             userListAdapter.ItemClick += OnItemClick;
 
             // Plug the adapter into the RecyclerView:
-            recyclerView.SetAdapter(userListAdapter);
+            userListLayout_recyclerView.SetAdapter(userListAdapter);
 
             var btnAddUser = (FloatingActionButton)FindViewById(Resource.Id.btnAddUser);
             btnAddUser.Click += (sender, e) =>
@@ -94,6 +94,7 @@ namespace SmartHome.Droid.Activities
                 StartActivity(new Intent(Application.Context, typeof(UserEditActivity)));
             };
         }
+
         void OnItemClick(object sender, int position)
         {
             UserListAdapter dapter = (UserListAdapter)sender;
@@ -110,7 +111,7 @@ namespace SmartHome.Droid.Activities
 
         private async Task GetData()
         {
-            swipeRefreshLayout.Refreshing = true;
+            userListLayout_swipe.Refreshing = true;
 
             try
             {
@@ -118,12 +119,12 @@ namespace SmartHome.Droid.Activities
             }
             finally
             {
-                swipeRefreshLayout.Refreshing = false;                
+                userListLayout_swipe.Refreshing = false;                
             }          
         }
     }
 
-    public class UserListAdapter : RecyclerView.Adapter
+    internal class UserListAdapter : RecyclerView.Adapter
     {
         // Event handler for item clicks:
         public event EventHandler<int> ItemClick;
@@ -155,14 +156,14 @@ namespace SmartHome.Droid.Activities
 
             // Create a ViewHolder to find and hold these view references, and 
             // register OnClick with the view holder:
-            PhotoViewHolder vh = new PhotoViewHolder(itemView, OnClick);
+            UserListViewHolder vh = new UserListViewHolder(itemView, OnClick);
             return vh;
         }
 
         // Fill in the contents of the photo card (invoked by the layout manager):
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
-            PhotoViewHolder vh = holder as PhotoViewHolder;
+            UserListViewHolder vh = holder as UserListViewHolder;
             
             vh.txtUserName.Text = lstUser[position].name;
 
@@ -195,13 +196,13 @@ namespace SmartHome.Droid.Activities
     // Implement the ViewHolder pattern: each ViewHolder holds references
     // to the UI components (ImageView and TextView) within the CardView 
     // that is displayed in a row of the RecyclerView:
-    public class PhotoViewHolder : RecyclerView.ViewHolder
+    internal class UserListViewHolder : RecyclerView.ViewHolder
     {
         public TextView txtUserName { get; private set; }
         public ListView UserListItem_House { get; private set; }
 
         // Get references to the views defined in the CardView layout.
-        public PhotoViewHolder(View itemView, Action<int> listener) : base(itemView)
+        public UserListViewHolder(View itemView, Action<int> listener) : base(itemView)
         {
             // Locate and cache view references:           
             txtUserName = itemView.FindViewById<TextView>(Resource.Id.txtUserName);

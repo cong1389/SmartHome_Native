@@ -82,6 +82,18 @@ SmartHome.Droid.Activities.DeviceCreateActivity, SmartHome.Android;md50bc25531ae
 SmartHome.Droid.Activities.DeviceCreateActivity, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50bc25531ae266a1f73d9f8430c1d471f.DeviceCreateActivity
 SmartHome.Droid.Activities.DeviceCreateActivity;md50bc25531ae266a1f73d9f8430c1d471f.DeviceCreateActivity
 smarthome.droid.activities.DeviceCreateActivity;md50bc25531ae266a1f73d9f8430c1d471f.DeviceCreateActivity
+SmartHome.Droid.Activities.RoomActivity_Holder, SmartHome.Android;md50bc25531ae266a1f73d9f8430c1d471f.RoomActivity_Holder
+SmartHome.Droid.Activities.RoomActivity_Holder, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50bc25531ae266a1f73d9f8430c1d471f.RoomActivity_Holder
+SmartHome.Droid.Activities.RoomActivity_Holder;md50bc25531ae266a1f73d9f8430c1d471f.RoomActivity_Holder
+smarthome.droid.activities.RoomActivity_Holder;md50bc25531ae266a1f73d9f8430c1d471f.RoomActivity_Holder
+SmartHome.Droid.Activities.RoomHolderAdapter, SmartHome.Android;md50bc25531ae266a1f73d9f8430c1d471f.RoomHolderAdapter
+SmartHome.Droid.Activities.RoomHolderAdapter, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50bc25531ae266a1f73d9f8430c1d471f.RoomHolderAdapter
+SmartHome.Droid.Activities.RoomHolderAdapter;md50bc25531ae266a1f73d9f8430c1d471f.RoomHolderAdapter
+smarthome.droid.activities.RoomHolderAdapter;md50bc25531ae266a1f73d9f8430c1d471f.RoomHolderAdapter
+SmartHome.Droid.Activities.RoomViewHolder, SmartHome.Android;md50bc25531ae266a1f73d9f8430c1d471f.RoomViewHolder
+SmartHome.Droid.Activities.RoomViewHolder, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50bc25531ae266a1f73d9f8430c1d471f.RoomViewHolder
+SmartHome.Droid.Activities.RoomViewHolder;md50bc25531ae266a1f73d9f8430c1d471f.RoomViewHolder
+smarthome.droid.activities.RoomViewHolder;md50bc25531ae266a1f73d9f8430c1d471f.RoomViewHolder
 SmartHome.Droid.Activities.RoomCreateActivity, SmartHome.Android;md50bc25531ae266a1f73d9f8430c1d471f.RoomCreateActivity
 SmartHome.Droid.Activities.RoomCreateActivity, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50bc25531ae266a1f73d9f8430c1d471f.RoomCreateActivity
 SmartHome.Droid.Activities.RoomCreateActivity;md50bc25531ae266a1f73d9f8430c1d471f.RoomCreateActivity
@@ -106,10 +118,10 @@ SmartHome.Droid.Activities.UserListAdapter, SmartHome.Android;md50bc25531ae266a1
 SmartHome.Droid.Activities.UserListAdapter, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50bc25531ae266a1f73d9f8430c1d471f.UserListAdapter
 SmartHome.Droid.Activities.UserListAdapter;md50bc25531ae266a1f73d9f8430c1d471f.UserListAdapter
 smarthome.droid.activities.UserListAdapter;md50bc25531ae266a1f73d9f8430c1d471f.UserListAdapter
-SmartHome.Droid.Activities.PhotoViewHolder, SmartHome.Android;md50bc25531ae266a1f73d9f8430c1d471f.PhotoViewHolder
-SmartHome.Droid.Activities.PhotoViewHolder, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50bc25531ae266a1f73d9f8430c1d471f.PhotoViewHolder
-SmartHome.Droid.Activities.PhotoViewHolder;md50bc25531ae266a1f73d9f8430c1d471f.PhotoViewHolder
-smarthome.droid.activities.PhotoViewHolder;md50bc25531ae266a1f73d9f8430c1d471f.PhotoViewHolder
+SmartHome.Droid.Activities.UserListViewHolder, SmartHome.Android;md50bc25531ae266a1f73d9f8430c1d471f.UserListViewHolder
+SmartHome.Droid.Activities.UserListViewHolder, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50bc25531ae266a1f73d9f8430c1d471f.UserListViewHolder
+SmartHome.Droid.Activities.UserListViewHolder;md50bc25531ae266a1f73d9f8430c1d471f.UserListViewHolder
+smarthome.droid.activities.UserListViewHolder;md50bc25531ae266a1f73d9f8430c1d471f.UserListViewHolder
 SmartHome.Droid.Activities.UserListActivity, SmartHome.Android;md50bc25531ae266a1f73d9f8430c1d471f.UserListActivity
 SmartHome.Droid.Activities.UserListActivity, SmartHome.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50bc25531ae266a1f73d9f8430c1d471f.UserListActivity
 SmartHome.Droid.Activities.UserListActivity;md50bc25531ae266a1f73d9f8430c1d471f.UserListActivity

@@ -64,7 +64,7 @@ namespace SmartHome.Droid.Activities
         {
             string houseId = e.View.FindViewById<TextView>(Resource.Id.txtHouseId).Text;
 
-            var roomActivity = new Intent(Application.Context, typeof(RoomActivity));
+            var roomActivity = new Intent(Application.Context, typeof(RoomActivity_Holder));
             roomActivity.PutExtra("houseId", houseId);           
             StartActivity(roomActivity);
 

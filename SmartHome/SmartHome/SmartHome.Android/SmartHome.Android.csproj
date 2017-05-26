@@ -171,6 +171,7 @@
     <Compile Include="Activities\DeviceFragment.cs" />
     <Compile Include="Activities\ResetPasswordActivity.cs" />
     <Compile Include="Activities\DeviceCreateActivity.cs" />
+    <Compile Include="Activities\RoomActivity_Holder.cs" />
     <Compile Include="Activities\RoomCreateActivity.cs" />
     <Compile Include="Activities\RoomActivity.cs" />
     <Compile Include="Activities\RoomFragment.cs" />
@@ -279,6 +280,12 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\UserListLayoutItem_Holder.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\RoomLayout_Holer.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\RoomLayoutItem_Holder.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
