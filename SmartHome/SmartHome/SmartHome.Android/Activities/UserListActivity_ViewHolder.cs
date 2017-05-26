@@ -41,8 +41,6 @@ namespace SmartHome.Droid.Activities
             base.OnResume();
 
             await GetData();
-
-
         }
 
         protected async override void OnCreate(Bundle savedInstanceState)
