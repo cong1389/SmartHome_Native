@@ -16,6 +16,7 @@ using SmartHome.Model;
 using SmartHome.Droid.Common;
 using Android.Support.Design.Widget;
 using Android.Support.V7.Widget;
+using Android.Support.V4.Widget;
 
 namespace SmartHome.Droid.Activities
 {
@@ -33,14 +34,13 @@ namespace SmartHome.Droid.Activities
         // Adapter that accesses the data set (a photo album):
         PhotoAlbumAdapter mAdapter;
 
+        SwipeRefreshLayout _SwipeRefreshLayout;
+
         protected override async void OnResume()
         {
             base.OnResume();
 
-            //var toolbar = FindViewById<Toolbar>(Resource.Id.app_bar);
-            //SetSupportActionBar(toolbar);
-            //SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            //SupportActionBar.SetDisplayShowHomeEnabled(true);
+            await GetData();
 
 
         }
@@ -59,7 +59,16 @@ namespace SmartHome.Droid.Activities
 
             Title = "User Management";
 
-            await GetData();
+            // ensure that the system bar color gets drawn
+            Window.AddFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
+
+            _SwipeRefreshLayout = (SwipeRefreshLayout)FindViewById(Resource.Id.acquaintanceListSwipeRefreshContainer);
+
+            _SwipeRefreshLayout.Refresh += async (sender, e) => {
+                await GetData();
+            };
+
+            _SwipeRefreshLayout.Post(() => _SwipeRefreshLayout.Refreshing = true);
 
             mRecyclerView = FindViewById<RecyclerView>(Resource.Id.recyclerView);
 
@@ -103,11 +112,17 @@ namespace SmartHome.Droid.Activities
 
         private async Task GetData()
         {
-            lstUser = await APIManager.GetUserAll();
-            //userList_list.Adapter = new UserAdapter(this, lstUser);
-            //userList_list.ItemClick += UserList_grd_ItemClick;
-        }
+            _SwipeRefreshLayout.Refreshing = true;
 
+            try
+            {
+                await mAdapter.GetData();
+            }
+            finally
+            {
+                _SwipeRefreshLayout.Refreshing = false;                
+            }          
+        }
     }
 
     public class PhotoAlbumAdapter : RecyclerView.Adapter
@@ -125,6 +140,13 @@ namespace SmartHome.Droid.Activities
         {
             this.lstUser = lstUser;
             this.activity = activity;
+        }
+
+        public async Task GetData()
+        {
+            lstUser = await APIManager.GetUserAll();
+
+            NotifyDataSetChanged();
         }
 
         // Create a new photo CardView (invoked by the layout manager): 

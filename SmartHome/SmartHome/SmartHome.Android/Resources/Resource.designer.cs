@@ -2997,14 +2997,14 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f0900a1
 			public const int HomeFrameLayout = 2131296417;
 			
+			// aapt resource value: 0x7f090114
+			public const int RoomBar_mnuCreateDevice = 2131296532;
+			
 			// aapt resource value: 0x7f090113
-			public const int RoomBar_mnuCreateDevice = 2131296531;
+			public const int RoomBar_mnuCreateRoom = 2131296531;
 			
 			// aapt resource value: 0x7f090112
-			public const int RoomBar_mnuCreateRoom = 2131296530;
-			
-			// aapt resource value: 0x7f090111
-			public const int RoomBar_mnuSave = 2131296529;
+			public const int RoomBar_mnuSave = 2131296530;
 			
 			// aapt resource value: 0x7f0900e0
 			public const int RoomCreate_txtRoomName = 2131296480;
@@ -3021,11 +3021,14 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f090101
 			public const int UserListItem_House = 2131296513;
 			
+			// aapt resource value: 0x7f090104
+			public const int acquaintanceListSwipeRefreshContainer = 2131296516;
+			
 			// aapt resource value: 0x7f0900c2
 			public const int action0 = 2131296450;
 			
-			// aapt resource value: 0x7f090109
-			public const int action_attach = 2131296521;
+			// aapt resource value: 0x7f09010a
+			public const int action_attach = 2131296522;
 			
 			// aapt resource value: 0x7f090064
 			public const int action_bar = 2131296356;
@@ -3075,8 +3078,8 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f090043
 			public const int action_mode_close_button = 2131296323;
 			
-			// aapt resource value: 0x7f090108
-			public const int action_refresh = 2131296520;
+			// aapt resource value: 0x7f090109
+			public const int action_refresh = 2131296521;
 			
 			// aapt resource value: 0x7f0900c1
 			public const int action_text = 2131296449;
@@ -3333,17 +3336,17 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f090080
 			public const int main_content = 2131296384;
 			
-			// aapt resource value: 0x7f090107
-			public const int masked = 2131296519;
+			// aapt resource value: 0x7f090108
+			public const int masked = 2131296520;
 			
 			// aapt resource value: 0x7f0900c5
 			public const int media_actions = 2131296453;
 			
-			// aapt resource value: 0x7f09010b
-			public const int menu_settings = 2131296523;
+			// aapt resource value: 0x7f09010c
+			public const int menu_settings = 2131296524;
 			
-			// aapt resource value: 0x7f09010a
-			public const int menu_share = 2131296522;
+			// aapt resource value: 0x7f09010b
+			public const int menu_share = 2131296523;
 			
 			// aapt resource value: 0x7f090022
 			public const int middle = 2131296290;
@@ -3432,20 +3435,20 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f0900ec
 			public const int nameSectionTitleTextView = 2131296492;
 			
+			// aapt resource value: 0x7f090110
+			public const int nav_SearchApartment = 2131296528;
+			
 			// aapt resource value: 0x7f09010f
-			public const int nav_SearchApartment = 2131296527;
+			public const int nav_device = 2131296527;
 			
 			// aapt resource value: 0x7f09010e
-			public const int nav_device = 2131296526;
+			public const int nav_home = 2131296526;
+			
+			// aapt resource value: 0x7f090111
+			public const int nav_logout = 2131296529;
 			
 			// aapt resource value: 0x7f09010d
-			public const int nav_home = 2131296525;
-			
-			// aapt resource value: 0x7f090110
-			public const int nav_logout = 2131296528;
-			
-			// aapt resource value: 0x7f09010c
-			public const int nav_userlist = 2131296524;
+			public const int nav_userlist = 2131296525;
 			
 			// aapt resource value: 0x7f090090
 			public const int nav_usr = 2131296400;
@@ -3492,8 +3495,8 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f09005d
 			public const int radio = 2131296349;
 			
-			// aapt resource value: 0x7f090104
-			public const int recyclerView = 2131296516;
+			// aapt resource value: 0x7f090105
+			public const int recyclerView = 2131296517;
 			
 			// aapt resource value: 0x7f09009d
 			public const int relativeLayout1 = 2131296413;
@@ -3639,8 +3642,8 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f090051
 			public const int textSpacerNoTitle = 2131296337;
 			
-			// aapt resource value: 0x7f090105
-			public const int textView = 2131296517;
+			// aapt resource value: 0x7f090106
+			public const int textView = 2131296518;
 			
 			// aapt resource value: 0x7f090099
 			public const int textView1 = 2131296409;
@@ -3723,8 +3726,8 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f090018
 			public const int useLogo = 2131296280;
 			
-			// aapt resource value: 0x7f090114
-			public const int userEditMenuSaveButton = 2131296532;
+			// aapt resource value: 0x7f090115
+			public const int userEditMenuSaveButton = 2131296533;
 			
 			// aapt resource value: 0x7f0900f0
 			public const int userEdit_Address = 2131296496;
@@ -3780,11 +3783,11 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f0900f4
 			public const int userEdit_linetenantId = 2131296500;
 			
-			// aapt resource value: 0x7f090115
-			public const int userEdit_mnuDelete = 2131296533;
-			
 			// aapt resource value: 0x7f090116
-			public const int userEdit_mnuResetPw = 2131296534;
+			public const int userEdit_mnuDelete = 2131296534;
+			
+			// aapt resource value: 0x7f090117
+			public const int userEdit_mnuResetPw = 2131296535;
 			
 			// aapt resource value: 0x7f0900f8
 			public const int userEdit_spinHouse = 2131296504;
@@ -3807,8 +3810,8 @@ namespace SmartHome.Droid
 			// aapt resource value: 0x7f09000e
 			public const int view_offset_helper = 2131296270;
 			
-			// aapt resource value: 0x7f090106
-			public const int visible = 2131296518;
+			// aapt resource value: 0x7f090107
+			public const int visible = 2131296519;
 			
 			// aapt resource value: 0x7f0900b7
 			public const int volume_item_container = 2131296439;
